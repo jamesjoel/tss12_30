@@ -1,3 +1,14 @@
+<?php
+$page = $_SERVER['PHP_SELF'];
+// $x = "about.php";
+
+// if(strstr($page, $x))
+// {
+// 	echo "hello";
+// }
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +36,10 @@
 <div id="menu">
 	<div id="inside-menu">
 		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
-			<li><a href="#">Help</a></li>
+			<li><a <?php if(strstr($page, "index.php")){ echo "class='active'"; } ?> href="index.php">Home</a></li>
+			<li><a <?php if(strstr($page, "about.php")){ echo "class='active'"; } ?> href="about.php">About</a></li>
+			<li><a <?php if(strstr($page, "contact.php")){ echo "class='active'"; } ?> href="contact.php">Contact</a></li>
+			<li><a <?php if(strstr($page, "help.php")){ echo "class='active'"; } ?> href="help.php">Help</a></li>
 		</ul>
 	</div>
 </div>
