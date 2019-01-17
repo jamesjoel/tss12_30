@@ -1,7 +1,6 @@
 <?php
 // print_r($_POST);
-
-$con = mysqli_connect("localhost", "admin", "admin", "tss12_30");
+include("connect.php");
 
 
 $a = $_POST['full_name'];
