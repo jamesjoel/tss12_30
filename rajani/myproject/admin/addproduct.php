@@ -1,7 +1,11 @@
+<?php
+include("header.php");
+?>
+<div id="content">
+	<div id="sub-content">
 
-
-			
-				<h3 style="text-align: center;">Product_information</h3>
+<h3 style="text-align: center;">Product_information</h3>
+				<form action="saveproduct.php" method="post">
 				<table align="center">
 						<tr>
 							<td>product name</td>
@@ -13,11 +17,11 @@
 						</tr>
 						<tr>
 							<td>details</td>
-							<td><input type="text" name="details" class="input" style="margin: 5px;"style="padding:5px;"  /></td>
+							<td><input type="text" name="detail" class="input" style="margin: 5px;"style="padding:5px;"  /></td>
 						</tr>
 						<tr>
 							<td>product catogary</td>
-							<td><select name="procatogary" class="input" style="margin: 5px;"style="padding:5px;">
+							<td><select name="productcategory" class="input" style="margin: 5px;"style="padding:5px;">
 								<option>select</option>
 								<option>electronics</option>
 								<option>home applience</option>
@@ -29,7 +33,7 @@
 						</tr>
 						<tr>
 							<td>discount</td>
-							<td><input type="text" name="details" class="input" style="margin: 5px;"style="padding:5px;"  /></td>
+							<td><input type="text" name="productdiscount" class="input" style="margin: 5px;"style="padding:5px;"  /></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="center">
@@ -37,6 +41,10 @@
 							</td>
 						</tr>
 					</table>
+				</form>
+				</div>
+				</div>
+
 
 
 

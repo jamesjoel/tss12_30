@@ -16,5 +16,5 @@ $query="INSERT INTO user(fullname,username,password,gender,address ,city,contact
 echo $query;
 mysqli_query($con,$query);
 
-// header("location:login.php");
+header("location:login.php");
 ?>

@@ -3,7 +3,7 @@
 
 
 ?>
-					<h3 style="text-align: center"style="color: black">User Registration</h3>
+					<h3 style="text-align: center;color: black">User Registration</h3>
 				<div id="Registration-box" >
 					<form action="save.php" method="post">
 					<table align="center">
@@ -26,8 +26,8 @@
 					
 						<tr>
 							<td>Gender</td>
-							<td>Male<input type="radio" name="gender"  style="margin: 2px"  />
-								Female<input type="radio" name="gender" style="margin: 2px" /></td>
+							<td>Male<input type="radio" value="male" name="gender"  style="margin: 2px"  />
+								Female<input type="radio" name="gender" value="female" style="margin: 2px" /></td>
 						</tr>
 						<tr>
 							<td>Address</td>

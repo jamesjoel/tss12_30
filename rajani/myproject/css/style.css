@@ -15,8 +15,7 @@ body{
 	/*background-color:#677172;*/
 }
 #content{
-	min-height:700px;
-	height: auto;
+	height: 100%;
 	width: 100%;
     background-color: #fff;
 }
@@ -61,6 +60,7 @@ body{
 	width:910px;
 	background-color: #fff;
 	margin:0 auto;
+	overflow: hidden;
 	}
 	#sub-content1{
 		height:700;
@@ -140,12 +140,13 @@ body{
 	}
 
 	#Registration-box{
-		height: 400px;
+		height: 415px;
 		width: 610px;
 		float:right;
 		margin:0 auto;
 		overflow: hidden;
 		background-color: #fff;
+
 	}
 
 
