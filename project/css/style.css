@@ -122,11 +122,6 @@ body{
 	background-color: #FFF;
 	color: #E50032;
 }
-.active{
-	border-bottom: 3px solid #E50032 !important;
-	background-color: #FFF !important;
-	color: #E50032 !important;
-}
 #left-content{
 	height: auto;
 	min-height: 700px;
