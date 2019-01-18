@@ -31,10 +31,10 @@ $page = $_SERVER['PHP_SELF'];
 		</div>
 		<div id="bottom-header">
 			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Help</a></li>
+				<li><a <?php if(strstr($page, "index.php")){ echo "class='active'"; } ?> href="index.php">Home</a></li>
+				<li><a <?php if(strstr($page, "about.php")){ echo "class='active'"; } ?>  href="#">Contact</a></li>
+				<li><a <?php if(strstr($page, "contact.php")){ echo "class='active'"; } ?> href="#">About</a></li>
+				<li><a <?php if(strstr($page, "help.php")){ echo "class='active'"; } ?> href="#">Help</a></li>
 			</ul>
 		</div>
 		<div id="white-header"></div>

@@ -1,5 +1,5 @@
 <?php
-echo md5("indore");
-
-
+// print_r($_SERVER);
+$a = $_SERVER['PHP_SELF'];
+$a = "test.php";
 ?>
