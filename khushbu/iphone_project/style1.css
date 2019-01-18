@@ -348,3 +348,10 @@ body{
 .btn:hover{
 	background-color:  #1F1F1F;
 }
+.active{
+	/*background-color: #FFF !important; */
+	/*text-shadow: none; */
+	/*border-bottom: 3px solid  #1a3b4c;*/
+	background-color: #FFF!important;
+	color: #216282 !important;
+}
