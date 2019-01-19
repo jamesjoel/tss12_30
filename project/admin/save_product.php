@@ -12,6 +12,7 @@ echo $query = "INSERT INTO product (product_name, product_price, category, detai
 // die;
 
 mysqli_query($con, $query);
+$_SESSION['msg']="A Product Add Successfuly";
 
 header("location:add_product.php");
 

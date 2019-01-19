@@ -252,3 +252,8 @@ body{
 .btn:hover{
 	background-color:  #1F1F1F;
 }
+.error{
+	color: red;
+	text-align: center;
+	font-size: 14px;
+}
