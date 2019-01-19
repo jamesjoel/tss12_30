@@ -1,5 +1,10 @@
 <?php
 include("header.php");
+<<<<<<< HEAD
+?>	
+<div id="content">
+	<h3>Add New Product</h3>
+=======
 ?> 
 <!-- <!DOCTYPE html>
 <html>
@@ -56,6 +61,7 @@ include("header.php");
 
 
 	<!-- <h3>Add New Product</h3>
+>>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
 	<form action="save_product.php" method="post">
 	<div id="login-box">
 	<table align="center">

@@ -11,7 +11,11 @@ $page = $_SERVER['PHP_SELF'];
 	<div id="header">
 		<div id="inside-header">
 			<div id="logo">
+<<<<<<< HEAD
+				<h1>adminpannel<h1>
+=======
 				<h1>adminpannel<h1>	
+>>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
 			</div>
 		</div>
 	</div>
@@ -27,9 +31,14 @@ $page = $_SERVER['PHP_SELF'];
 			</ul>
 		</div>
 	</div>
+<<<<<<< HEAD
+</body>
+</html>
+=======
 	<!-- <div id="content">
 		<div id="inside-content"></div>
 	</div> -->
 <!-- </body> -->
 <!-- </html> -->
+>>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
 
