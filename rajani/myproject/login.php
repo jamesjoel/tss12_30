@@ -20,6 +20,15 @@
 							</td>
 						</tr>
 					</table>
+					<p class="error">
+						<?php
+						if(isset($_SESSION['meg']))
+						{
+							echo $_SESSION['meg'];
+							unset($_SESSION['meg']);
+						}
+						?>
+					</p>
 
 				</form>
 </div>
