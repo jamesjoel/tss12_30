@@ -5,7 +5,6 @@ include("header.php");
 	<div id="in-content">
 		<div id="right-content">
 			<h3>Login</h3>
-			<
 		</div>
 		<div id="left-content">
 			<div id="left-menu">
