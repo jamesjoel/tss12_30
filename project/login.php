@@ -1,4 +1,5 @@
 <?php
+include("connect.php");
 include("header.php");
 ?>
 			<div id="right-content-bottom">
@@ -20,6 +21,15 @@ include("header.php");
 							</td>
 						</tr>
 					</table>
+						<p class="error">
+						<?php
+						if(isset($_SESSION['msg']))
+						{
+							echo $_SESSION['msg'];
+							unset($_SESSION['msg']);
+						}
+						?>
+						</p>
 				</form>
 				</div>
 			</div>

@@ -1,8 +1,16 @@
 <?php
+include("../connect.php");
 include("header.php");
 ?>	
 <div id="content">
 	<h3>Add New Product</h3>
+	<?php
+	if(isset($_SESSION['msg']))
+	{
+		echo $_SESSION['msg'];
+		unset($_SESSION['msg']);
+	}
+	?>
 	<form action="save_product.php" method="post">
 	<div id="login-box">
 	<table align="center">
