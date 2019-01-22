@@ -23,11 +23,28 @@ $page = $_SERVER['PHP_SELF'];
 		</div>
 		<div id="right-header">
 			<div id="right-header-top">
+				<?php
+				if(isset($_SESSION['is_user_logged_in']))
+				{
+				?>
+				<ul>
+					<li><a href="#">My Cart()</a></li>
+					<li><a href="logout.php">Logout</a>|</li>
+					<li><a href="my_account.php">My Account</a>|</li>
+					<li><a href="#"><?php echo $_SESSION['name']; ?></a>|</li>
+				</ul>
+				<?php
+				}else{
+				?>
+
 				<ul>
 					<li><a href="#">My Cart()</a></li>
 					<li><a href="signup.php">Signup</a>|</li>
 					<li><a href="login.php">Login</a>|</li>
 				</ul>
+				<?php
+				}
+				?>
 			</div>
 			<div id="right-header-bottom"></div>
 		</div>

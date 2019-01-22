@@ -8,6 +8,7 @@ $username = $_POST["username"];
 $password = $_POST["pass"];
 
 $d = md5($password);
+// echo $d;die;
 
 $gender = $_POST["gender"];
 $address = $_POST["add"];
@@ -15,7 +16,7 @@ $city = $_POST["city"];
 $contact = $_POST["contact"];
 $pincode = $_POST["pincode"];
 
- $sql = "insert into user (fullname,username,password,gender,address,city,contact,pincode) values('$fullname','$username','$password','$gender','$address','$city','$contact','$pincode')";
+ $sql = "insert into user (fullname,username,password,gender,address,city,contact,pincode) values('$fullname','$username','$d','$gender','$address','$city','$contact','$pincode')";
 
  mysqli_query($con,$sql);
 

@@ -11,6 +11,6 @@ $e=$_POST['productdiscount'];
 $query= "INSERT INTO product(productname,productprice,detail,productcategory,productdiscount)VALUES('$a','$b','$c','$d','$e')";
 echo $query;
 mysqli_query($con,$query);
-header("location:product.php")
+header("location:saveproduct.php")
 
 ?>
