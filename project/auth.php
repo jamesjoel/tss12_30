@@ -1,16 +1,29 @@
 <?php
 include("connect.php");
-$u = $_POST['username'];
+
+$u = $_POST['username']; // abc
 $p = $_POST['pass'];
+
+
 $query = "SELECT * FROM user WHERE username ='$u'";
+
+
 $result = mysqli_query($con, $query);
+
+// print_r($result);
+// die;
+// the result is a non-readble object
+
 if(mysqli_num_rows($result)==1)
 {
 	$data = mysqli_fetch_assoc($result);
-	// print_r($data);
 	if($data['password']==md5($p))
 	{
-		echo "yes";
+		$_SESSION["name"]=$data['full_name'];
+		$_SESSION['id']=$data['id'];
+		$_SESSION['is_user_logged_in']=true;
+
+		header("location:my_account.php");
 	}
 	else
 	{
