@@ -67,8 +67,8 @@ include("menu.php");
 											<td><input name="firstname" type="text" class="input" /></td>
 										</tr>
 										<tr>
-											<td>lastname</td>
-											<td><input name="lastname" type="text" class="input" /></td>
+											<td>username</td>
+											<td><input name="username" type="text" class="input" /></td>
 										</tr>
 										<tr>
 											<td>Password</td>
