@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AdminPanel</title>
+	<title>AdminPannel</title>
 </head>
 <body>
 
