@@ -22,8 +22,10 @@
 					?> href="addproduct.php">addproduct</a></li>
 				<li><a <?php if (strstr($page,"viewproduct.php"))
 					{echo "class='active'";}
-					?> href="#">viewproduct</a></li>
-				<li><a href="#">addcategory</a></li>
+					?> href="viewproduct.php">viewproduct</a></li>
+				<li><a <?php if (strstr($page,"addcategory.php"))
+					{echo "class='active'";}
+					?> href="addcategory.php">addcategory</a></li>
 				<li><a href="#">viewcategory</a></li>
 				<li><a href="#">viewusers</a></li>
 				<li><a href="#">logout</a></li>

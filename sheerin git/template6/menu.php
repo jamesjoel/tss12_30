@@ -1,7 +1,7 @@
 <?php  
  // print_r($_SERVER);
- // echo $_SERVER['PHP_SELF'];
-$page=$_SERVER['PHP_SELF'];
+ //echo $_SERVER['PHP_SELF'];
+ $page=$_SERVER['PHP_SELF'];
  // echo $page;
 // $x="electronics.php";
 // if (strstr($page,$x))
