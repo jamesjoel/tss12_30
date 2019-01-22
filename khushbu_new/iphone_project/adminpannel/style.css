@@ -6,7 +6,6 @@ body{
 #header{
 	height: 100px;
 	width: 100%;
-<<<<<<< HEAD
 	background-color: #04f2de;
 	background-image: url("bg.png");
 }
@@ -15,39 +14,25 @@ body{
 	height:50px;
 	width:100%;
 	background-color:#04f2de;
-=======
-}
-#menu{
-	/*background-image: url("bg.png");*/
-	height:50px;
-	width:100%;
-	/*background-color:#04f2de;*/
->>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
 }
 	
 #inside-header{
 	height: 100px;
 	width: 970px;
 	margin: 0 auto;
-<<<<<<< HEAD
-=======
 	background-color: #04f2de;
 	background-image: url("bg.png");
->>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
 	/*background-color:yellow*/
 }
 #inside-menu{
 	height: 50px;
 	width: 970px;
 	margin: 0 auto;
-<<<<<<< HEAD
 	background-color:#216282;
 	border-radius: 5px;
-=======
-	background-color: #216282;
+	/*background-color: #216282;*/
 	/*background-image: url("bg.png");*/
 	/*border-radius: 5px;*/
->>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
 }
 #logo{
 	height: 40px;
@@ -77,8 +62,6 @@ body{
 	font-size: 14px;
 	border-right: 1px solid #1a394b;
 }
-<<<<<<< HEAD
-=======
 .first-hover:hover{
 	border-radius: 5px 0 0 5px;
 }
@@ -120,4 +103,4 @@ body{
 	height: auto;
 	/*color: #FFF;*/
 }
->>>>>>> 950c405ed542e3687fd563b0f6854eff902bb5e7
+
