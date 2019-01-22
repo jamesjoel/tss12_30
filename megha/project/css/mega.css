@@ -1,0 +1,295 @@
+body{
+	padding: 0;
+	margin: 0;
+	background-color: grey;
+	font-family: Helvetica; 
+}
+span
+{
+	color: white;
+}
+#header{
+	/*background-color: pink;*/
+	height: 400px;
+	width: 100%;
+	/*text-align: center;*/
+}
+#content{
+	/*background-color:green;*/
+	height: 600px;
+	width: 100%;
+	/*border-bottom: 2px solid #333333;*/
+}
+#in-header{
+	background-color: #282832;
+	height: 400px;
+	width: 910px;
+	margin:0 auto;
+
+}
+#in-content{
+	background-color: white;
+	height: 700px;
+	width: 910px;
+	margin:0 auto;
+}
+#left-header{
+	background-color: white;
+	height: 200px;
+	width: 450px;
+	margin-left: 70px;
+	/*float: left;*/
+}
+#right-header{
+	/*background-color:blue;*/
+	height: 200px;
+	width: 300px;
+	float: right;
+	float: bottom;
+	margin-top: -200px;
+	margin-right: 70px;
+	color: white;
+}
+#top-header{
+	background-color:#1c1717;
+	height: 80px;
+	width: 910px;
+	float:top;
+}
+#logo{
+	/*background-color:blue;*/
+	height: 80px;
+	width: 150px;
+	float: left;
+	font-weight: normal;
+	margin-left: 65px;
+	color: white;
+}
+#top-menu ul{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+
+}
+#top-menu ul li{
+	float: right;
+}
+#top-menu ul li a{
+	text-decoration: none;
+	color:blue;
+	display: inline-block;
+	padding: 0px 50px;
+	float: right;
+	margin: 5px;
+
+}
+h2{
+	color: white;
+}
+
+.box{
+	height: 45px;
+	width: 60px;
+	background-color: pink;
+	text-align: center;
+	float: right;
+	margin: 20px;
+	/*margin-top: 43px;*/
+	border-radius: 3px;
+	/*float: left;*/
+}
+.box01
+{
+	height: 100px;
+	width: 140px;
+	/*background-color: red;*/
+	color: white;
+	text-align: center;
+	float:left;
+	margin-left: 65px;
+	margin-top: 20px;
+	/*border-radius: 3px;*/
+	text-align: center;
+	/*float: left;*/
+}
+
+#footer{
+	/*border-top:15px solid #333333;*/
+	margin-top: 10px;
+	width: 100%;
+	height: 100px;
+    border-top: 2px;
+}
+#inside-footer{
+	width: 910px;
+	margin: 0 auto;
+	/*background-color: red;*/
+	height: 100px;
+	border-top: 3px solid #b2b2b2;
+	/*border-top:red 2px;*/
+}
+#left-content{
+	/*background-color:pink;*/
+	height: 550px;
+	width: 300px;
+	float: left;
+	margin-top: 15px;
+}
+#right-content{
+	/*background-color:yellow;*/
+	height: 550px;
+	width: 530px;
+	float: right;
+	/*border-radius: 2px color red;*/
+	/*margin: 2px 2px;*/
+	margin-top: 15px;
+	margin-right: 25px;
+	border-bottom: 2px solid #333333;
+	
+}
+#top-menu{
+	width:650px;
+	height: 50px;
+	background-color:#1c1717;
+	float: right;
+	padding-top: 30px;
+	margin-right: 20px;
+}
+#right1{
+	background-color: #e23636;
+	width: 263px;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: -14px;
+}
+#right1 h1{
+	margin-left: 47px; 
+	margin-top: 45px;
+}
+.content-box{
+	height: 155px;
+	width: 150px;
+	float:right;
+	background-color:grey;
+	margin: 10px;
+}
+.image{
+	height: 135px;
+	width: 150px;
+	background-color:white;
+	float: right;
+}
+
+.price{
+	height: 20px;
+	width: 150px;
+	background-color:black;
+	margin:0 auto;
+	/*float: right;*/
+}
+#h4{
+	color:white;
+	margin-left: 60px;
+	float:right;
+}
+i{
+   padding:100px;
+}
+#left-menu{
+	/*background-color: red;*/
+	/*margin: 0 auto;*/
+	width: 300px;
+	height: 550px;
+	text-align: center;
+}
+h3{
+	margin: 0;
+	padding: 12px;
+	background-color: #b2b2b2;
+}
+#left-menu ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+#left-menu ul li a{
+	text-decoration: none;
+	color:white;
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #b2b2b2;
+	font-size: 13px;
+	color:black;
+}
+#left-menu ul li a:hover{
+	background-color: #333333;
+	color: #FFF;
+}
+#inside-footer2{
+	width: 200px;
+	height: 50px;
+	background-color:white;
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 35px;
+
+}
+.logo1
+{
+	height: 40px;
+	width: 30px;
+	/*background-color: red;*/
+	border-radius: 50px;
+	float: left;
+	/*margin: 5px;*/
+	padding-left: 20px;
+}
+.logo1:hover{
+	background-color:#877f7f;
+}
+#inside-footer-right{
+	width: 350px;
+	height: 100px;
+	/*background-color: pink;*/
+	float: right;
+
+}
+
+#inside-footer-left{
+	width: 350px;
+	height: 100px;
+	/*background-color: pink;*/
+	float: left;
+	padding-left: 15px;
+}
+.image1{
+	height: 35px;
+	width: 40px;
+	/*background-color:white;*/
+	float: right;
+	padding-right: 5px;
+}
+.logobox{
+	height: 200px;
+	width: 200px;
+	background-color: #e5dcdc;
+	margin: 0 auto;
+	padding-left: 50px;
+}
+.registerbox{
+	height: 400px;
+	width: 400px;
+	background-color: #e5dcdc;
+	margin: 0 auto;
+	padding-left: 130px;
+	padding-top: 30px;
+}
+.add-to-card{
+	/*background-color:;*/
+	width: 85px;
+	height: 20px;
+	float:right; 
+	border-radius: 5px;
+	color: white;
+}
