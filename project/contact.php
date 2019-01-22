@@ -1,4 +1,5 @@
 <?php
+include("connect.php");
 include("header.php");
 ?>
 			<div id="right-content-bottom">
