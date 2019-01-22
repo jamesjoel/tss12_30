@@ -9,8 +9,9 @@ include("connect.php");
 
 $query="SELECT * FROM user WHERE username='$u'";
 echo $query;
+// die;
 $result=mysqli_query($con,$query);
-
+// echo mysqli_num_rows($result);die;
 if(mysqli_num_rows($result)==1)
 	{
 	$data = mysqli_fetch_assoc($result);
