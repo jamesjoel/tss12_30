@@ -53,14 +53,14 @@
 <div id="menu">
 	<div id="inside-menu">
 		<div id="in-menu1">
-		<input type="text" style="height:25px"
+		<input type="text"style="height:25px"
 	"width:200px" style="border:1px solid #000 ">search<input type="button" value="Go"></div>
 		<div id="in-menu2">
 		 <ul><li><a <?php if(strstr($page,"index.php")){echo "class='active'";} ?>  href="index.php">Home</a></li> 
-		    <li><a <?php if(strstr($page,"login.php")){echo "class='active'";} ?>href="login.php">&nbsp&nbsplogin&nbsp&nbsp</a></li>
-	        <li><a <?php if(strstr($page,"sign.php")){echo "class='active'";} ?> href="sign.php">&nbsp&nbspsignup&nbsp&nbsp</a></li>
-	    	<li><a  href="#">&nbsp&nbspNewProduct&nbsp&nbsp</a></li>
-			<li><a href="#">&nbsp&nbspmycart(0)&nbsp&nbsp</a></li>
+		    <li><a <?php if(strstr($page,"login.php")){echo "class='active'";} ?>href="login.php">login</a></li>
+	        <li><a <?php if(strstr($page,"sign.php")){echo "class='active'";} ?> href="sign.php">signup</a></li>
+	    	<li><a  href="#">NewProduct</a></li>
+			<li><a href="#">mycart(0)</a></li>
 		</ul>
 		</div>
 	</div>
@@ -74,18 +74,18 @@
 				BROWSE BY CATEGORIES</h4></div>
 				<div id="top-sub-con12">
 				<ul>
-					<li><a href="#">Desktop</li>
-					<hr><li><a href="#">Cables</li>
-					<hr><li><a href="#">Notebooks</li>
-					<hr><li><a href="#">Memory</li>
-					<hr><li><a href="#">Networking</li>
-					<hr><li><a href="#">storage</li>
-					<hr><li><a href="#">PDS's</li>
-					<hr><li><a href="#">Fax-Machines</li>
-					<hr><li><a href="#">Audio hi-wi</li>
-					<hr><li><a href="#">Video hi-wi</li>
-					<hr><li><a href="#">Hardware & software</li>
-					<hr><li><a href="#">All producte</li>
+					<li><a href="#">Desktop</a></li>
+					<hr><li><a href="#">Cables</a></li>
+					<hr><li><a href="#">Notebooks</a></li>
+					<hr><li><a href="#">Memory</a></li>
+					<hr><li><a href="#">Networking</a></li>
+					<hr><li><a href="#">storage</a></li>
+					<hr><li><a href="#">PDS's</a></li>
+					<hr><li><a href="#">Fax-Machines</a></li>
+					<hr><li><a href="#">Audio hi-wi</a></li>
+					<hr><li><a href="#">Video hi-wi</a></li>
+					<hr><li><a href="#">Hardware & software</a></li>
+					<hr><li><a href="#">All producte</a></li>
 				</ul><hr>
 				</div>
 			</div>
@@ -106,4 +106,5 @@
 				
 					<div id="top-con22">
 					<h5 style="margin-top:5px;padding-top:10px" >FEATURES PRODUCTS</h5>
+				
 				</div>

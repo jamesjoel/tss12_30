@@ -1,0 +1,149 @@
+body{
+	background-color: #ababab;
+	font-family: helvetica;
+	margin: 0px;
+	padding: 0px;
+}
+#header{
+	/*background-color: red;*/
+	height: 120px;
+	width: 100%;
+}
+	#in-header{
+		background-color:#171e2e;
+		height: 120px;
+		width: 910px;
+		margin: 0 auto;
+		
+	}
+	#logo{
+
+		/*background-color: red;*/
+		height: 120px;
+		width: 250px;
+		display:inline-block;
+		padding-left: 24px;
+		margin-top: 24px;
+
+	}
+	#logo h2{
+		display: inline-block;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#logo p{
+		margin: 0px;
+		padding: 0px;
+		font-size: 12px;
+		color: #fff;
+	
+	}
+	#logo2
+	{
+		/*background-color: yellow;*/
+		height: 120px;
+		width: 500px;
+		float: right;
+	
+	}
+	#logo2top{
+		/*background-color: red;*/
+		height: 60px;
+		width: 500;
+		
+	}
+	#logo2bottom{
+		/*background-color: white;*/
+		height: 60px;
+		width: 500px;
+	}
+
+	#logo2top ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+	#logo2top ul li{
+		float: right;
+		color: #fff;
+	}
+
+	#logo2top ul li a{
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 20px;
+		padding-top: 35px;
+	
+	}
+	#logo2bottom ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		
+	}
+	#logo2bottom ul li{
+		float: right;
+	}
+	#logo2bottom ul li a{
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 12px;
+
+	}
+#menu{
+	/*background-color: blue;*/
+	height: 70px;
+	width: 100%;
+}
+	#in-menu{
+		background-color: #ababab;
+		height: 70px;
+		width: 910px;
+		margin: 0 auto;
+	}
+	#in-menu a{
+		text-decoration: none;
+		/*margin-top: 10px;*/
+		padding-top: 20px;
+		display: inline-block;
+		margin-left: 17px;
+	}
+	#menuright{
+		height: 70px;
+		width: 750px;
+		float: right;
+		background-color: #125577;
+	}
+	#menuright ul{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+	#menuright ul li{
+		float: left;
+	}
+	#menuright ul li a{
+		text-decoration: none;
+		display: inline-block;
+		margin-left: 10px;
+		font-size: 17px;
+		padding-top: 15px;
+		margin: 10px 55px;
+	}
+#content{
+	background-color: #ababbb;
+	height: 250px;
+	width: 100%;
+	margin: 20px;
+}
+	
+
+#footer{
+	background-color: #ababab;
+	height: 250px;
+	width: 100%;
+	margin: 20px;
+}
+	
