@@ -24,6 +24,15 @@ overflow:hidden;
 	height:auto;
 	border-radius: 30px;
 }
+#viewproductdetail
+{
+	/*border:2px solid white;*/
+	/*height:500px;*/
+	width:600px;
+	min-height:400;
+	margin:0px auto;
+	height:auto;
+}
 
 #registration-table
 {	
@@ -34,6 +43,17 @@ overflow:hidden;
 	border-radius: 5px;
 	height:30px;
 	width:200;
+}
+#tab1
+{
+	color:white;
+	border-collapse: collapse;
+}
+#tab1 tr td,#tab1 tr th
+{
+border:2px solid white;
+padding:10px 7px;
+font-size: 16px;
 }
 .btn{
 	background-color:#FFFF00;

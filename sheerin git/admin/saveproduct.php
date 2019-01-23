@@ -12,9 +12,9 @@ $con=mysqli_connect("localhost","root","","database");
 $query="insert into addproduct
 (productname,productprice,detail,category,discount)
 values('$a',$b,'$c','$d',$e)";
-// echo $query;
-$n=mysqli_query($con,$query);
-// echo "<br>";
-// echo $n;
-header("location:addproduct.php");
+echo $query;
+$result=mysqli_query($con,$query);
+echo "<br>";
+echo $result;
+// header("location:addproduct.php");
 ?>

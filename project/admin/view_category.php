@@ -7,7 +7,7 @@ if(!isset($_SESSION['is_admin_logged_in']))
 
 include("header.php");
 
-$query = "SELECT * FROM product";
+$query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
 ?>	
 <div id="content">
@@ -17,10 +17,7 @@ $result = mysqli_query($con, $query);
 		<table class="tab" align="center">
 			<tr>
 				<th>S.No.</th>
-				<th>Product Name</th>
-				<th>Product Price</th>
-				<th>Category</th>
-				<th>Discount</th>
+				<th>Category Name</th>
 			</tr>
 			
 			<?php
@@ -28,10 +25,7 @@ $result = mysqli_query($con, $query);
 			{ ?>
 				<tr>
 					<td><?php echo $data['id'];?></td>
-					<td><?php echo $data['product_name'];?></td>
-					<td><?php echo $data['product_price'];?></td>
-					<td><?php echo $data['category'];?></td>
-					<td><?php echo $data['discount'];?></td>
+					<td><?php echo $data['name'];?></td>
 				</tr>
 
 

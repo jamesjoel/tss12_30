@@ -7,7 +7,9 @@ if(! isset($_SESSION['is_user_logged_in']))
 include("header.php");
 ?>
 			<div id="right-content-bottom">
-				<h3>Welcome : <?php echo $_SESSION['name'] ?></h3>
+				<h3>Welcome : <?php echo $_SESSION['name'] ?>
+					
+				</h3>
 				
 			</div>
 		</div>
