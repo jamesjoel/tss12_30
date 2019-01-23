@@ -6,7 +6,8 @@ $page = $_SERVER['PHP_SELF'];
 // {
 // 	echo "hello";
 // }
-
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
 
 ?>
 <!DOCTYPE html>
@@ -64,11 +65,15 @@ $page = $_SERVER['PHP_SELF'];
 	<div id="inside-content">
 		<div id="left-content">
 			<ul>
-				<li><a href="#">Electronics</a></li>
-				<li><a href="#">Home Appliance</a></li>
-				<li><a href="#">Mobile</a></li>
-				<li><a href="#">Fashion Mens</a></li>
-				<li><a href="#">Fashion Womens</a></li>
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{ ?>
+
+					<li><a href="#"><?php echo $data['name']; ?></a></li>
+				<?php
+				}
+				?>
+				
 			</ul>
 		</div>
 		<div id="right-content">

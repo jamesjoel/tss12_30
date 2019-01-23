@@ -44,6 +44,7 @@ body{
 	min-height: 600px;
 	background-color: #ABB120;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 #content h3{
 	margin: 0;
@@ -54,7 +55,8 @@ body{
 	width: 500px;
 	border-radius: 8px;
 	box-shadow: 10px 10px 10px #000;
-	margin: 20px auto;
+	margin: 0px auto;
+
 	border:1px solid #6b6767;
 	min-height: 150px;
 	padding: 10px;
