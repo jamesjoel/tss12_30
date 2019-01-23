@@ -1,6 +1,16 @@
 <?php
 include("../connect.php");
+if(!isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
+
+
 include("header.php");
+$query = "SELECT * FROM category";
+$result = mysqli_query($con, $query);
+
+
 ?>	
 <div id="content">
 	<h3>Add New Product</h3>
@@ -30,11 +40,13 @@ include("header.php");
 			<td>Product Category</td>
 			<td><select class="input" name="pro_cate">
 				<option>Select</option>
-				<option>Electronics</option>
-				<option>Home Appliance</option>
-				<option>Mobile</option>
-				<option>Fashion Men</option>
-				<option>Fashion Women</option>
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{ ?>
+					<option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
+				<?php
+				}
+				?>
 			</select></td>
 		</tr>
 		<tr>
