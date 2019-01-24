@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>AdminPannel</title>
+	<title></title>
 </head>
 <body>
+	<h2>Adminpanel</h2>
 
 </body>
 </html>

@@ -18,6 +18,8 @@ $result = mysqli_query($con, $query);
 			<tr>
 				<th>S.No.</th>
 				<th>Category Name</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</tr>
 			
 			<?php
@@ -26,6 +28,8 @@ $result = mysqli_query($con, $query);
 				<tr>
 					<td><?php echo $data['id'];?></td>
 					<td><?php echo $data['name'];?></td>
+					<td><a href="#">Edit</a></td>
+					<td><a href="#">Delete</a></td>
 				</tr>
 
 

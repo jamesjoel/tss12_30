@@ -1,13 +1,7 @@
 <?php
 $page = $_SERVER['PHP_SELF'];
-// $x = "about.php";
-
-// if(strstr($page, $x))
-// {
-// 	echo "hello";
-// }
-$query = "SELECT * FROM category";
-$result = mysqli_query($con, $query);
+$query_cate = "SELECT * FROM category";
+$result_cate = mysqli_query($con, $query_cate);
 
 ?>
 <!DOCTYPE html>
@@ -66,10 +60,10 @@ $result = mysqli_query($con, $query);
 		<div id="left-content">
 			<ul>
 				<?php
-				while($data=mysqli_fetch_assoc($result))
+				while($data_cate=mysqli_fetch_assoc($result_cate))
 				{ ?>
 
-					<li><a href="#"><?php echo $data['name']; ?></a></li>
+					<li><a href="#"><?php echo $data_cate['name']; ?></a></li>
 				<?php
 				}
 				?>
