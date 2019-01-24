@@ -1,6 +1,12 @@
 <?php
 include("../connect.php");
+if(!isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
+
 // print_r($_POST);
+// die;
 $a = $_POST['product_name'];
 $b = $_POST['product_price'];
 $c = $_POST['detail'];

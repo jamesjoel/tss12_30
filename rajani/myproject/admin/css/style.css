@@ -41,6 +41,7 @@ body{
 	border-bottom: 1px solid #000;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 #sub-content{
@@ -51,6 +52,10 @@ body{
 	margin: 0 auto;
 	/*border-bottom: 1px solid red;*/
 }
+#sub-content h3{
+	margin: 0px;
+	padding: 0px;
+}
 #sub-footer{
 	height: 100px;
 	width: 910px;
@@ -60,7 +65,7 @@ body{
 #sub-menu ul{
 	list-style: none;
 	margin: 0px;
-	padding: 0;
+	padding: 0px;
 	color:#000;
 
 }
@@ -75,13 +80,27 @@ body{
 #sub-menu ul li a{
 	text-decoration: none;
 	color:#000;
-
+	display:inline-block;
+	background-color: red;
+	padding:10px;
 }
 
 #sub-menu ul li a:hover{
-	
-	border-bottom:  1px solid #000;
-}
+	border-bottom: 2px solid #fff;
+	}
 .active{
-	background-color: #fff;
+	border-bottom: 2px solid #fff;
+}
+.input{
+
+margin: 5px;
+padding:5px;
+}
+.table{
+	border-collapse: collapse;
+}
+.table tr td, .table tr th{
+	border:1px solid #000;
+	padding: 5px 7px;
+	font-size: 14px;
 }

@@ -6,12 +6,31 @@
 			 <input type="text" placeholder="search for products brands and more"><p>search</p>
 		</div>
 		<div id="inside-header-right">
+			<?php
+		if(isset($_SESSION["user_loged_in"]))
+			{
+			?>
+			<ul>
+				<li><a href="#"><?php echo $_SESSION["name"];?></a></li>
+				<li><a href="myaccount.php">myaccount</a></li>
+				<li><a href="#">more</a></li>
+				<li><a href="#">cart</a></li>
+				<li><a href="logout.php">logout</a></li>
+			</ul>
+			<?php
+			}
+			else
+			{
+			?>
 			<ul>
 				<li><a href="login.php">login</a></li>
 				<li><a href="registration.php">createmyaccount</a></li>
 				<li><a href="#">more</a></li>
 				<li><a href="#">cart</a></li>
 			</ul>
+			<?php
+			}	
+			?>
 		</div>
 		</div>
 	</div>

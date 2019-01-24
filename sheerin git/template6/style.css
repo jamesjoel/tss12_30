@@ -1,8 +1,10 @@
+
 body
 {
 	margin: 0;
 	padding: 0;
 	font-family: Helvetica;
+	/*background-color:red;*/
 }
 #maindetail
 {
@@ -23,6 +25,7 @@ overflow:hidden;
 	border-radius: 30px;
 }
 
+
 #registration-table
 {	
 	color:white;
@@ -30,6 +33,7 @@ overflow:hidden;
 #registration-table input
 {
 	border-radius: 5px;
+	height:30px;
 }
 
 #header
@@ -375,5 +379,12 @@ height:160px;
 width:1300px;
 background-color:black;
 margin:0 auto;
+
+}
+.error
+{
+	text_align:center;
+	background-color:red;
+	font-size:14px;
 
 }
