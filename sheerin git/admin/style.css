@@ -20,7 +20,7 @@ overflow:hidden;
 	border:2px solid white;
 	/*height:500px;*/
 	width:400px;
-	margin:0px auto;
+	margin:30px auto;
 	height:auto;
 	border-radius: 30px;
 }
@@ -30,7 +30,7 @@ overflow:hidden;
 	/*height:500px;*/
 	width:600px;
 	min-height:400;
-	margin:0px auto;
+	margin:30px auto;
 	height:auto;
 }
 
@@ -54,6 +54,10 @@ overflow:hidden;
 border:2px solid white;
 padding:10px 7px;
 font-size: 16px;
+}
+#tab1 tr td a
+{
+	color:white;
 }
 .btn{
 	background-color:#FFFF00;

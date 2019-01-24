@@ -3,11 +3,12 @@
 // die;
 $a=$_POST["categoryname"];
 
-$con=mysqli_connect("localhost","root","","database");
+include("../template6/connection.php");
 $query="insert into addcategory(categoryname)values('$a')";
 // echo $query;
 $n=mysqli_query($con,$query);
 // echo "<br>";
 // echo $n;
+$_SESSION['msg']="A category Added Successfully";
  header("location:addcategory.php");
 ?>
