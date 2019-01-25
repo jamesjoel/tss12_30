@@ -23,8 +23,8 @@ $page = $_SERVER['PHP_SELF'];
 				<li><a href="add_product.php">add product</a></li>
 				<li><a href="view_product.php">view product</a></li>
 				<li><a href="add_category.php">add category</a></li>
-				<li><a href="#">view category</a></li>
-				<li><a href="#">logout</a></li>
+				<li><a href="view_category.php">view category</a></li>
+				<li><a href="logout.php">logout</a></li>
 			</ul>
 		</div>
 	</div>

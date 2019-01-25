@@ -1,29 +1,11 @@
 <?php
 include("../connect.php");
-if(!isset($_SESSION['is_admin_logged_in']))
-{
-	header("location:index.php");
-}
-
-
 include("header.php");
-$query = "SELECT * FROM category";
+$query = "SELECT * FROM add_category";
 $result = mysqli_query($con, $query);
+// die;
+?>
 
-
-?>	
-<div id="content">
-	<h3>Add New Product</h3>
-	<?php
-	if(isset($_SESSION['msg']))
-	{
-		echo $_SESSION['msg'];
-		unset($_SESSION['msg']);
-	}
-	?>
-<?php
-include("header.php");
-?>	
 <div id="content">
 	<div id="inside-content">
 	<h2>ADD NEW PRODUCT</h2>
@@ -49,16 +31,14 @@ include("header.php");
 				<option>Select</option>
 				<?php
 				while($data=mysqli_fetch_assoc($result))
-				{ ?>
-					<option value="<?php echo $data['id']; ?>"><?php echo $data['name']; ?></option>
+				{
+				?>
+
+				<option value="<?php echo $data['id'];?>"><?php echo $data['product_category'];?></option>
 				<?php
 				}
 				?>
-				<!-- <option>iphone</option> -->
-				<!-- <option>android phone</option> -->
-				<!-- <option>tablet</option> -->
-				<!-- <option>pendrive</option> -->
-				<!-- <option>cables</option> -->
+
 			</select></td>
 		</tr>
 		<tr>

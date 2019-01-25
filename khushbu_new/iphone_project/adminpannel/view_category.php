@@ -1,25 +1,21 @@
 <?php
 include("../connect.php");
-if(!isset($_SESSION['is_admin_logged_in']))
-{
-	header("location:index.php");
-}
-
 include("header.php");
 
-$query = "SELECT * FROM category";
+$query = "SELECT * FROM add_category";
 $result = mysqli_query($con, $query);
-?>	
-<div id="content">
-	<h3>View All Product</h3>
-	
+// die;
+?>
+<div id="inside-content">
+	<h2>VIEW CATEGORY</h2>
+	<hr>
+
 	<div id="login-box">
+	<table align="center">
 		<table class="tab" align="center">
 			<tr>
 				<th>S.No.</th>
-				<th>Category Name</th>
-				<th>Edit</th>
-				<th>Delete</th>
+				<th>category_name</th>
 			</tr>
 			
 			<?php
@@ -27,11 +23,8 @@ $result = mysqli_query($con, $query);
 			{ ?>
 				<tr>
 					<td><?php echo $data['id'];?></td>
-					<td><?php echo $data['name'];?></td>
+					<td><?php echo $data['product_category'];?></td>
 				</tr>
-
-
-
 			<?php
 			}
 			?>
