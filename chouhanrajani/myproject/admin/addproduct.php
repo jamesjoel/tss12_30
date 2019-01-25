@@ -34,11 +34,12 @@ include("header.php");
 						</tr>
 						<tr>
 							<td>discount</td>
-							<td><input type="text" name="productdiscount" class="input" style="margin: 5px;"style="padding:5px;"  /></td>
+							<td><input type="text" name="productdiscount" class="input" 
+							 /></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="center">
-								<input id="button" type="submit" value="Login" style="margin: 5px;"style="padding:5px;" style="background-color: #EBE9EA"/>
+								<input id="button" type="submit" value="Login"/>
 							</td>
 						</tr>
 					</table>

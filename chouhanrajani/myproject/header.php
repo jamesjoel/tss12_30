@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>HELLO</title>
+	<title>homepage-index</title>
 	<link rel="stylesheet" type="text/css" href="css\style.css">
 </head>
 <body>
@@ -75,16 +75,11 @@
 				<div id="top-sub-con12">
 				<ul>
 					<li><a href="#">Desktop</a></li>
-					<hr><li><a href="#">Cables</a></li>
 					<hr><li><a href="#">Notebooks</a></li>
 					<hr><li><a href="#">Memory</a></li>
 					<hr><li><a href="#">Networking</a></li>
-					<hr><li><a href="#">storage</a></li>
-					<hr><li><a href="#">PDS's</a></li>
-					<hr><li><a href="#">Fax-Machines</a></li>
-					<hr><li><a href="#">Audio hi-wi</a></li>
-					<hr><li><a href="#">Video hi-wi</a></li>
-					<hr><li><a href="#">Hardware & software</a></li>
+					<hr><li><a href="#">Fashion</a></li>
+					<hr><li><a href="#">Mobile</a></li>
 					<hr><li><a href="#">All producte</a></li>
 				</ul><hr>
 				</div>
