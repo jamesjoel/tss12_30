@@ -1,5 +1,5 @@
 <?php
 
-$con = mysqli_connect("localhost", "root", "", "ssproject");
+$con = mysqli_connect("localhost", "root", "", "ssproject);
 session_start();
 ?>
