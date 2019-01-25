@@ -439,7 +439,7 @@ text-align: center;
 
 }
 .error{
-<<<<<<< HEAD
+
 	color:red;
 	text-align: center;
 }
@@ -447,11 +447,9 @@ text-align: center;
 	 margin: 5px;
 	 padding:5px;
 	 background-color: #EBE9EA 
-=======
 	color: #ababab;
 	text-align: center;
 	font-size: 12px;
->>>>>>> e7f8a8c595bbf1b39482541aed93d7a04224a025
 }
 
 

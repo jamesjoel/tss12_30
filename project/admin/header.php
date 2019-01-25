@@ -16,7 +16,7 @@ $page = $_SERVER['PHP_SELF'];
 			<li><a href="view_product.php" <?php if(strstr($page, "view_product.php")){ echo "class='active'"; } ?>>View Product</a></li>
 			<li><a href="add_category.php" <?php if(strstr($page, "add_category.php")){ echo "class='active'"; } ?>>Add Category</a></li>
 			<li><a href="view_category.php" <?php if(strstr($page, "view_category.php")){ echo "class='active'"; } ?>>View Category</a></li>
-			<li><a href="#" <?php if(strstr($page, "view_users.php")){ echo "class='active'"; } ?>>View Users</a></li>
+			<li><a href="view_users.php" <?php if(strstr($page, "view_users.php")){ echo "class='active'"; } ?>>View Users</a></li>
 			<li><a href="logout.php">Logout</a></li>
 		</ul>
 	</div>

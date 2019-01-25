@@ -1,5 +1,12 @@
 <?php
 include("header.php");
+include("../template6/connection.php");
+
+if(!isset($_SESSION['admin_loged_in']))
+{
+    header("location:index.php");
+}
+
 include("menu.php");
 ?>
 <!DOCTYPE html>
@@ -11,6 +18,7 @@ include("menu.php");
 <body>
 		<div id="maindetail" >    
         <div id="detail">
+        <h3 align="center">Add New category</h3>
     <form method="post" action="savecategory.php" >
     <table id="registration-table"  align="center" cellspacing="10px" cellpadding="10px">
         <tr>
@@ -25,6 +33,16 @@ include("menu.php");
         </tr>
     </table>
 </form>
+
+<p align="center">
+    <?php
+    if(isset($_SESSION['msg']))
+    {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+    }
+    ?>
+</p>
     </div>
     </div>
     </body>

@@ -1,60 +1,39 @@
 <?php
 include("connect.php");
 include("header.php");
+
+
+$query_pro = "SELECT * FROM product";
+
+$result_pro = mysqli_query($con, $query_pro);
+
 ?>
 			<div id="right-content-bottom">
 				<h3>New Products</h3>
+				<?php
+				while($data_pro = mysqli_fetch_assoc($result_pro))
+				{
+					$discount = $data_pro['discount'];
+					$price = $data_pro['product_price'];
+					$x = $price*$discount/100;
+					$new_price=$price-$x;
+				?>
+
 				<div class="product-box">
 					<div class="product-box-top">
 						<img src="images/1.jpg" />
 					</div>
 					<div class="product-box-bottom">
-						<p>New Saree</p>
-						<p class="old_price">$ 800.00</p>
-						<p class="new_price">$ 600.00</p>
+						<p><?php echo $data_pro['product_name']; ?></p>
+						<p class="old_price">$ <?php echo $data_pro['product_price']; ?></p>
+						<p class="new_price">$ <?php echo $new_price; ?>.00</p>
+						<a href="#" class="view-more-btn">View More</a>
 					</div>
 				</div>
-				<div class="product-box">
-					<div class="product-box-top">
-						<img src="images/2.jpeg" />
-					</div>
-					<div class="product-box-bottom">
-						<p>New Saree</p>
-						<p class="old_price">$ 800.00</p>
-						<p class="new_price">$ 600.00</p>
-					</div>
-				</div>
-				<div class="product-box">
-					<div class="product-box-top">
-						<img src="images/3.jpeg" />
-					</div>
-					<div class="product-box-bottom">
-						<p>New Saree</p>
-						<p class="old_price">$ 800.00</p>
-						<p class="new_price">$ 600.00</p>
-					</div>
-				</div>
-				<div class="product-box">
-					<div class="product-box-top">
-						<img src="images/4.jpeg" />
-					</div>
-					<div class="product-box-bottom">
-						<p>New Saree</p>
-						<p class="old_price">$ 800.00</p>
-						<p class="new_price">$ 600.00</p>
-					</div>
-				</div>
-				<div class="product-box">
-					<div class="product-box-top">
-						<img src="images/5.jpeg" />
-					</div>
-					<div class="product-box-bottom">
-						<p>New Saree</p>
-						<p class="old_price">$ 800.00</p>
-						<p class="new_price">$ 600.00</p>
-					</div>
-				</div>
-
+				
+			<?php 
+			}
+			?>
 			</div>
 		</div>
 	</div>
