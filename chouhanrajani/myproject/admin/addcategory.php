@@ -9,11 +9,13 @@ include("header.php");
 				<table align="center">
 						<tr>
 							<td>category name</td>
-							<td><input type="text" name="productname" class="input" style="margin: 5px;" style="padding:5px;" /></td>
+							<td><input type="text" name="productname" class="input" 
+							 /></td>
 						</tr>
 						<tr>
 							<td colspan="2" align="center">
-								<input id="button" type="submit" value="Add" style="margin: 5px;"style="padding:5px;" style="background-color: #EBE9EA"/>
+								<input id="button" type="submit" value="Add" 
+								/>
 							</td>
 						</tr>
 					</table>

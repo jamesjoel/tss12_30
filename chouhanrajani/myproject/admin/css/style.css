@@ -10,12 +10,12 @@ body{
 	/*background-color: red;*/
 }
 #menu{
-	height: 50px;
+	height: 40px;
 	width: 100%;
 	/*background-color: yellow;*/
 }
 #content{
-	height: 500px;
+	height: 450px;
 	width: 100%;
 	/*background-color: blue;*/
 }
@@ -31,7 +31,7 @@ body{
 	margin: 0 auto;
 }
 #sub-menu{
-	height: 50px;
+	height: 40px;
 	width: 910px;
 	background-color: #abfeab;
 	margin:0 auto;
@@ -45,7 +45,7 @@ body{
 }
 
 #sub-content{
-	min-height:500px;
+	min-height:450px;
 	height: auto;
 	width: 910px;
 	background-color: #aabb11;
@@ -72,8 +72,8 @@ body{
 #sub-menu ul li{
 	text-decoration: none;
 	float:right;
-	margin: 20px;
-	padding: 0;
+	margin: 7px;
+	padding-right: 10px;
 	color:#000;
 			
 }
@@ -81,8 +81,9 @@ body{
 	text-decoration: none;
 	color:#000;
 	display:inline-block;
-	background-color: red;
-	padding:10px;
+	background-color: #11ffbb;
+	margin-right: 15px;
+	padding-bottom: 13px;
 }
 
 #sub-menu ul li a:hover{

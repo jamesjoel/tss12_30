@@ -181,7 +181,7 @@ body{
 }
 .product-box{
 	/*background-color: green;*/
-	height: 180px;
+	height: 200px;
 	width: 150px;
 	float: left;
 	margin: 8px 5px;
@@ -256,5 +256,13 @@ body{
 .error{
 	color: red;
 	text-align: center;
+	font-size: 14px;
+}
+.view-more-btn{
+	background-color: #E00038;
+	color: #FFF;
+	padding: 3px 7px;
+	border-radius: 3px;
+	text-decoration: none;
 	font-size: 14px;
 }
