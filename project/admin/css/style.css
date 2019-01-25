@@ -89,3 +89,21 @@ body{
 	padding: 5px 7px;
 	font-size: 14px;
 }
+.edit-btn{
+	background-color: #5e85f2;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
+.delete-btn{
+	background-color: #f25757;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
+.change-btn{
+	background-color: #47b731;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}

@@ -27,6 +27,7 @@ $result_pro = mysqli_query($con, $query_pro);
 						<p><?php echo $data_pro['product_name']; ?></p>
 						<p class="old_price">$ <?php echo $data_pro['product_price']; ?></p>
 						<p class="new_price">$ <?php echo $new_price; ?>.00</p>
+						<a href="#" class="view-more-btn">View More</a>
 					</div>
 				</div>
 				
