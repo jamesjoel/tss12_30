@@ -1,14 +1,13 @@
-
 <?php
 include("header.php");
 include("../template6/connection.php");
-if(! isset($_SESSION["admin_loged_in"]))
- { //not open myaccount page when not login through login page and redirect to login.
+if(!isset($_SESSION['admin_loged_in']))
+{
     header("location:index.php");
- }
+}
 include("menu.php");
 
-$query="select * from addproduct";
+$query="select * from user";
 $result=mysqli_query($con,$query);
 $n=mysqli_num_rows($result);
 // echo $n;
@@ -28,10 +27,10 @@ if($n>0)
 		<table id="tab1"  align="center">
 			<tr>
 				<th>sno</th>
-				<th>product name</th>
-				<th>product price</th>
-				<th>category</th>
-				<th>discount</th>
+				<th>user name</th>
+				<th>email id</th>
+				<th>contact</th>
+				<th>pincode</th>
 			</tr>
    		<?php
    		while($data=mysqli_fetch_assoc($result))
@@ -40,10 +39,10 @@ if($n>0)
    		 ?>
    		<tr>
    			<td><?php echo $data['id'] ;?></td>
-   			<td><?php echo $data['productname'] ;?></td>
-   			<td><?php echo $data['productprice'] ;?></td>
-   			<td><?php echo $data['category'] ;?></td>
-   			<td><?php echo $data['discount'] ;?></td>
+   			<td><?php echo $data['name'] ;?></td>
+   			<td><?php echo $data['emailid'] ;?></td>
+   			<td><?php echo $data['mno'] ;?></td>
+   			<td><?php echo $data['pincode'] ;?></td>
    		</tr>
 
    		<?php

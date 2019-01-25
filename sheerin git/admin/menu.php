@@ -17,18 +17,27 @@
 					{echo "class='active'";}
 					?>
 						 href="#">dashboard</a></li>
+
 				<li><a <?php if (strstr($page,"addproduct.php"))
 					{echo "class='active'";}
 					?> href="addproduct.php">addproduct</a></li>
+
 				<li><a <?php if (strstr($page,"viewproduct.php"))
 					{echo "class='active'";}
 					?> href="viewproduct.php">viewproduct</a></li>
+
 				<li><a <?php if (strstr($page,"addcategory.php"))
 					{echo "class='active'";}
 					?> href="addcategory.php">addcategory</a></li>
-				<li><a href="#">viewcategory</a></li>
-				<li><a href="#">viewusers</a></li>
-				<li><a href="#">logout</a></li>
+
+				<li><a <?php if (strstr($page,"viewcategory.php"))
+					{echo "class='active'";}
+					?>href="viewcategory.php">viewcategory</a></li>
+
+				<li><a <a <?php if (strstr($page,"viewusers.php"))
+					{echo "class='active'";}
+					?>href="viewusers.php">viewusers</a></li>
+				<li><a href="logout.php">logout</a></li>
 				
 			</ul>
 	</div>
