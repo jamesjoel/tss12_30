@@ -29,7 +29,7 @@ $result = mysqli_query($con, $query);
 				<tr>
 					<td><?php echo $n;?></td>
 					<td><?php echo $data['name'];?></td>
-					<td><a href="#" class="edit-btn">Edit</a></td>
+					<td><a href="edit_cate.php?cid=<?php echo $data['id']; ?>" class="edit-btn">Edit</a></td>
 					<td><a href="delete_cate.php?cid=<?php echo $data['id']; ?>" class="delete-btn">Delete</a></td>
 				</tr>
 
