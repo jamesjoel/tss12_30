@@ -9,11 +9,11 @@ include("header.php");
 	<div id="login-box">
 	<table align="center">
 		<tr>
-			<td>addcategory</td>
+			<td>add category</td>
 			<td><input type="Text" name="product_category" class="input"/></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="center">
+			<td colspan="3" align="center">
 				<input type="submit" value="Add" class="btn">
 			</td>
 		</tr>

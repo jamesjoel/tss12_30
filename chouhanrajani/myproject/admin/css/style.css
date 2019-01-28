@@ -5,17 +5,18 @@ body{
 	font-family: helvetika;
 }
 #header{
-	height: 80px;
+	height: 79px;
 	width: 100%;
 	/*background-color: red;*/
 }
 #menu{
-	height: 50px;
+	height: 70px;
 	width: 100%;
+
 	/*background-color: yellow;*/
 }
 #content{
-	height: 500px;
+	height: 450px;
 	width: 100%;
 	/*background-color: blue;*/
 }
@@ -25,37 +26,35 @@ body{
 	background-color: white;
 }
 #sub-header{
-	height: 80px;
+	height: 79px;
 	width: 910px;
 	background-color: #aabb55;
 	margin: 0 auto;
 }
 #sub-menu{
-	height: 50px;
+	height: 70px;
 	width: 910px;
 	background-color: #abfeab;
 	margin:0 auto;
+	text-align: center;
 	/*border-bottom: 1px solid #000;*/
 }
 #sub-content h3{
 	border-bottom: 1px solid #000;
-	margin: 0;
-	padding: 0;
+	margin: 0px;
+	padding: 20px;
 	text-align: center;
 }
 
 #sub-content{
-	min-height:500px;
+	min-height:450px;
 	height: auto;
 	width: 910px;
 	background-color: #aabb11;
 	margin: 0 auto;
 	/*border-bottom: 1px solid red;*/
 }
-#sub-content h3{
-	margin: 0px;
-	padding: 0px;
-}
+
 #sub-footer{
 	height: 100px;
 	width: 910px;
@@ -64,6 +63,7 @@ body{
 }
 #sub-menu ul{
 	list-style: none;
+
 	margin: 0px;
 	padding: 0px;
 	color:#000;
@@ -72,8 +72,9 @@ body{
 #sub-menu ul li{
 	text-decoration: none;
 	float:right;
-	margin: 20px;
-	padding: 0;
+		
+	padding-right: 45px;
+	margin-right: 12px;
 	color:#000;
 			
 }
@@ -81,12 +82,14 @@ body{
 	text-decoration: none;
 	color:#000;
 	display:inline-block;
-	background-color: red;
-	padding:10px;
+	background-color: #11aaab;
+	margin-top: 28px;
+	padding-top: 15px;
 }
 
 #sub-menu ul li a:hover{
 	border-bottom: 2px solid #fff;
+	background-color: #5AFFE2;
 	}
 .active{
 	border-bottom: 2px solid #fff;
@@ -103,4 +106,7 @@ padding:5px;
 	border:1px solid #000;
 	padding: 5px 7px;
 	font-size: 14px;
+}
+.btn{
+	background-color: #123aba;
 }

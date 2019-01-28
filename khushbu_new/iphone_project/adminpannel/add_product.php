@@ -1,6 +1,11 @@
 <?php
+include("../connect.php");
 include("header.php");
-?>	
+$query = "SELECT * FROM add_category";
+$result = mysqli_query($con, $query);
+// die;
+?>
+
 <div id="content">
 	<div id="inside-content">
 	<h2>ADD NEW PRODUCT</h2>
@@ -24,11 +29,16 @@ include("header.php");
 			<td>Product Category</td>
 			<td><select class="input" name="pro_cate">
 				<option>Select</option>
-				<option>iphone</option>
-				<option>android phone</option>
-				<option>tablet</option>
-				<option>pendrive</option>
-				<option>cables</option>
+				<?php
+				while($data=mysqli_fetch_assoc($result))
+				{
+				?>
+
+				<option value="<?php echo $data['id'];?>"><?php echo $data['product_category'];?></option>
+				<?php
+				}
+				?>
+
 			</select></td>
 		</tr>
 		<tr>
