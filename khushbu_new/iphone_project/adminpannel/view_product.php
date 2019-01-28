@@ -19,19 +19,25 @@ $result = mysqli_query($con, $query);
 				<th>Product Price</th>
 				<th>Category</th>
 				<th>Discount</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</tr>
 			
 			<?php
+			$n=1;
 			while($data=mysqli_fetch_assoc($result))
 			{ ?>
 				<tr>
-					<td><?php echo $data['id'];?></td>
+					<td><?php echo $n; ?></td>
 					<td><?php echo $data['product_name'];?></td>
 					<td><?php echo $data['product_price'];?></td>
 					<td><?php echo $data['product_category'];?></td>
 					<td><?php echo $data['product_discount'];?></td>
+					<td><a href="#" class="edit-btn">Edit</a></td>
+					<td><a href="delete_pro.php?pid=<?php echo $data['id']; ?>" class="delete-btn">delete</a></td>
 				</tr>
 			<?php
+			$n++;
 			}
 			?>
 		</table>

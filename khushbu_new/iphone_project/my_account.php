@@ -6,7 +6,10 @@ if(! isset($_SESSION['is_user_logged_in']))
 }
 include("header.php");
 ?>
-			<div id="right-content-bottom">
+<?php
+include("menu.php");
+?>
+			<div style="margin: 0 auto; padding-left: 10px;" id="right-content-bottom">
 				<h3>Welcome user : <?php echo $_SESSION['name'] ?></h3>
 				
 			</div>

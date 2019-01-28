@@ -57,7 +57,7 @@ body{
 	color: #FFF;
 	display: inline-block;
 	text-decoration: none;
-	padding: 16px 30px;
+	padding: 16px 15px;
 	font-weight: bold;
 	font-size: 14px;
 	border-right: 1px solid #1a394b;
@@ -93,7 +93,7 @@ body{
 	/*color: #FFF;*/
 }
 #login-box{
-	width: 400px;
+	width: 500px;
 	/*border-radius: 8px;*/
 	box-shadow: 10px 10px 10px #216282;
 	margin: 60px auto;
@@ -112,5 +112,17 @@ body{
 	padding: 5px 7px;
 	font-size: 14px;
 }
-
-
+.edit-btn{
+	background-color: #1bfbd1;
+	text-decoration: none;
+}
+.delete-btn{
+	background-color: #1bfbd1;
+	text-decoration: none;
+}
+.change-btn{
+	background-color: yellow;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
