@@ -4,7 +4,30 @@ include("header.php");
 <div id="content">
 	<div id="in-content">
 		<div id="right-content">
-			<h3>Login</h3>
+			<h3>login</h3>
+			
+								<div id="login-box">
+									<form action="login.php" method="post">
+									<table align="center">
+										<tr>
+											<td>Username</td>
+											<td><input name="firstname" type="text" class="input" /></td>
+										</tr>
+							
+										<tr>
+											<td>Password</td>
+											<td><input name="password" type="password" class="input" /></td>
+										</tr>
+										
+
+										<tr>
+											<td colspan="2" align="center">
+												<input name="sign" class="btn" type="submit" value="login">
+											</td>
+										</tr>
+									</table>
+								</form>
+								</div>
 		</div>
 		<div id="left-content">
 			<div id="left-menu">
