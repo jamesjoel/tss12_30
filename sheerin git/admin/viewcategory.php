@@ -31,19 +31,21 @@ if($n>0)
 				<th>delete</th>
 			</tr>
    		<?php
+      $n=1;
    		while($data=mysqli_fetch_assoc($result))
    		 // print_r($data);
    			{
    		 ?>
    		<tr>
-   			<td><?php echo $data['id'] ;?></td>
+   			<td><?php echo $n;?></td>
         <td><?php echo $data['categoryname'] ;?></td>
         <td><a href="#">edit</a></td>
-        <td><a href="#">delete</a></td>
+        <td><a href="deletecategory.php?cid=<?php echo $data['id'] ;?>">delete</a></td>
    		
       </tr>
 
    		<?php
+      $n++;
    		}
    		?>
    	</table>
