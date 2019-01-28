@@ -44,6 +44,7 @@ body{
 	min-height: 600px;
 	background-color: #ABB120;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 #content h3{
 	margin: 0;
@@ -54,7 +55,8 @@ body{
 	width: 500px;
 	border-radius: 8px;
 	box-shadow: 10px 10px 10px #000;
-	margin: 20px auto;
+	margin: 0px auto;
+
 	border:1px solid #6b6767;
 	min-height: 150px;
 	padding: 10px;
@@ -78,4 +80,30 @@ body{
 }
 .btn:hover{
 	background-color:  #1F1F1F;
+}
+.tab{
+	border-collapse: collapse;
+}
+.tab tr td, .tab tr th{
+	border:1px solid #FFF;
+	padding: 5px 7px;
+	font-size: 14px;
+}
+.edit-btn{
+	background-color: #5e85f2;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
+.delete-btn{
+	background-color: #f25757;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
+.change-btn{
+	background-color: #47b731;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
 }
