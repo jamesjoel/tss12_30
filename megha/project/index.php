@@ -1,5 +1,6 @@
 <?php
 include("header.php");
+include("menu.php");
 ?>
 <div id="content">
 	<div id="in-content">

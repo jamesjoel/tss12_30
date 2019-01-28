@@ -1,8 +1,13 @@
 
 <?php
 include("header.php");
-include("menu.php");
 include("../template6/connection.php");
+if(! isset($_SESSION["admin_loged_in"]))
+ { //not open myaccount page when not login through login page and redirect to login.
+    header("location:index.php");
+ }
+include("menu.php");
+
 $query="select * from addproduct";
 $result=mysqli_query($con,$query);
 $n=mysqli_num_rows($result);
@@ -13,7 +18,7 @@ if($n>0)
 <!DOCTYPE html>
 <html>
 <head>
-	<title>addproduct</title>
+	<title>viewproduct</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>

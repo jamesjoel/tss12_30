@@ -1,7 +1,13 @@
 <?php
 include("header.php");
+include("../template6/connection.php");
+if(! isset($_SESSION["admin_loged_in"]))
+ { //not open myaccount page when not login through login page and redirect to login.
+    header("location:index.php");
+ }
 include("menu.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +17,8 @@ include("menu.php");
 <body>
 		<div id="maindetail" >    
         <div id="detail">
+    <h3 align="center">Add New Product</h3>
+    
     <form method="post" action="saveproduct.php" >
     <table id="registration-table"  align="center" cellspacing="10px" cellpadding="10px">
         <tr>
@@ -25,13 +33,28 @@ include("menu.php");
             <tr> <td>category</td>
                 <td><select name="category">
                     <option>select</option>
-                    <option>electronics</option>
-                    <option>homeappliances</option>
-                    <option>mobile</option>
-                    <option>menfashion</option>
-                    <option>womenfashion</option>
-                </select> </td>
+
+                    <?php
+                $query="select * from addcategory";
+                $result=mysqli_query($con,$query);
+                $n=mysqli_num_rows($result);
+                // echo $n;
+                if($n>0)
+                {
+
+                    while($data=mysqli_fetch_assoc($result))
+                    // print_r($data);
+                     {
+                    ?>
+        <option value=<?php echo $data['id'] ;?>><?php echo $data['categoryname'] ;?></option>
+                    <?php
+                    }
+                    
+                }
+                     ?>  
+                     </select></td>
             </tr>
+
             <tr> <td>discount</td>
                 <td><input type="text" name="discount"> </td>
             </tr>
@@ -43,6 +66,15 @@ include("menu.php");
          </tr>
     </table>
 </form>
+<p align="center">
+    <?php
+    if(isset($_SESSION['msg']))
+    {
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
+    }
+    ?>
+</p>
     </div>
     </div>
     </body>
