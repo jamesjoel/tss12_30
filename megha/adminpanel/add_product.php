@@ -1,5 +1,5 @@
 <?php
-
+include("../project/connect.php");
 include("header.php");
 ?>	
 <div id="content">
