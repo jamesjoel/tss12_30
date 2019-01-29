@@ -12,11 +12,11 @@ include("header.php")
 	 		  <table align="center">
 	 			<tr>
 	 				<td><b>Add category</b></td>
-	 				<td><input type="text" name="product_category"></td>
+	 				<td><input type="text" name="product_category" class="input"></td>
 	 			</tr>
 	 			<tr>
 	 				<td colspan="2" align="center">
-	 					<input type="submit" value="Add" name="">
+	 					<input type="submit" value="Add" class="btn">
 	 				</td>
 
 	 			</tr>
