@@ -31,22 +31,29 @@ if($n>0)
 				<th>product name</th>
 				<th>product price</th>
 				<th>category</th>
-				<th>discount</th>
+        <th>discount</th>
+        <th>edit</th>
+				<th>delete</th>
 			</tr>
    		<?php
+      $a=1;
    		while($data=mysqli_fetch_assoc($result))
    		 // print_r($data);
    			{
    		 ?>
    		<tr>
-   			<td><?php echo $data['id'] ;?></td>
+   			<td><?php echo $a;?></td>
    			<td><?php echo $data['productname'] ;?></td>
    			<td><?php echo $data['productprice'] ;?></td>
    			<td><?php echo $data['category'] ;?></td>
    			<td><?php echo $data['discount'] ;?></td>
+        <td><a href="#">edit</a></td>
+        <td><a href="deleteproduct.php?pid=<?php echo $data['id'] ;?>">delete</a></td>
+      
    		</tr>
 
    		<?php
+      $a++;
    		}
    		?>
    	</table>

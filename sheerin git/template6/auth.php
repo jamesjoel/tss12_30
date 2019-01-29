@@ -27,11 +27,18 @@ if($n>0)
 	if($data["password"]==md5($p))
 	{
 		// echo"matched";
+		if($data["status"]==1)
+			{
 		$_SESSION["name"]=$data["emailid"];
 		$_SESSION["id"]=$data["id"];
 		$_SESSION["user_loged_in"]=true;
 		 header("location:myaccount.php");
-	
+			}
+		else
+			{
+			$_SESSION["msg"]="user deactivate contact our team";
+			header("location:login.php");
+			}
 	}
 	else
 	{
