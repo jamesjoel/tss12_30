@@ -27,8 +27,8 @@ $result = mysqli_query($con, $query);
 				<tr>
 					<td><?php echo $n;?></td>
 					<td><?php echo $data['product_category'];?></td>
-					<td><a href="#" class="edit-btn">Edit</a></td>
-					<td><a href="delete_cate.php?cid=<?php echo $data['id']; ?>" class="delete-btn">delete</a></td>
+					<td><a href="edit_cate.php?cid=<?php echo $data['id']; ?>"class="edit-btn">Edit</a></td>
+					<td><a href="delete_cate.php?cid=<?php echo $data['id']; ?>"class="delete-btn">delete</a></td>
 				</tr>
 			<?php
 			$n++;
