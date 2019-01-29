@@ -63,7 +63,7 @@ include("menu.php");
 									<table align="center">
 										<tr>
 											<td>Username</td>
-											<td><input type="text" class="input" placeholder="your name" name="username" /></td>
+											<td><input type="text" class="input" placeholder="user@gmail.com" name="username" /></td>
 										</tr>
 										<tr>
 											<td>Password</td>

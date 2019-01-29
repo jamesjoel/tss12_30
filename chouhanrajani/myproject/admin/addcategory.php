@@ -14,7 +14,7 @@ include("header.php");
 						</tr>
 						<tr>
 							<td colspan="2" align="center">
-								<input id="button" type="submit" value="Add" 
+								<input id="button" class="btn" type="submit" value="Add" 
 								/>
 							</td>
 						</tr>

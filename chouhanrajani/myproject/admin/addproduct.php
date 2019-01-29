@@ -1,8 +1,14 @@
 <?php
-include("header.php");
+include("../connect.php");
+if(!(isset($_SESSION["admin_logged_in"])))
+{
+	header("location:index.php");
+}
+include("header.php");	
+$query="SELECT * FROM addcategory";
+$result=mysqli_fetch_assoc($con, $query);
 ?>
 <div id="content">
-	<div id="sub-content">
 
 <h3>Product_information</h3>
 				<form action="saveproduct.php" method="post">
@@ -21,14 +27,19 @@ include("header.php");
 							<td><input type="text" name="detail" class="input"/></td>
 						</tr>
 						<tr>
-							<td>product catogary</td>
+							<td>product category</td>
 							<td><select name="productcategory" class="input">
 								<option>select</option>
-								<option>electronics</option>
-								<option>home applience</option>
-								<option>fashion</option>
-								<option>mobile accessiries</option>
-								<option>beauty product</option>
+								<?php
+					while($data=mysqli_fetch_assoc($result))
+					{?>
+						<option value="<?php echo $data['id'];?>" <?php echo $data['name'];?>>
+						</option>
+
+
+					<?php	
+					}?>
+
 							</select>
 								 </td>
 						</tr>
@@ -44,7 +55,7 @@ include("header.php");
 						</tr>
 					</table>
 				</form>
-				</div>
+			
 				</div>
 
 
