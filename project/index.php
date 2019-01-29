@@ -21,7 +21,7 @@ $result_pro = mysqli_query($con, $query_pro);
 
 				<div class="product-box">
 					<div class="product-box-top">
-						<img src="images/1.jpg" />
+						<img src="upload/<?php echo $data_pro['product_image']; ?>" />
 					</div>
 					<div class="product-box-bottom">
 						<p><?php echo $data_pro['product_name']; ?></p>
