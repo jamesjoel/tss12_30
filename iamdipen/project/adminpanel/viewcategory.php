@@ -17,8 +17,13 @@ die;
  				<th>category_name</th>
  			</tr>
  			<?php
+ 			while($data=mysquli_fetch_assoc($result))
 
- 			?>
+ 			{?>
+ 				<tr>
+ 					<td><?php echo $data['id'];?></td>
+ 					<td><?php echo $data['product_category'];?></td>
+ 				</tr>
  		</table>
  	</div>
 

@@ -22,7 +22,7 @@
 	 			<li><a href="addcategory.php" <?php if(strstr($page, "addcategory.php")){ echo "class='active'"; }?>>add category</a> |</li>
 	 			<li><a href="addproduct.php" <?php if(strstr($page, "addproduct.php")){ echo "class='active'"; }?>>Add product</a> |</li>
 	 			<li><a href="viewproduct.php" <?php if(strstr($page, "viewproduct.php")){ echo "class='active'"; }?>>view product</a> |</li>
-	 			<li><a href="#" <?php if(strstr($page, "viewcategory.php")){ echo "class='active'"; }?>>view category</a> |</li>
+	 			<li><a href="viewcategory.php" <?php if(strstr($page, "viewcategory.php")){ echo "class='active'"; }?>>view category</a> |</li>
 	 			<li><a href="#">logout</a> |</li>
 	 		</ul>
 	 	</div>
