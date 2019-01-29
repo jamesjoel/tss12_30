@@ -16,6 +16,9 @@ die;
  				<th>S.No.</th>
  				<th>category_name</th>
  			</tr>
+ 			<?php
+
+ 			?>
  		</table>
  	</div>
 

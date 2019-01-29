@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<?php
-=======
  <?php
->>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 include("../connect.php");
 include("header.php");
 
 $a = $_GET['cid'];
-$query_cate = "SELECT * FROM category WHERE id = $a";
+$query_cate = "SELECT * FROM add_category WHERE id = $a";
 $result_cate=mysqli_query($con, $query_cate);
 $data_cate=mysqli_fetch_assoc($result_cate);
 // print_r($data_cate);
@@ -22,7 +18,7 @@ $data_cate=mysqli_fetch_assoc($result_cate);
 		<input type="hidden" value="<?php echo $a ?>" name="cid">
 		<tr>
 			<td>Category Name</td>
-			<td><input value="<?php echo $data_cate['name']; ?>" type="Text" name="category_name" class="input"/></td>
+			<td><input value="<?php echo $data_cate['product_category']; ?>" type="Text" name="category_name" class="input"/></td>
 		</tr>
 		
 		<tr>

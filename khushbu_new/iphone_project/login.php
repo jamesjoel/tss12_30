@@ -63,7 +63,11 @@ include("menu.php");
 									<table align="center">
 										<tr>
 											<td>Username</td>
+<<<<<<< HEAD
 											<td><input type="text" class="input" placeholder="your name" name="username" /></td>
+=======
+											<td><input type="text" class="input" placeholder="user@gmail.com" name="username" /></td>
+>>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 										</tr>
 										<tr>
 											<td>Password</td>
