@@ -63,7 +63,7 @@ $result_cate = mysqli_query($con, $query_cate);
 				while($data_cate=mysqli_fetch_assoc($result_cate))
 				{ ?>
 
-					<li><a href="#"><?php echo $data_cate['name']; ?></a></li>
+					<li><a href="index.php?category=<?php echo $data_cate['id']; ?>"><?php echo $data_cate['name']; ?></a></li>
 				<?php
 				}
 				?>
