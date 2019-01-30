@@ -24,7 +24,10 @@ die;
  					<td><?php echo $data['id'];?></td>
  					<td><?php echo $data['product_category'];?></td>
  				</tr>
+ 			?}
  		</table>
  	</div>
 
  </div>
+</body>
+</html>
