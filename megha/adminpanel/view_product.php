@@ -33,9 +33,6 @@ $result = mysqli_query($con, $query);
 					<td><?php echo $data['category'];?></td>
 					<td><?php echo $data['discount'];?></td>
 				</tr>
-
-
-
 			<?php
 			}
 			?>

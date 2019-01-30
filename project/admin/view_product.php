@@ -13,7 +13,7 @@ $result = mysqli_query($con, $query);
 <div id="content">
 	<h3>View All Product</h3>
 	
-	<div id="login-box">
+	<div id="login-box" style="width: 700px;">
 		<table class="tab" align="center">
 			<tr>
 				<th>S.No.</th>
@@ -21,6 +21,7 @@ $result = mysqli_query($con, $query);
 				<th>Product Price</th>
 				<th>Category</th>
 				<th>Discount</th>
+				<th>Image</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
@@ -35,6 +36,7 @@ $result = mysqli_query($con, $query);
 					<td><?php echo $data['product_price'];?></td>
 					<td><?php echo $data['category'];?></td>
 					<td><?php echo $data['discount'];?></td>
+					<td><img height="100" width="100" src="../upload/<?php echo $data['product_image']; ?>" /></td>
 					<td><a href="edit_pro.php?pid=<?php echo $data['id']; ?>" class="edit-btn">Edit</a></td>
 					<td><a href="delete_pro.php?pid=<?php echo $data['id']; ?>" class="delete-btn">Delete</a></td>
 				</tr>

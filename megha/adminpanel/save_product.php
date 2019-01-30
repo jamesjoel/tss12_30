@@ -10,10 +10,10 @@ include("../project/connect.php");
 $a = $_POST['product_name'];
 $b = $_POST['product_price'];
 $c = $_POST['detail'];
-$d = $_POST['pro_cate'];
+$d = $_POST['pro_category'];
 $e = $_POST['discount'];
 
-echo $query = "INSERT INTO add_product (product_name, product_price, pro_category, details, discount) VALUES ('$a', '$b', '$d', '$c', '$e')";
+echo $query = "INSERT INTO add_product (product_name, product_price, details, pro_category, discount) VALUES ('$a', '$b', '$c', '$d', '$e')";
 
 // die;
 
