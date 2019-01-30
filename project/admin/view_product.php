@@ -40,9 +40,6 @@ $result = mysqli_query($con, $query);
 					<td><a href="edit_pro.php?pid=<?php echo $data['id']; ?>" class="edit-btn">Edit</a></td>
 					<td><a href="delete_pro.php?pid=<?php echo $data['id']; ?>" class="delete-btn">Delete</a></td>
 				</tr>
-
-
-
 			<?php
 			$n++;
 			}

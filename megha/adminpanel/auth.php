@@ -1,12 +1,13 @@
 <?php
-include("../connect.php");
+include("../project/connect.php");
+
 if(!isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");
 }
 
-$u = $_POST['username']; // abc
-$p = $_POST['pass'];
+$u = $_POST['username']; 
+$p = $_POST['password'];
 
 
 $query = "SELECT * FROM admin WHERE username ='$u'";

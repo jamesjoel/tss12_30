@@ -39,7 +39,7 @@ if($n>0)
    		<tr>
    			<td><?php echo $n;?></td>
         <td><?php echo $data['categoryname'] ;?></td>
-        <td><a href="#">edit</a></td>
+        <td><a href="editcategory.php?cid=<?php echo $data['id'] ;?>">edit</a></td>
         <td><a href="deletecategory.php?cid=<?php echo $data['id'] ;?>">delete</a></td>
    		
       </tr>

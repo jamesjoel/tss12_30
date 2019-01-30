@@ -47,8 +47,8 @@ if($n>0)
    			<td><?php echo $data['productprice'] ;?></td>
    			<td><?php echo $data['category'] ;?></td>
    			<td><?php echo $data['discount'] ;?></td>
-        <td><a href="#">edit</a></td>
-        <td><a href="deleteproduct.php?pid=<?php echo $data['id'] ;?>">delete</a></td>
+    <td><a href="editproduct.php?pid=<?php echo $data['id'] ;?>">edit</a></td>
+    <td><a href="deleteproduct.php?pid=<?php echo $data['id'] ;?>">delete</a></td>
       
    		</tr>
 

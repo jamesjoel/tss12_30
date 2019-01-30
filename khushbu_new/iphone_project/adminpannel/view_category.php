@@ -16,16 +16,22 @@ $result = mysqli_query($con, $query);
 			<tr>
 				<th>S.No.</th>
 				<th>category_name</th>
+				<th>Edit</th>
+				<th>Delete</th>
 			</tr>
 			
 			<?php
+			$n=1;
 			while($data=mysqli_fetch_assoc($result))
 			{ ?>
 				<tr>
-					<td><?php echo $data['id'];?></td>
+					<td><?php echo $n;?></td>
 					<td><?php echo $data['product_category'];?></td>
+					<td><a href="edit_cate.php?cid=<?php echo $data['id']; ?>"class="edit-btn">Edit</a></td>
+					<td><a href="delete_cate.php?cid=<?php echo $data['id']; ?>"class="delete-btn">delete</a></td>
 				</tr>
 			<?php
+			$n++;
 			}
 			?>
 		</table>
