@@ -14,8 +14,8 @@ $result=mysqli_query($con,$query);
 		<tr>
 		<th> S.no.</th>
 		<th> Category name</th>
-		<th>Edit</th>
 		<th>Delete</th>
+		<th>Edit</th>
 		
 		</tr>
 		<?php
@@ -26,6 +26,8 @@ $result=mysqli_query($con,$query);
 		<tr>
 			<td><?php echo $n ;?></td>
 			<td><?php echo $data['addcategory'];?></td>
+			<td><a href="view_category.php?cid=<?php echo $data['id'];?>">delete</a></td>
+			<!-- <td><a href="view_category.php?cid=<?php echo $data['id'];?>">edit</a></td> -->
 			
 		</tr>
 		<?php

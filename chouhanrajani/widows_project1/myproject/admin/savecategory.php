@@ -8,13 +8,16 @@ if(!isset($_SESSION['is_admin_logged_in']))
 }
 
 $a= $_POST['category_name'];
+ //  print_r($_POST);
+ // die;
+$query="INSERT INTO addcategory(addcategory)VALUES ('$a')";
+// echo $query;
  // print_r($_POST);
  // die;
-$query="INSERT INTO addcategory(addcategory)VALUES $a";
 // die;
 mysqli_query($con,$query);
 // echo $query;
- $_SESSION['msg']="A Product Add Successfuly";
+ // $_SESSION['msg']="A Product Add Successfuly";
 header("location:addcategory.php");
 
 ?>
