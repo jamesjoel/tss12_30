@@ -10,7 +10,6 @@ $data_pro = mysqli_fetch_assoc($result_pro);
 include("header.php");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
-
 $x = $data_pro['category'];
 
 ?>	

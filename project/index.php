@@ -2,8 +2,18 @@
 include("connect.php");
 include("header.php");
 
+if(isset($_GET['category']))
+{
+	$a = $_GET['category'];	
+	$query_pro = "SELECT * FROM product WHERE category = $a";
+}
+else
+{
 
-$query_pro = "SELECT * FROM product";
+	$query_pro = "SELECT * FROM product";
+}
+
+
 
 $result_pro = mysqli_query($con, $query_pro);
 
@@ -21,13 +31,17 @@ $result_pro = mysqli_query($con, $query_pro);
 
 				<div class="product-box">
 					<div class="product-box-top">
+<<<<<<< HEAD
+						<img src="images/1.jpg" />
+=======
 						<img src="upload/<?php echo $data_pro['product_image']; ?>" />
+>>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 					</div>
 					<div class="product-box-bottom">
 						<p><?php echo $data_pro['product_name']; ?></p>
 						<p class="old_price">$ <?php echo $data_pro['product_price']; ?></p>
 						<p class="new_price">$ <?php echo $new_price; ?>.00</p>
-						<a href="#" class="view-more-btn">View More</a>
+						<a href="view_more.php?pid=<?php echo $data_pro['id']; ?>" class="view-more-btn">View More</a>
 					</div>
 				</div>
 				

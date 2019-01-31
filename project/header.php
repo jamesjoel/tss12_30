@@ -26,6 +26,7 @@ $result_cate = mysqli_query($con, $query_cate);
 					<li><a href="#">My Cart()</a></li>
 					<li><a href="logout.php">Logout</a>|</li>
 					<li><a href="my_account.php">My Account</a>|</li>
+					<li><a href="my_profile.php">My Profile</a>|</li>
 					<li><a href="#"><?php echo $_SESSION['name']; ?></a>|</li>
 				</ul>
 				<?php
@@ -63,7 +64,7 @@ $result_cate = mysqli_query($con, $query_cate);
 				while($data_cate=mysqli_fetch_assoc($result_cate))
 				{ ?>
 
-					<li><a href="#"><?php echo $data_cate['name']; ?></a></li>
+					<li><a href="index.php?category=<?php echo $data_cate['id']; ?>"><?php echo $data_cate['name']; ?></a></li>
 				<?php
 				}
 				?>

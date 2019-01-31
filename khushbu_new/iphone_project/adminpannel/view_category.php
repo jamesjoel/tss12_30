@@ -16,6 +16,18 @@ $result = mysqli_query($con, $query);
 			<tr>
 				<th>S.No.</th>
 				<th>category_name</th>
+<<<<<<< HEAD
+			</tr>
+			
+			<?php
+			while($data=mysqli_fetch_assoc($result))
+			{ ?>
+				<tr>
+					<td><?php echo $data['id'];?></td>
+					<td><?php echo $data['product_category'];?></td>
+				</tr>
+			<?php
+=======
 				<th>Edit</th>
 				<th>Delete</th>
 			</tr>
@@ -32,6 +44,7 @@ $result = mysqli_query($con, $query);
 				</tr>
 			<?php
 			$n++;
+>>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 			}
 			?>
 		</table>

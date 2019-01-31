@@ -29,6 +29,9 @@ $result = mysqli_query($con, $query);
 			$n=1;
 			while($data=mysqli_fetch_assoc($result))
 			{ 
+
+				if($data['status']==1)
+
 				if($data['status'])
 					$x="Active";
 				else

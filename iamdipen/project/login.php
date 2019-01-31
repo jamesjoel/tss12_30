@@ -3,18 +3,18 @@ include("header.php");
 ?>
 	 <div id="login-inside-content">
 	 	<div id="login-content">
-	 	 <form>
+	 	 <form action="auth.php" method="post">
 	 	 	
 	 		<table width="400" height="100" align="center">
 	 		 
 	 		  <tr>
 	 		  	  <td>Email or Number</td>
-	 		  	<td><input type="text"></td>
+	 		  	<td><input name="user" type="text"></td>
 	 		  </tr>
 	 		 
 	 		   <tr>
 	 		   	<td>Password</td>
-	 		   	<td><input type="Password"></td>
+	 		   	<td><input name="pass" type="Password"></td>
 	 		   </tr>
 
 	 		  <tr>
