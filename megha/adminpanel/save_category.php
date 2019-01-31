@@ -1,4 +1,4 @@
-<?php
+     <?php
 include("../project/connect.php");
 // print_r($_POST);
 if(!isset($_SESSION['is_admin_logged_in']))

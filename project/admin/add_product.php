@@ -57,6 +57,15 @@ $result = mysqli_query($con, $query);
 		</tr>
 	</table>
 	</form>
+	<p class="error">
+		<?php
+		if(isset($_SESSION['msg']))
+		{
+			echo $_SESSION['msg'];
+			unset($_SESSION['msg']);
+		}
+		?>
+	</p>
 	</div>
 </div>
 </body>
