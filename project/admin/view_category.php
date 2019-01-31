@@ -10,10 +10,10 @@ include("header.php");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
 ?>	
-<div id="content">
+<div id="sub-content">
 	<h3>View All Product</h3>
 	
-	<div id="login-box">
+	
 		<table class="tab" align="center">
 			<tr>
 				<th>S.No.</th>
@@ -40,7 +40,7 @@ $result = mysqli_query($con, $query);
 			}
 			?>
 		</table>
-	</div>
+	
 </div>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
  $page = $_SERVER['PHP_SELF'];
+ include("connect.php");
 // echo $page;
 // print_r($_SERVER);
- // include("connect.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,7 +60,7 @@
 		 <ul><li><a <?php if(strstr($page,"index.php")){echo "class='active'";} ?>  href="index.php">Home</a></li> 
 		    <li><a <?php if(strstr($page,"login.php")){echo "class='active'";} ?>href="login.php">login</a></li>
 	        <li><a <?php if(strstr($page,"sign.php")){echo "class='active'";} ?> href="sign.php">signup</a></li>
-	    	<li><a <?php if(strstr($page,"sign.php")){echo "class='active'";} ?> href="userlogout.php">logout</a></li>
+	    	<li><a  href="userlogout.php">logout</a></li>
 			<li><a href="#">mycart(0)</a></li>
 		</ul>
 		</div>

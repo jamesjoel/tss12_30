@@ -1,5 +1,4 @@
 <?php
-include("connect.php");
  include("header.php");
 
 
@@ -18,7 +17,7 @@ include("connect.php");
 						</tr>
 						<tr>
 							<td>Password</td>
-							<td><input type="password" name="pass" style="margin: 2px" /></td>
+							<td><input type="text" name="pass" style="margin: 2px" /></td>
 						</tr>
 					<tr>
 							<td>Re-Password</td>

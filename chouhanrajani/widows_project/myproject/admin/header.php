@@ -22,9 +22,9 @@
 			<li><a <?php if(strstr($page,"viewproduct.php")){echo "class='active'";}?> href="viewproduct.php">viewproduct</a></li>
 
 			<li><a <?php if(strstr($page,"addcategory.php")){echo "class='active'";}?> href="addcategory.php">add category</a></li>
-			<li><a <?php if(strstr($page,"view_category.php")){echo "class='active'";}?> href="view_category.php">view category</a></li>
-			<li><a <?php if(strstr($page,"view_user.php")){echo "class='active'";}?> href="view_user.php">view user</a></li>
-			<li><a <?php if(strstr($page,"admin_logout.php")){echo "class='active'";}?> href="admin_logout.php">logout</a></li>
+			<li><a <?php if(strstr($page,"viewcategory.php")){echo "class='active'";}?> href="#">view category</a></li>
+			<li><a <?php if(strstr($page,"viewuser.php")){echo "class='active'";}?> href="#">view user</a></li>
+			<li><a <?php if(strstr($page,"logout.php")){echo "class='active'";}?> href="#">logout</a></li>
 		</ul>
 	</div>
 </div>

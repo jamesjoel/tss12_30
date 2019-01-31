@@ -1,7 +1,6 @@
 <?php
- include("connect.php");
  include("header.php");
-
+ include("connect.php");
 
 ?>				
 				<h3 style="text-align: center;">User-login</h3>
