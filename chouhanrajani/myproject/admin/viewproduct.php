@@ -3,6 +3,9 @@ include("../connect.php");
 include("header.php");			
 $query="SELECT * FROM product";
 $result=mysqli_query($con ,$query);
+$data=mysqli_fetch_assoc($result);
+// print_r($data);
+// echo $data;
 // die;
 ?>
 	<div id=sub-content>
@@ -14,21 +17,28 @@ $result=mysqli_query($con ,$query);
 		<th>Product price</th>
 		<th>Product category</th>
 		<th>discount</th>
+		<th>delete</th>
+		<th>edit</th>
 	</tr>
 	<?php
+	$n=1;
 	while($data=mysqli_fetch_assoc($result))
+		
 	{?>
-		<tr><td><?php echo $data['id']?></td>
-			<td><?php echo $data['productname']?></td>
-			<td><?php echo $data['productprice']?></td>
-			<td><?php echo $data['productcategory']?></td>
-			<td><?php echo $data['productdiscount']?></td>
+		<tr><td><?php echo $n;?></td>
+			<td><?php echo $data['productname'];?></td>
+			<td><?php echo $data['productprice'];?></td>
+			<td><?php echo $data['productcategory'];?></td>
+			<td><?php echo $data['productdiscount'];?></td>
+			<td><a href="delete_pro.php?pid=<?php echo $data['id'];?>">delete</a></td>
 
 
 		</tr>
 		<?php
+
+	 $n++;
 	}
-		?>
+	?>
 		
 	</table>
 </div>

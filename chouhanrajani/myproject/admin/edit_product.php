@@ -1,9 +1,5 @@
 <?php
 include("../connect.php");
-if(!isset($_SESSION["admin_logged_in"]))
-{
-	header("location:index.php");
-}
 include("header.php");	
 $query="SELECT * FROM addcategory";
 $result=mysqli_query($con, $query);
