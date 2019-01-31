@@ -15,7 +15,7 @@ $p = $_POST['pass'];
  }
  else
  {
-    header(location:login.php);
+    header(location:index.php);
  }
 
 ?>

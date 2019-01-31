@@ -31,6 +31,23 @@ if($n>0)
 				<th>email id</th>
 				<th>contact</th>
 				<th>pincode</th>
+<<<<<<< HEAD
+			</tr>
+   		<?php
+   		while($data=mysqli_fetch_assoc($result))
+   		 // print_r($data);
+   			{
+   		 ?>
+   		<tr>
+   			<td><?php echo $data['id'] ;?></td>
+   			<td><?php echo $data['name'] ;?></td>
+   			<td><?php echo $data['emailid'] ;?></td>
+   			<td><?php echo $data['mno'] ;?></td>
+   			<td><?php echo $data['pincode'] ;?></td>
+   		</tr>
+
+   		<?php
+=======
         <th>status</th>
         <th>change</th>
 
@@ -61,6 +78,7 @@ if($n>0)
 
    		<?php
       $n++;
+>>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
    		}
    		?>
    	</table>

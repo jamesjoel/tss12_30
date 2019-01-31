@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<?php
+=======
  <?php
+>>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 include("../connect.php");
 include("header.php");
 
