@@ -9,8 +9,9 @@ $data_cate=mysqli_fetch_assoc($result_cate);
 // print_r($data_cate);
 
 ?>	
-<div id="content">
-	<h3>Update Category</h3>
+<div id="inside-content">
+	<h2>UPDATE CATEGORY</h2>
+	<hr>
 	
 	<form action="update_category.php" method="post">
 	<div id="login-box">
