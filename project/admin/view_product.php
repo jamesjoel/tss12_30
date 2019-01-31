@@ -46,4 +46,4 @@ $result = mysqli_query($con, $query);
 	</div>
 </div>
 </body>
-</html>
+</html>x
