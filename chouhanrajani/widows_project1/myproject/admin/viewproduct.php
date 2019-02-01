@@ -1,47 +1,49 @@
 <?php
 include("../connect.php");	
-include("header.php");			
-$query="SELECT * FROM product";
-$result = mysqli_query($con, $query);
+if(!isset($_SESSION['is_admin_logged_in']))
+{
+	header("location:index.php");
+}
 
-// print_r($data);
-// echo $data;
-// die;
+
+include("header.php");			
+$query = "SELECT * FROM product";
+$result = mysqli_query($con, $query);
+ 
 ?>
-	<div id=sub-content>
+	<div id="sub-content">
 	<h3>information about list of all product</h3>
  <table align="center"  class="table"><!-- cellpadding="5px" cellspacing="5px" for table making--> 
 	<tr>
 		<th>S.no.</th>
 		<th>Product name</th>
 		<th>Product price</th>
+		<th>Detail</th>
 		<th>Product category</th>
 		<th>discount</th>
-		<th>delete</th>
-		<th>edit</th>
-		<th>Product image</th>
+		<th>Product_img</th>
 	</tr>
 	<?php
 	$n=1;
 		while($data=mysqli_fetch_assoc($result))
 	{?>
-		<tr><td><?php echo $n;?></td>
+		<tr>
+			<td><?php echo $n; ?></td>
 			<td><?php echo $data['productname'];?></td>
 			<td><?php echo $data['productprice'];?></td>
+			<td><?php echo $data['detail'];?></td>
 			<td><?php echo $data['productcategory'];?></td>
 			<td><?php echo $data['productdiscount'];?></td>
-			<td><a href="delete_pro.php?pid=<?php echo $data['id'];?>">delete</a></td>
-<<<<<<< HEAD
-			<td><?php echo $data['pro_image'];?></td>
-
-
-=======
->>>>>>> fa29fa7e5febd5678ae10dd2d50b72f9d352d1ca
+			<td><?php echo $data['product_img'];?></td>
+			<td><a href="delete_pro.php?proid=<?php echo $data['id'] ?>">Delete</td>
 		</tr>
 		<?php
+		 // print_r($data);
+		  // die;
 			$n++;
 			}
 			?>
+
 	</table>
 </div>
 </body>
