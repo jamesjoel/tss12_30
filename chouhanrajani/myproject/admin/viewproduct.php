@@ -19,6 +19,7 @@ $data=mysqli_fetch_assoc($result);
 		<th>discount</th>
 		<th>delete</th>
 		<th>edit</th>
+		<th>Product image</th>
 	</tr>
 	<?php
 	$n=1;
@@ -31,6 +32,7 @@ $data=mysqli_fetch_assoc($result);
 			<td><?php echo $data['productcategory'];?></td>
 			<td><?php echo $data['productdiscount'];?></td>
 			<td><a href="delete_pro.php?pid=<?php echo $data['id'];?>">delete</a></td>
+			<td><?php echo $data['pro_image'];?></td>
 
 
 		</tr>

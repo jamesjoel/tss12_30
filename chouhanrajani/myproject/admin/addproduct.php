@@ -12,7 +12,7 @@ $result=mysqli_query($con, $query);
 
 		<h3>Product_information</h3>
 		
-				<form action="saveproduct.php" method="post">
+				<form action="saveproduct.php" method="post" enctype="mulitpart/form-data">
 				<table align="center">
 						<tr>
 							<td>product name</td>
@@ -46,6 +46,11 @@ $result=mysqli_query($con, $query);
 						<tr>
 							<td>discount</td>
 							<td><input type="text" name="productdiscount" class="input" 
+							 /></td>
+						</tr>
+						<tr>
+							<td>product image</td>
+							<td><input type="file" name="file" class="input" 
 							 /></td>
 						</tr>
 						<tr>
