@@ -44,10 +44,14 @@ $result = mysqli_query($con, $query);
 					<td><?php echo $data['product_category'];?></td>
 					<td><?php echo $data['product_discount'];?></td>
 <<<<<<< HEAD
+					<td><a href="edit_pro.php?pid=<?php echo $data['id']; ?>" class="edit-btn">Edit</a></td>
+=======
+<<<<<<< HEAD
 				</tr>
 			<?php
 =======
 					<td><a href="edit_pro.php" class="edit-btn">Edit</a></td>
+>>>>>>> 36967454f46da586cad1feda298003d9051a9281
 					<td><a href="delete_pro.php?pid=<?php echo $data['id']; ?>" class="delete-btn">delete</a></td>
 				</tr>
 			<?php

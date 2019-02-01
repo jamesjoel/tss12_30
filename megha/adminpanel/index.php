@@ -1,6 +1,7 @@
 <?php
 include("../project/connect.php");
-// print_r($_POST);
+print_r($_POST);
+echo $a= "";
 ?>
 <!DOCTYPE html>
 <html>
