@@ -2,6 +2,9 @@
 include("connect.php");
 include("header.php");
 
+
+
+
 if(isset($_GET['category']))
 {
 	$a = $_GET['category'];	
@@ -17,6 +20,7 @@ else
 
 $result_pro = mysqli_query($con, $query_pro);
 
+
 ?>
 			<div id="right-content-bottom">
 				<h3>New Products</h3>
@@ -31,17 +35,15 @@ $result_pro = mysqli_query($con, $query_pro);
 
 				<div class="product-box">
 					<div class="product-box-top">
-<<<<<<< HEAD
-						<img src="images/1.jpg" />
-=======
+
 						<img src="upload/<?php echo $data_pro['product_image']; ?>" />
->>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 					</div>
 					<div class="product-box-bottom">
 						<p><?php echo $data_pro['product_name']; ?></p>
 						<p class="old_price">$ <?php echo $data_pro['product_price']; ?></p>
 						<p class="new_price">$ <?php echo $new_price; ?>.00</p>
-						<a href="view_more.php?pid=<?php echo $data_pro['id']; ?>" class="view-more-btn">View More</a>
+						<a href="view_more.php?pid=<?php echo $data_pro['id']; ?>" class="view-more-btn">View</a>
+						<a href="add_to_cart.php?pid=<?php echo $data_pro['id']; ?>" class="view-more-btn">Add To Cart</a>
 					</div>
 				</div>
 				
