@@ -99,11 +99,11 @@ include("menu.php");
 					<li><a href="#">Watches</a></li>
 					<li><a href="#">Footwear</a></li>
 					<li><a href="#">Jewellery</a></li>
-					<li><a href="#">Toys</a></li>
+					<!-- <li><a href="#">Toys</a></li>
 					<li><a href="#">Fragrances</a></li>
 					<li><a href="#">Beauty Wellness</a></li>
 					<li><a href="#">School Supplies</a></li>
-					<li><a href="#">Eyewear</a></li>
+					<li><a href="#">Eyewear</a></li> -->
 				</ul>
 			</div>
 		</div>
