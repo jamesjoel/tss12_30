@@ -46,7 +46,7 @@ else
 				?>
 
 				<ul>
-					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
+					<li><a href="my_cart.php">My Cart(<?php echo $total; ?>)</a></li>
 					<li><a href="signup.php">Signup</a>|</li>
 					<li><a href="login.php">Login</a>|</li>
 				</ul>
