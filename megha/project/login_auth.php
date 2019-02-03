@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 include("connect.php");
 if(!isset($_SESSION['is_admin_logged_in']))
 {
@@ -11,7 +11,7 @@ $p = $_POST['password'];
 // $a= $_POST['password'];
 // $x= md5($a);
 
-$query = "SELECT * FROM user WHERE username ='$u'";
+$query = "SELECT * FROM user WHERE firstname ='$u'";
 
 $result = mysqli_query($con, $query);
 
@@ -21,11 +21,11 @@ $result = mysqli_query($con, $query);
 if(mysqli_num_rows($result)==1)
 {
 	$data = mysqli_fetch_assoc($result);
-	if($data['pass']==md5($p))
+	if($data['password']==md5($p))
 	{
 		if($data['status']==1)
-		{
-			$_SESSION["name"]=$data['full_name'];
+		 {
+			$_SESSION["name"]=$data['fullname'];
 			$_SESSION['id']=$data['id'];
 			$_SESSION['is_user_logged_in']=true;
 
@@ -50,4 +50,4 @@ else
 	$_SESSION['msg'] = "Invalid Username and Password";
 	header("location:login.php");	
 }
-?>
+?> -->

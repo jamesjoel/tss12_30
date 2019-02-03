@@ -20,9 +20,10 @@ if(mysqli_num_rows($result)==1)
 	$data = mysqli_fetch_assoc($result);
 	if($data['password']==md5($p))
 	{
-		$_SESSION['is_admin_logged_in']=true;
+		$_SESSION['is_admin_logged_in']=successfull;
+		header("location:header.php");
 
-		header("location:add_product.php");
+		// header("location:add_product.php");
 	}
 	else
 	{

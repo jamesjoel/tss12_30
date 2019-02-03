@@ -1,8 +1,12 @@
 <?php
-include("connect.php");
+include("../project/connect.php");
+// if(!isset($_SESSION['is_admin_logged_in']))
+// {
+// 	header("location:index.php");
+// }
 
-$u = $_POST['username']; // abc
-$p = $_POST['pass'];
+$u = $_POST['username'];
+$p = $_POST['password'];
 
 
 $query = "SELECT * FROM user WHERE username ='$u'";
@@ -19,7 +23,7 @@ if(mysqli_num_rows($result)==1)
 	$data = mysqli_fetch_assoc($result);
 	if($data['password']==md5($p))
 	{
-		$_SESSION["name"]=$data['full_name'];
+		$_SESSION["name"]=$data['username'];
 		$_SESSION['id']=$data['id'];
 		$_SESSION['is_user_logged_in']=true;
 
@@ -30,10 +34,10 @@ if(mysqli_num_rows($result)==1)
 		$_SESSION['msg'] = "Invalid Password";
 		header("location:login.php");			
 	}
-}
-else
-{
-	$_SESSION['msg'] = "Invalid Username and Password";
-	header("location:login.php");	
-}
-?>
+// }
+// else
+// {
+	// $_SESSION['msg'] = "Invalid Username and Password";
+	// header("location:login.php");	
+// }
+<!-- ?> -->
