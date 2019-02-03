@@ -40,8 +40,18 @@ body{
 }
 .menu{
 
-	height: 100;
-	width: 50;
+	min-height: 70px;
+	height: 0 auto;
+	width: 100px;
 	background-color: #123655;
 	margin:5px;
+	padding: 5px;
+	/*margin:0 auto;*/
+}
+#in-header select{
+	
+}
+
+
+
 }
