@@ -4,9 +4,7 @@ include("connect.php");
 $u = $_POST['username']; // abc
 $p = $_POST['pass'];
 
-
 $query = "SELECT * FROM user WHERE username ='$u'";
-
 
 $result = mysqli_query($con, $query);
 

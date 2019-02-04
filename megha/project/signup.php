@@ -5,8 +5,7 @@ include("header.php");
 	<div id="in-content">
 		<div id="right-content">
 			<h3>Signup</h3>
-			
-								<div id="login-box">
+			                     <div id="login-box">
 									<form action="save.php" method="post">
 									<table align="center">
 										<tr>
@@ -88,3 +87,4 @@ include("header.php");
 <?php
 include("footer.php");
 ?>
+			                   
