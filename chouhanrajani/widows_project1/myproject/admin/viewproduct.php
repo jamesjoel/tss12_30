@@ -21,6 +21,10 @@ $result = mysqli_query($con, $query);
 		<th>Detail</th>
 		<th>Product category</th>
 		<th>discount</th>
+<<<<<<< HEAD
+=======
+		<th>delete</th>
+>>>>>>> 0c60702de2b17112a600c7ae4171f0b9e9769c65
 		<th>Product_img</th>
 	</tr>
 	<?php
@@ -34,8 +38,14 @@ $result = mysqli_query($con, $query);
 			<td><?php echo $data['detail'];?></td>
 			<td><?php echo $data['productcategory'];?></td>
 			<td><?php echo $data['productdiscount'];?></td>
+<<<<<<< HEAD
 			<td><?php echo $data['product_img'];?></td>
 			<td><a href="delete_pro.php?proid=<?php echo $data['id'] ?>">Delete</td>
+=======
+			<!-- <td><?php echo $data['product_img'];?></td> -->
+			<td><a href="delete_pro.php?proid=<?php echo $data['id'] ?>">Delete</td>
+				<td><img height="70" width="70" src="../upload/<?php echo $data['product_img']; ?>" /></td>
+>>>>>>> 0c60702de2b17112a600c7ae4171f0b9e9769c65
 		</tr>
 		<?php
 		 // print_r($data);

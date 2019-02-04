@@ -3,50 +3,57 @@ include("header.php");
 ?>
 	 <div id="signup-content">
 	 	  <div id="inside-signup-content">
-	 	  	<form method="post" action="save.php">
-	 	  		<table align="center">
-	 	  			<tr>
-	 	  				<td><b>Full name</td>
-	 	  				<td><input name="fullname" type="text"></td>
-	 	  			</tr>
-	 	  			<br>
-	 	  			<tr>
-	 	  				<td><b>Email</td>
-	 	  				<td><input name="email" type="text"></td>
-	 	  			</tr>
-	 	  			<tr>
-	 	  				<td><b>password</td>
-	 	  				<td><input name="password" type="password"></td>
-	 	  			</tr>
-	 	  			<tr>
-	 	  				<td><b>Re-enter password</td>
-	 	  				<td><input type="password"></td>
-	 	  			</tr>
-	 	  			<tr>
-	 	  				<td><b>Number</td>
-	 	  				<td><input name="number" type="text"></td>
-	 	  			</tr>
-	 	  			<tr>
-	 	  				<td><b>City</td>
-	 	  				<td>
-	 	  					<select name="city">
-	 	  						 <option>select</option>
-	 	  						 <option>Indore</option>
-	 	  						 <option>Ujjain</option>
-	 	  						 <option>Dhar</option>
-	 	  						 <option>Dewas</option>
-	 	  						 <option>Ratlam</option>
-	 	  					</select>
-	 	  				</td>
-	 	  			</tr>
-	 	  			<tr>
-	 	  				<td><b>Pincode</td>
-	 	  				<td><input name="pincode" type="text"></td>
-	 	  			</tr>
-	 	  			<tr>
-	 	  				<td align="center" rowspan="2"><input type="submit" value="Signup"></td>
-	 	  			</tr>
-	 	  		</table>
-	 	  	</form>
-	 	  </div>
-	 </div>
+	 	  
+	<form action="save.php" method="post" enctype="multipart/form-data">
+		<table align="center" cellpadding="5" cellspacing="0" border="1">
+			<tr>
+				<td align="center" colspan="2"><h2>SIGNUP</h2></td>
+			</tr>
+			<tr>
+				<td>Full Name</td>
+				<td><input type="text" name="full_name"></td>
+			</tr>
+			
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="user"></td>
+			</tr>
+			
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="Password" name="pass"></td>
+			</tr>
+
+
+			<tr>
+				<td>Gender</td>
+				<td>M<input value="male" type="radio" name="gender">
+					F<input value="female" type="radio" name="gender"></td>
+
+			</tr>
+			
+			<tr>
+				<td>Choose file</td>
+				<td><input type="file" name="pro_name"></td>
+			</tr>
+			
+			<tr>
+				<td>Address</td>
+				<td><textarea name="add"></textarea></td>
+			</tr>
+			<tr>
+				<td>pincode</td>
+				<td><input type="text" name="pincode"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="save" ></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
