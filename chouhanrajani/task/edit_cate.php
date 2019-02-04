@@ -1,6 +1,6 @@
 <?php
 $con=mysqli_connect("localhost","root","","task");
-$query="SELECT * FROM blog";
+$query="SELECT * FROM blog where subject=science OR subject=physics OR subject=Travelling";
 $result=mysqli_query($con,$query);
  // ($data=mysqli_fetch_assoc($result));
  $data=myspli_num_rows($result);
@@ -31,7 +31,7 @@ die;
 	</div>
 </div>
 <div id="in-content">
-	<?php 
+	<!-- <?php 
 	
 	$n=1;
 	while($data=mysqli_fetch_assoc($result))
@@ -46,7 +46,7 @@ die;
 	<?php
 		$n++;
 	}
-		?>
+		?> -->
 
 </div>
 </body>
