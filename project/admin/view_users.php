@@ -29,11 +29,10 @@ $result = mysqli_query($con, $query);
 			$n=1;
 			while($data=mysqli_fetch_assoc($result))
 			{ 
-<<<<<<< HEAD
+
 				if($data['status']==1)
-=======
+
 				if($data['status'])
->>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 					$x="Active";
 				else
 					$x="Deactive";

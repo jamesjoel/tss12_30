@@ -1,6 +1,7 @@
 <?php
 include("../connect.php");
   // print_r($_POST);
+
 $a = $_POST['name'];
 $b = $_POST['price'];
 $c = $_POST['details'];

@@ -10,11 +10,6 @@ $data_pro = mysqli_fetch_assoc($result_pro);
 include("header.php");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);
-
-<<<<<<< HEAD
-
-=======
->>>>>>> c38ac84a220a4610d43c7f2abc25d6ac7d07ee22
 $x = $data_pro['category'];
 
 ?>	

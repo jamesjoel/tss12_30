@@ -3,6 +3,18 @@ $page = $_SERVER['PHP_SELF'];
 $query_cate = "SELECT * FROM category";
 $result_cate = mysqli_query($con, $query_cate);
 
+
+if(isset($_COOKIE['product_id']))
+{	
+	$x = $_COOKIE['product_id']; // 5#1#2
+	$arr_cookie = explode("#", $x);
+	$total = count($arr_cookie);
+}
+else
+{
+	$total = 0;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +38,7 @@ $result_cate = mysqli_query($con, $query_cate);
 					<li><a href="#">My Cart()</a></li>
 					<li><a href="logout.php">Logout</a>|</li>
 					<li><a href="my_account.php">My Account</a>|</li>
+					<li><a href="my_profile.php">My Profile</a>|</li>
 					<li><a href="#"><?php echo $_SESSION['name']; ?></a>|</li>
 				</ul>
 				<?php
@@ -33,7 +46,7 @@ $result_cate = mysqli_query($con, $query_cate);
 				?>
 
 				<ul>
-					<li><a href="#">My Cart()</a></li>
+					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
 					<li><a href="signup.php">Signup</a>|</li>
 					<li><a href="login.php">Login</a>|</li>
 				</ul>

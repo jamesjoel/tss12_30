@@ -1,6 +1,8 @@
 <?php
 include("../connect.php");
 include("header.php");
+$query= "SELECT * FROM" 
+
 ?>
   <h3 style="color:#fff; ">Add product</h3>
   <hr>
