@@ -1,8 +1,8 @@
-<?php  
+<?php 
  // print_r($_SERVER);
  //echo $_SERVER['PHP_SELF'];
  $page=$_SERVER['PHP_SELF'];
- // echo $page;
+  // echo $page;
 // $x="electronics.php";
 // if (strstr($page,$x))
 // {
@@ -13,21 +13,19 @@
 	<div id="inside-menu">
 			<ul>
 				<!-- <li><a class="active" href="electronics.php">electronics</a></li> -->
-				<li><a <?php if (strstr($page,"electronics.php"))
+				<li><a <?php if (strstr($page,"index.php"))
 					{echo "class='active'";}
 					?>
-						 href="electronics.php">electronics</a></li>
-				<li><a <?php if (strstr($page,"tv&appliances.php"))
+						 href="index.php">home</a></li>
+				<li><a <?php if (strstr($page,"about.php"))
 					{echo "class='active'";}
-					?> href="tv&appliances.php">tv & appliances</a></li>
-				<li><a <?php if (strstr($page,"men.php"))
+					?> href="about.php">about</a></li>
+				<li><a <?php if (strstr($page,"contact.php"))
 					{echo "class='active'";}
-					?> href="men.php">men</a></li>
-				<li><a href="#">women</a></li>
-				<li><a href="#">baby&kids</a></li>
-				<li><a href="#">home&furniture</a></li>
-				<li><a href="#">sports,books&more</a></li>
-				<li><a href="#">offer zone</a></li>
+					?> href="contact.php">contact us</a></li>
+				<li><a href="#">help</a></li>
+				<li><a href="#">map</a></li>
+				
 			</ul>
 	</div>
 </div>
