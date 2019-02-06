@@ -8,7 +8,7 @@ $query= "SELECT * FROM"
   <hr>
 	 <div id="content">
 	 	
-	 		<form action="saveproduct.php" method="post">
+	 		<form action="saveproduct.php" method="post" enctype="multipart/form-data">
 	 			<div id="login">
 	 		  <table align="center">
 	 			<tr>
@@ -18,6 +18,10 @@ $query= "SELECT * FROM"
 	 			<tr>
 	 				<td><b>Product Price</b></td>
 	 				<td><input type="text" name="price"></td>
+	 			</tr>
+	 			<tr>
+	 				<td><b>Choose Files</b></td>
+	 				<td><input type="file" name="pro_name"></td>
 	 			</tr>
 				<tr>
 	 				<td><b>Details</b></td>

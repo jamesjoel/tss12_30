@@ -161,7 +161,7 @@ h3{
 .image a{
        /*border-radius:2px; */
 }
-.detail{
+.name{
 	  height:30px;
 	  width:210px;
 	  background-color:grey;
@@ -209,13 +209,13 @@ h3{
 #footer{
 	   height:200px;
 	   width:100%;
-	   background-color:red;  
+	   /*background-color:red;  */
 }
 #in-footer{
 	height:200px;
 	width:910px;
 	margin:0 auto;
-	background-color:yellow;
+	/*background-color:yellow;*/
 
 
 }
@@ -224,7 +224,7 @@ h3{
 	height:100px;
 	width:500px;
 	margin:0 auto;
-	background-color:green;   
+	/*background-color:green;   */
 }
 
 
