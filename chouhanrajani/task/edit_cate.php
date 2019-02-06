@@ -1,11 +1,11 @@
 <?php
-$con=mysqli_connect("localhost","root","","task");
+$con=mysqli_connect("localhost","root","password","rajni");
 $query="SELECT * FROM blog";
 $result=mysqli_query($con,$query);
  // ($data=mysqli_fetch_assoc($result));
  $data=myspli_num_rows($result);
-print_r($data);
-die;
+// print_r($data);
+// die;
 ?>
 <!DOCTYPE html>
 <html>
