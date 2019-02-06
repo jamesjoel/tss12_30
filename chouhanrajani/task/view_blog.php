@@ -2,7 +2,9 @@
 $con=mysqli_connect("localhost","root","","task");
 $query="SELECT * FROM blog";
 $result=mysqli_query($con,$query);
-
+ // ($data=mysqli_fetch_assoc($result))
+ // $data=mysqli_num_rows($result);
+// print_r($data);
 
 ?>
 <!DOCTYPE html>
@@ -19,17 +21,29 @@ $result=mysqli_query($con,$query);
 			<form>
 			<table align="center">
 			<tr><td>Subject :<select name="subject"><option>select</option>
-							<option>Science</option>
-							<option>Phusics</option>
-							<option>Travelling</option>
-							<option>Cooking</option>
+							<option  <?php while($data=mysqli_fetch_assoc($result)) echo $data['field'];?>
+		 		 <?php echo $data['id'];?>
+				 <?php echo$data['subject'];?>
+				 <?php echo$data['message'];?>>Science</option>
+							<option  <?php while($data=mysqli_fetch_assoc($result)) echo $data['field'];?>
+		 		 <?php echo $data['id'];?>
+				 <?php echo$data['subject'];?>
+				 <?php echo$data['message'];?>>Phusics</option>
+							<option  <?php echo $data['field'];?>
+		 		 <?php echo $data['id'];?>
+				 <?php echo$data['subject'];?>
+				 <?php echo$data['message'];?>>Travelling</option>
+							<option  <?php echo $data['field'];?>
+		 		 <?php echo $data['id'];?>
+				 <?php echo$data['subject'];?>
+				 <?php echo$data['message'];?>>Cooking</option>
 				</select></td></tr> 
 				</table>
 				</form>
 	</div>
 </div>
 <div id="in-content">
-	<?php 
+	 <?php 
 	
 	$n=1;
 	while($data=mysqli_fetch_assoc($result))
@@ -44,7 +58,7 @@ $result=mysqli_query($con,$query);
 	<?php
 		$n++;
 	}
-		?>
+		?> 
 
 </div>
 </body>
