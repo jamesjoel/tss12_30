@@ -266,3 +266,25 @@ body{
 	text-decoration: none;
 	font-size: 14px;
 }
+.search-frm{
+	float: right;
+	margin-top: 0px;
+}
+#search-txt{
+	height: 28px;
+	border:1px solid #E00038;
+	padding: 5px;
+	width: 300px;
+	border-radius: 5px;
+}
+#search-btn{
+	
+	/*border:1px solid #E00038;*/
+	padding: 10px;
+	font-weight: bold;
+	display: inline-block;
+	background-color: #E00038;
+	color: #FFF;
+	border:none;
+	border-radius: 5px;
+}

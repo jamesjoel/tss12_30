@@ -54,6 +54,13 @@ else
 				}
 				?>
 			</div>
+				<div class="search-frm">
+					<form action="" method="get">
+						
+					<input name="q" type="text" id="search-txt" placeholder="Search Product ">
+					<input type="submit" id="search-btn" value="Go">
+					</form>
+				</div>
 			<div id="right-header-bottom"></div>
 		</div>
 	</div>
