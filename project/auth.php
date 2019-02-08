@@ -28,7 +28,9 @@ if(mysqli_num_rows($result)==1)
 		}
 		else
 		{
-			$_SESSION['msg'] = "You Are Diactive Now pls Contact our team....";
+			$link = $data['check_status_link'];
+
+			$_SESSION['msg'] = "You Are Diactive, For Active please <a target='_blank' href='active_user.php?link=".$link."'>click here</a>";
 			header("location:login.php");	
 		}
 
