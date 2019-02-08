@@ -8,7 +8,9 @@ include("../connect.php");
 include("header.php");
 
 $query = "SELECT * FROM user";
-$result = mysqli_query($con, $query);
+$result = mysqli_query($co
+"
+"n, $query);
 
 ?>	
 <div id="inside-content">

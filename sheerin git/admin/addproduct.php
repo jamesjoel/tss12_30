@@ -19,11 +19,15 @@ include("menu.php");
         <div id="detail">
     <h3 align="center">Add New Product</h3>
     
-    <form method="post" action="saveproduct.php" >
+    <form method="post" action="saveproduct.php" enctype="multipart/form-data">
     <table id="registration-table"  align="center" cellspacing="10px" cellpadding="10px">
         <tr>
             <td>Product Name</td>
             <td><input type="text" name="proname"></td></tr>
+            <tr>
+            <td>Product Image</td>
+            <td><input type="file" name="pro_image"class="input"/></td>
+            </tr>
             <tr><td>product price</td>
                 <td><input type="text" name="proprice" ></td>
             </tr>

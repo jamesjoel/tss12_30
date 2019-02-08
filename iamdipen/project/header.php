@@ -9,17 +9,18 @@
 	 	   <h1>Tech</h1>
 	 	   <div id="right-header">
 	 	   	<ul>
-	 	   		<li><a href="#">Home</a></li>
+	 	   		
 	 	   		<li><a href="login.php">Login</a> |</li>
 	 	   		<li><a href="signup.php">Signup</a> |</li>
+	 	   		<li><a href="my_cart.php">My Cart</a> |</li>
 	 	   	</ul>
 	 	   </div>
 	 </div>
 	 <div id="menu">
 	 	<div id="inside-menu">
 	 		<ul>
-	 			<li><a href="#">Demo1</a> |</li>
-	 			<li><a href="#">Demo2</a> |</li>
+	 			<li><a href="index.php">HOME</a> |</li>
+	 			<li><a href="about.php">About</a> |</li>
 	 			<li><a href="#">Demo3</a></li>
 	 		</ul>
 	 	</div>

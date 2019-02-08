@@ -6,7 +6,7 @@ include("header.php")
   <hr>
  <div id="content">
 	 	
-	 		<form action="saveproduct.php" method="post">
+	 		<form action="save1product.php" method="post">
 	 			<div id="login">
 	 				<div id="add-box" style="padding:80px; margin:0 auto; height:100px;width:350px; background-color:#1a3b4c;">
 	 		  <table align="center">
@@ -18,7 +18,6 @@ include("header.php")
 	 				<td colspan="2" align="center">
 	 					<input type="submit" value="Add" class="btn">
 	 				</td>
-
 	 			</tr>
 	 		</table>
 	 		</div>
