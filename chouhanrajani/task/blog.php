@@ -8,6 +8,7 @@
 <div id="header">
 	<div id="in-header">
 		<a href="view_blog.php"><h3 align="center">view all blogs</h3></a>
+		<a href="mycart.php"><h3 align="center">my cart(0)</h3></a>
 	</div>
 </div>
 <div id="content">

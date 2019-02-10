@@ -26,7 +26,7 @@ $result=mysqli_query($con,$query);
 		<tr>
 			<td><?php echo $n ;?></td>
 			<td><?php echo $data['addcategory'];?></td>
-			<td><a href="view_category.php?cid=<?php echo $data['id'];?>">delete</a></td>
+			<td><a href="delete_category.php?cid=<?php echo $data['id'];?>">delete</a></td>
 			<!-- <td><a href="view_category.php?cid=<?php echo $data['id'];?>">edit</a></td> -->
 			
 		</tr>
