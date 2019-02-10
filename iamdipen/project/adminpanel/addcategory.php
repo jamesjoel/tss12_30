@@ -18,7 +18,6 @@ include("header.php")
 	 				<td colspan="2" align="center">
 	 					<input type="submit" value="Add" class="btn">
 	 				</td>
-
 	 			</tr>
 	 		</table>
 	 		</div>

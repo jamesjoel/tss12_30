@@ -11,6 +11,11 @@ $result=mysqli_query($con, $query);
 		<div id="sub-content">
 
 		<h3>Product_information</h3>
+<<<<<<< HEAD
+=======
+		
+				<form action="saveproduct.php" method="post">
+>>>>>>> 36a9352e106b3c2c249aa2c59391f76d62bf279f
 				<form action="saveproduct.php" method="post" enctype="mulitpart/form-data">
 				<table align="center">
 						<tr>

@@ -1,11 +1,16 @@
 <?php
+<<<<<<< HEAD
 $con=mysqli_connect("localhost","root","","task");
 $query="SELECT * FROM blog where subject=science OR subject=physics OR subject=Travelling";
+=======
+$con=mysqli_connect("localhost","root","password","rajni");
+$query="SELECT * FROM blog";
+>>>>>>> 36a9352e106b3c2c249aa2c59391f76d62bf279f
 $result=mysqli_query($con,$query);
  // ($data=mysqli_fetch_assoc($result));
  $data=myspli_num_rows($result);
-print_r($data);
-die;
+// print_r($data);
+// die;
 ?>
 <!DOCTYPE html>
 <html>
