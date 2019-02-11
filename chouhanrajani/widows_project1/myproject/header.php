@@ -94,7 +94,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="sub-content2">
+		 <div id="sub-content2">
 			<div id="in-sub-con1">
 				<img src="image/253.jpg" height="200" width="610" style="border-radius: 10px" />
 			</div>
@@ -103,4 +103,4 @@
 					<div id="top-con22">
 					<h5 style="margin-top:5px;padding-top:10px" >FEATURES PRODUCTS</h5>
 				
-				</div>
+				</div>  

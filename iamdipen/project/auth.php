@@ -1,17 +1,22 @@
 <?php
-include("connect.php");
-
-$u = $_POST['username'];
+print_r($_POST)
+$u = $_POST['admin_name'];
 $p = $_POST['pass'];
-
- $query = "SELECT * FROM user WHERE username ='$u'";
+echo "$u";
+echo "$p"
+die;
+include("../connect.php");
+ $query = "SELECT * FROM admin WHERE admin_name ='$u'";
+ echo $query;
+ die;
 
  $result = mysqli_query($con, $query);
  print_r($result);
 
  if(mysqli_num_rows($result)==1) 
  {
-    $data= mysqli_fetch_assoc($result)	
+    $data= mysqli_fetch_assoc($result)
+    header(location:header.php;)	
  }
  else
  {

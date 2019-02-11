@@ -8,6 +8,7 @@
 <div id="header">
 	<div id="in-header">
 		<a href="view_blog.php"><h3 align="center">view all blogs</h3></a>
+		<a href="mycart.php"><h3 align="center">my cart(0)</h3></a>
 	</div>
 </div>
 <div id="content">
@@ -15,15 +16,15 @@
 		<form action="save.php" method="post">
 			<table align="center">
 				<tr>
-					<td>Title  :<input type="text" name="title"></td>
+					<p><td>Title:<input type="text" name="title"></td></p>
 				</tr>
-	<tr> <td>Subject :<select name="subject"><option>select</option>
+	<tr><p> <td>Subject :<select name="subject"><option>select</option>
 							<option>Science</option>
 							<option>Phusics</option>
 							<option>Travelling</option>
 							<option>Cooking</option>
-				</select></td></tr>
-	<tr><td>Message :<textarea name="msg"></textarea></td></tr>
+				</select></td></p></tr>
+	<tr><p><td>Message :<textarea name="msg"></textarea></td></p></tr>
 	<tr>
 		<td><input type="submit" value="submit"></td></tr>
 

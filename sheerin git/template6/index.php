@@ -1,7 +1,15 @@
 
 <?php
+include("connection.php");
 include("header.php");
 include("menu.php");
+$query_pro="select * from addproduct";//product dynamically
+$result_pro=mysqli_query($con,$query_pro);
+
+$query="select * from addcategory";//category dynamically
+$result=mysqli_query($con,$query);
+$n=mysqli_num_rows($result);
+// echo $n;
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,10 +25,19 @@ include("menu.php");
 				<div id="left1">
 					<h3>category</h3>
 					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact us</a></li>
-						<li><a href="#">Help</a></li>
+					<?php
+     				while($data=mysqli_fetch_assoc($result))
+   		 				// print_r($data);
+   					{
+   		 			?>
+						<li><a href="#"><?php echo $data['categoryname'] ;?>
+							
+							</a>
+						</li>
+					<?php
+   					}
+
+   					?>  
 					</ul>				
 				</div>
 				<div id="left2">
@@ -44,60 +61,37 @@ include("menu.php");
 				</div>
 				
 				<div id="right2">
-
 			
 				</div>
-
 				<div id="right3">
-				<h3>under $100<h3>
+				<?php
+   				while($data_pro=mysqli_fetch_assoc($result_pro))
+   				 {
+   				  // print_r($data_pro);
+   					 $discount=$data_pro['discount'];
+   					 $price=$data_pro['productprice'];
+   		   			 $x=$price*$discount/100;
+   					 $new_price=$price-$x;
+   					 // echo $new_price;
+   				 
+ 				
+   		 		?>
 				<div class="right3-productbox">
-				 <img src="../images/9.jpg"> 
-				 <p>iphone<p>
-				 <h5>$100<h5>
+				 <!-- <img src="../images/9.jpg">  -->
+				 <img src="../admin/uploads/<?php echo $data_pro['image']; ?>" /> 
+				 <p><?php echo $data_pro['productname'] ;?><p>
+				 <h4 class="old_price"><?php echo $data_pro['productprice'] ;?></h4>
+				<h4 class="new_price"><?php echo $new_price ;?></h4> 
 				 <a href="#">add to cart</a>
-				 <a href="#">wishlist</a>		 
+				 <a href="#">view more</a>		 
 				</div>
-				<div class="right3-productbox">
-				 <img src="../images/10.jpeg"> 
-				 <p>iphone<p>
-				 <h5>$100<h5>
-				 <a href="#">add to cart</a>
-				 <a href="#">wishlist</a>		 
-				</div>
-				<div class="right3-productbox">
-				 <img src="../images/11.jpeg"> 
-				 <p>iphone<p>
-				 <h5>$100<h5>
-				 <a href="#">add to cart</a>
-				 <a href="#">wishlist</a>		 
-				</div>
-				<div class="right3-productbox">
-				 <img src="../images/13.jpeg"> 
-				 <p>iphone<p>
-				 <h5>$100<h5>
-				 <a href="#">add to cart</a>
-				 <a href="#">wishlist</a>		 
-				</div>
-				<div class="right3-productbox">
-				 <img src="../images/9.jpg"> 
-				 <p>iphone<p>
-				 <h5>$100<h5>
-				 <a href="#">add to cart</a>
-				 <a href="#">wishlist</a>		 
-				</div>
+				<?php
+				}
+   		 		?>
+				
 				</div>
 
-				<div id="right4">
-				<div class="right4-productbox">
-				</div>
-				<div class="right4-productbox">
-				</div>
-				<div class="right4-productbox">
-				</div>
-				<div class="right4-productbox">
-				</div>
-		
-				</div>
+				
 		 	</div>
 		
 	</div>

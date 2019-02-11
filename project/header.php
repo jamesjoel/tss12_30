@@ -46,7 +46,11 @@ else
 				?>
 
 				<ul>
+
+
+
 					<li><a href="my_cart.php">My Cart(<?php echo $total; ?>)</a></li>
+
 					<li><a href="signup.php">Signup</a>|</li>
 					<li><a href="login.php">Login</a>|</li>
 				</ul>
@@ -54,6 +58,13 @@ else
 				}
 				?>
 			</div>
+				<div class="search-frm">
+					<form action="" method="get">
+						
+					<input name="q" type="text" id="search-txt" placeholder="Search Product ">
+					<input type="submit" id="search-btn" value="Go">
+					</form>
+				</div>
 			<div id="right-header-bottom"></div>
 		</div>
 	</div>

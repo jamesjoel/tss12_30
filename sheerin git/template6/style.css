@@ -184,11 +184,13 @@ float:left;
 }
  #left1
 {
-height:200px;
+min-height:200px;
+height:auto;
 width:300px;
 /*background-color: pink;*/
 background-color:white;
 float:left;
+
 }
 #left1 ul
 {
@@ -223,7 +225,8 @@ color:white;
 #left2
 {
 margin-top:10px;
-height:500px;
+min-height:500px;
+height:auto;
 width:300px;
 background-color:YELLOW;
 /*background-color:white;*/
@@ -235,7 +238,7 @@ float:left;
 }
 #left2 img
 {
-height:200px;
+height:130px;
 width:300px;
 background-color:YELLOW;
 }
@@ -266,7 +269,7 @@ width:250px;
 #inside-content-right #right2
 {
 margin-top:9px;
-height:230px;
+height:220px;
 width:970px;
 background-color:blue;
 /*background-color: white;*/
@@ -282,69 +285,88 @@ background-color:yellow;
 float:left;
 }
 
-#inside-content-right #right3
+#right3
 {
 margin-top:9px;
-height:230px;
+height:430px;
 width:970px;
 /*background-color:blue;*/
-background-color: white;
+/*background-color: yellow;*/
 float:right;
 }
-#right3 h3
-{
-	margin:0px;
-	padding:0px;
-}
+
 .right3-productbox
 {
 margin:2px;
-height:203px;
+height:220px;
 width:230px;
 /*background-color:yellow;*/
-background-color: white;
+
 float:left;
+text-align:center;
+
 }
 
 .right3-productbox img
 {
-height:140px;
+height:150px;
 width:140px;
-margin-top:1px;
-margin-left:37px;
+/*text-align: center;*/
 }
+
 
 .right3-productbox p
 {
-	margin:0px 37px;
-	padding:0px;
-	background-color:#023860;
-	text-align: center;
-	color:white;
-	width:150px;
-}
-
-.right3-productbox h5
-{
+	text-align:center;
 	margin:0px;
 	padding:0px;
+	/*background-color:red;*/
 	color:#023860;
-	text-align:center;
+
+}
+
+.right3-productbox h4
+{
+	
+	/*background-color: green;*/
+}
+.old_price{
+	margin:0px;
+	padding:0px;
+	margin-left:40px;
+	float: left;
+	text-decoration: line-through;
+
+}
+.new_price{
+
+	margin:0px;
+	padding:0px;
+	margin-right:40px;
+
+	float: right;
+	font-weight: bold;
 }
 .right3-productbox a
 {
 	margin:0px 13px;
 	padding:2px;
-	font-size: 13px;
+	font-size: 16px;
 	display:inline-block;
 	color:#023860;
 	text-decoration:none;
 	border-radius:5px;
+	
+}
+.right3-productbox a:hover
+{
+	background-color: red;
 }
 
 .right3-productbox:hover
 {
 	box-shadow:2px 2px 5px #023860;
+
 }
 
 #inside-content-right #right4

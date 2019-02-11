@@ -38,6 +38,10 @@
 							<th><input type="text" name="contact" /></th>
 						</tr>
 						<tr>
+							<th>Age</th>
+							<th><input type="text" name="age" /></th>
+						</tr>
+						<tr>
 							<th>Pincode</th>
 							<th><input type="text" name="pincode" /></th>
 						</tr>

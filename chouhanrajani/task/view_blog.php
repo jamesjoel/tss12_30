@@ -1,8 +1,10 @@
 <?php
 $con=mysqli_connect("localhost","root","","task");
-$query="SELECT * FROM blog";
+$query="SELECT * FROM blog where subject='science' OR subject='physics' OR subject='Travelling'";
 $result=mysqli_query($con,$query);
-
+ // ($data=mysqli_fetch_assoc($result))
+ // $data=mysqli_num_rows($result);
+// print_r($data);
 
 ?>
 <!DOCTYPE html>
@@ -29,14 +31,15 @@ $result=mysqli_query($con,$query);
 	</div>
 </div>
 <div id="in-content">
-	<?php 
+	 <?php 
 	
 	$n=1;
 	while($data=mysqli_fetch_assoc($result))
 		{?>
 			<div class="menu">
+				 <?php echo $data['id'];?>
 				  <?php echo $data['field'];?>
-		 		 <?php echo $data['id'];?>
+		 		
 				 <?php echo$data['subject'];?>
 				 <?php echo$data['message'];?>
 			</div>
@@ -44,7 +47,7 @@ $result=mysqli_query($con,$query);
 	<?php
 		$n++;
 	}
-		?>
+		?> 
 
 </div>
 </body>

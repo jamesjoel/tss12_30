@@ -6,7 +6,8 @@ $query_pro = "SELECT * FROM product WHERE id = $a";
 $result_pro = mysqli_query($con, $query_pro);
 $data_pro = mysqli_fetch_assoc($result_pro);
 
-// print_r($data_pro);
+ // print_r($data_pro);
+ // die;
 include("header.php");
 $query = "SELECT * FROM category";
 $result = mysqli_query($con, $query);

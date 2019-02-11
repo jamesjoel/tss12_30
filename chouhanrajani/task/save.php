@@ -1,7 +1,8 @@
 <?php
 // print_r($_POST);
 // die;
-$con=mysqli_connect("localhost","root","","task");
+// $con=mysqli_connect("localhost","root","","task");
+$con=mysqli_connect("localhost","root","password","rajni");
 $a=$_POST['title'];
 $b=$_POST['subject'];
 $c=$_POST['msg'];

@@ -12,8 +12,8 @@ $query="select * from addproduct";
 $result=mysqli_query($con,$query);
 $n=mysqli_num_rows($result);
 // echo $n;
-if($n>0)
-{
+// if($n>0)
+// {
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,14 +32,17 @@ if($n>0)
 				<th>product price</th>
 				<th>category</th>
         <th>discount</th>
+        <th>image</th>
         <th>edit</th>
 				<th>delete</th>
 			</tr>
    		<?php
+      if($n>0)
+      {
       $a=1;
    		while($data=mysqli_fetch_assoc($result))
-   		 // print_r($data);
-   			{
+   		  // print_r($data);
+      {
    		 ?>
    		<tr>
    			<td><?php echo $a;?></td>
@@ -47,6 +50,7 @@ if($n>0)
    			<td><?php echo $data['productprice'] ;?></td>
    			<td><?php echo $data['category'] ;?></td>
    			<td><?php echo $data['discount'] ;?></td>
+        <td><img src="uploads/<?php echo $data['image']; ?>"height="100" width="100"/></td>
     <td><a href="editproduct.php?pid=<?php echo $data['id'] ;?>">edit</a></td>
     <td><a href="deleteproduct.php?pid=<?php echo $data['id'] ;?>">delete</a></td>
       
