@@ -10,19 +10,19 @@ include("connect.php");
 					<table align="center">
 						<tr>
 							<td>Full Name</td>
-							<td><input type="text" name="fullname" style="margin: 2px" /></td>
+							<td><input type="text" name="fullname" class="input" /></td>
 						</tr>
 						<tr>
 							<td>Username</td>
-							<td><input type="text" name="username" style="margin: 2px" /></td>
+							<td><input type="text" name="username" class="input"/></td>
 						</tr>
 						<tr>
 							<td>Password</td>
-							<td><input type="password" name="pass" style="margin: 2px" /></td>
+							<td><input type="password" name="pass" class="input"/></td>
 						</tr>
 					<tr>
 							<td>Re-Password</td>
-							<td><input type="password" name="repass" style="margin: 2px"  /></td>
+							<td><input type="password" name="repass" class="input" /></td>
 						</tr>
 					
 						<tr>
@@ -47,7 +47,7 @@ include("connect.php");
 						</td>
 						<tr>
 							<td>Contact</td>
-							<td><input type="text" name="contact" style="margin: 2px" /></td>
+							<td><input type="text" name="contact" class="input" /></td>
 						</tr>
 						<tr>
 							<td>Pincode</td>

@@ -1,9 +1,5 @@
 <?php
 include("../connect.php");
-if(!isset($_SESSION["admin_logged_in"]))
-{
-	header("location:index.php");
-}
 include("header.php");	
 $query="SELECT * FROM addcategory";
 $result=mysqli_query($con, $query);
@@ -11,12 +7,8 @@ $result=mysqli_query($con, $query);
 		<div id="sub-content">
 
 		<h3>Product_information</h3>
-<<<<<<< HEAD
-=======
 		
 				<form action="saveproduct.php" method="post">
->>>>>>> 36a9352e106b3c2c249aa2c59391f76d62bf279f
-				<form action="saveproduct.php" method="post" enctype="mulitpart/form-data">
 				<table align="center">
 						<tr>
 							<td>product name</td>
@@ -50,11 +42,6 @@ $result=mysqli_query($con, $query);
 						<tr>
 							<td>discount</td>
 							<td><input type="text" name="productdiscount" class="input" 
-							 /></td>
-						</tr>
-						<tr>
-							<td>product image</td>
-							<td><input type="file" name="file" class="input" 
 							 /></td>
 						</tr>
 						<tr>

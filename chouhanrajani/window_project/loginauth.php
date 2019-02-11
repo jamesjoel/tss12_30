@@ -25,7 +25,11 @@ if(mysqli_num_rows($result)==1)
 	}
 	
  	else{
- 		$_SESSION['msg']="invailid password";
+
+ 		$link=$data['user_status_link'];
+ 		
+
+ 		$_SESSION['msg']="for verification please click here <a href='active_user.php?link=".$link."'>login</a>";
  		 header("location:login.php");
 	}
  }
