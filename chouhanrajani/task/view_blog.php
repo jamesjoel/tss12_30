@@ -1,6 +1,6 @@
 <?php
 $con=mysqli_connect("localhost","root","","task");
-$query="SELECT * FROM blog";
+$query="SELECT * FROM blog where subject='science' OR subject='physics' OR subject='Travelling'";
 $result=mysqli_query($con,$query);
  // ($data=mysqli_fetch_assoc($result))
  // $data=mysqli_num_rows($result);
@@ -21,22 +21,10 @@ $result=mysqli_query($con,$query);
 			<form>
 			<table align="center">
 			<tr><td>Subject :<select name="subject"><option>select</option>
-							<option  <?php while($data=mysqli_fetch_assoc($result)) echo $data['field'];?>
-		 		 <?php echo $data['id'];?>
-				 <?php echo$data['subject'];?>
-				 <?php echo$data['message'];?>>Science</option>
-							<option  <?php while($data=mysqli_fetch_assoc($result)) echo $data['field'];?>
-		 		 <?php echo $data['id'];?>
-				 <?php echo$data['subject'];?>
-				 <?php echo$data['message'];?>>Phusics</option>
-							<option  <?php echo $data['field'];?>
-		 		 <?php echo $data['id'];?>
-				 <?php echo$data['subject'];?>
-				 <?php echo$data['message'];?>>Travelling</option>
-							<option  <?php echo $data['field'];?>
-		 		 <?php echo $data['id'];?>
-				 <?php echo$data['subject'];?>
-				 <?php echo$data['message'];?>>Cooking</option>
+							<option>Science</option>
+							<option>Phusics</option>
+							<option>Travelling</option>
+							<option>Cooking</option>
 				</select></td></tr> 
 				</table>
 				</form>
@@ -49,8 +37,9 @@ $result=mysqli_query($con,$query);
 	while($data=mysqli_fetch_assoc($result))
 		{?>
 			<div class="menu">
+				 <?php echo $data['id'];?>
 				  <?php echo $data['field'];?>
-		 		 <?php echo $data['id'];?>
+		 		
 				 <?php echo$data['subject'];?>
 				 <?php echo$data['message'];?>
 			</div>
