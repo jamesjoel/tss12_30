@@ -1,22 +1,16 @@
-<!-- <?php
+<?php
 include("connect.php");
-if(!isset($_SESSION['is_admin_logged_in']))
-{
-	header("location:index.php");
-}
 
-$u = $_POST['username']; 
-$p = $_POST['password'];
+$u = $_POST['username']; // abc
+$p = $_POST['pass'];
 
-// $a= $_POST['password'];
-// $x= md5($a);
-
-$query = "SELECT * FROM user WHERE firstname ='$u'";
+$query = "SELECT * FROM user WHERE username ='$u'";
 
 $result = mysqli_query($con, $query);
 
 // print_r($result);
 // die;
+// the result is a non-readble object
 
 if(mysqli_num_rows($result)==1)
 {
@@ -24,8 +18,8 @@ if(mysqli_num_rows($result)==1)
 	if($data['password']==md5($p))
 	{
 		if($data['status']==1)
-		 {
-			$_SESSION["name"]=$data['fullname'];
+		{
+			$_SESSION["name"]=$data['full_name'];
 			$_SESSION['id']=$data['id'];
 			$_SESSION['is_user_logged_in']=true;
 
@@ -37,6 +31,8 @@ if(mysqli_num_rows($result)==1)
 			$_SESSION['msg'] = "You Are Diactive Now pls Contact our team....";
 			header("location:login.php");	
 		}
+
+
 
 	}
 	else
@@ -50,4 +46,4 @@ else
 	$_SESSION['msg'] = "Invalid Username and Password";
 	header("location:login.php");	
 }
-?> -->
+?>

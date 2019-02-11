@@ -7,7 +7,7 @@ include("header.php");
 		<div id="right-content">
 			<h3>login</h3>
 			<div id="login-box">
-				<form action="login_auth.php" method="post">
+				<form action="auth.php" method="post">
 					<table align="center">
 						<tr>
 							<td>Username</td>

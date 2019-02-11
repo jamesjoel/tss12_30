@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +11,28 @@
 	<div id="in-header">
 		<div id="top-header">
 			<div id="top-menu">
+				<?php
+				if(isset($_SESSION['is_user_logged_in']))
+				{
+					?>
 				<ul>
-					
-					
+					<li><a href="#">My Cart()</a></li>
+					<li><a href="logout.php">Logout</a>|</li>
+					<li><a href="my_account.php">My Account</a>|</li>
+					<li><a href="my_profile.php">My Profile</a>|</li>
+					<li><a href="#"><?php echo $_SESSION['name']; ?></a>|</li>
+				</ul>
+				<?php
+				}else{
+				?>
+
+				<ul>
 					<li><a href="login.php">Login</a><span>|</span></li>
 					<li><a href="#">My Cart(0)</a><span>|</span></li>
 					<li><a href="signup.php">Register</a></li>
 				</ul>
+				<?php
+				}?>	
 			</div>
 			<div id="logo">
 				<h1>Fashion</h1>
