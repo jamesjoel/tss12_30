@@ -11,12 +11,12 @@ $result=mysqli_query($con, $query);
 		<div id="sub-content">
 
 		<h3>Product_information</h3>
-		
 <<<<<<< HEAD
-				<form action="saveproduct.php" method="post">
 =======
+		
+				<form action="saveproduct.php" method="post">
+>>>>>>> 36a9352e106b3c2c249aa2c59391f76d62bf279f
 				<form action="saveproduct.php" method="post" enctype="mulitpart/form-data">
->>>>>>> 0c60702de2b17112a600c7ae4171f0b9e9769c65
 				<table align="center">
 						<tr>
 							<td>product name</td>

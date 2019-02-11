@@ -14,7 +14,7 @@
 	 	   	</ul>
 	 	   </div>
 	 </div>
-
+     
 	 <div id="login-inside-content">
 	 	<div id="login">
 	 	 <form action="auth.php" method="post">
@@ -31,9 +31,7 @@
                 <td><input name="pass" type="Password"></td>
               </tr>  
               <tr>
-	 		   	
-                <td colspan="2" align="center"><input type="submit" value="login"></td>
-
+	 	         <td colspan="2" align="center"><input type="submit" value="login"></td>
               </tr> 
             </table>
          </form>

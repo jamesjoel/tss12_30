@@ -8,9 +8,17 @@ $c = $_POST['details'];
 $d = $_POST['category'];
 $e = $_POST['discount'];
 
-$query = "INSERT INTO add_product (name, price, details, category, discount) VALUES('$a', $b,'$c', '$d', $e)";
+$f=$_FILES['pro_name']['name'];
+$tmp=$_FILES['pro_name']['tmp_name'];
 
-mysqli_query($con,$query) ;
 
- // header("location:addproduct.php");
+$x=explode(".",$f);
+$y=end($x);
+$n=time().rand(1000,10000).".".$y;
+move_uploaded_file($tmp,"upload/".$n);
+
+$query = "INSERT INTO add_product (name, price, image, details, category, discount) VALUES('$a', '$b', '$n','$c', '$d', '$e')";
+
+mysqli_query($con, $query);
+// header("location:viewproduct.php");
 ?>

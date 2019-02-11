@@ -19,10 +19,8 @@ $result = mysqli_query($con, $query);
 		<th>discount</th>
 		<th>delete</th>
 		<th>edit</th>
-<<<<<<< HEAD
-=======
+
 		<th>Product image</th>
->>>>>>> 0c60702de2b17112a600c7ae4171f0b9e9769c65
 	</tr>
 	<?php
 	$n=1;
@@ -34,10 +32,8 @@ $result = mysqli_query($con, $query);
 			<td><?php echo $data['productcategory'];?></td>
 			<td><?php echo $data['productdiscount'];?></td>
 			<td><a href="delete_pro.php?pid=<?php echo $data['id'];?>">delete</a></td>
-<<<<<<< HEAD
-=======
+			<td><a href="edit_product.php?pid=<?php echo $data['id']; ?>" class="edit-btn">Edit</a></td>
 			<td><?php echo $data['pro_image'];?></td>
->>>>>>> 0c60702de2b17112a600c7ae4171f0b9e9769c65
 		</tr>
 		<?php
 			$n++;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 28, 2019 at 02:06 PM
+-- Generation Time: Feb 11, 2019 at 02:21 PM
 -- Server version: 5.7.23-0ubuntu0.18.04.1
 -- PHP Version: 7.2.7-0ubuntu0.18.04.2
 
@@ -55,8 +55,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'Mobileeeeee'),
-(4, 'Boy Fashion'),
+(1, 'Mobile'),
+(4, 'Mens Fashion'),
 (5, 'Womens Fashion'),
 (7, 'Example'),
 (8, 'Home Appliance');
@@ -73,20 +73,20 @@ CREATE TABLE `product` (
   `product_price` decimal(8,2) NOT NULL,
   `detail` text NOT NULL,
   `category` int(11) NOT NULL,
-  `discount` int(11) NOT NULL
+  `discount` int(11) NOT NULL,
+  `product_image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `product_name`, `product_price`, `detail`, `category`, `discount`) VALUES
-(1, 'I-Phone', '45000.00', 'sdfg sdfg sdfg sdfgsd', 1, 10),
-(4, 'Sony Z1', '28000.00', 'sdg sdfgsdfg dfg', 1, 12),
-(5, 'Demo', '1000.00', 'sdfgsdgsdfg', 1, 10),
-(6, 'T-Shirt', '1800.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 4, 10),
-(7, 'Saree', '3000.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 5, 10),
-(8, 'Sofa-Set', '30000.00', 'new sofa form Satiler', 8, 12);
+INSERT INTO `product` (`id`, `product_name`, `product_price`, `detail`, `category`, `discount`, `product_image`) VALUES
+(1, 'I-Phone', '35000.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, 7, '15488352276618.png'),
+(2, 'T-Shirt', '1800.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 4, 12, '15488353818473.jpeg'),
+(3, 'New Saree', '3500.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 5, 8, '15488355674724.jpg'),
+(4, 'Shirt', '2500.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 4, 20, '15488355842064.jpg'),
+(5, 'Firdge', '18000.00', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.`', 8, 10, '15488356078190.jpeg');
 
 -- --------------------------------------------------------
 
@@ -104,18 +104,20 @@ CREATE TABLE `user` (
   `city` varchar(100) NOT NULL,
   `contact` varchar(100) NOT NULL,
   `pincode` varchar(100) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '1'
+  `status` int(11) NOT NULL DEFAULT '1',
+  `check_status_link` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `full_name`, `username`, `password`, `gender`, `address`, `city`, `contact`, `pincode`, `status`) VALUES
-(1, 'James', 'james@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'male', 'test', 'Indore', '12455', '12221', 1),
-(2, 'Rohit', 'rohit@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'male', 'test', 'Indore', '124578', '124578', 1),
-(3, 'Jaya', 'jaya@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'female', 'dfsgsd sdfgsdf', 'Delhi', '2225558', '22558', 1),
-(4, 'Gaurav', 'gaurav@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'male', 'test', 'Mumbai', '124578', '124522', 0);
+INSERT INTO `user` (`id`, `full_name`, `username`, `password`, `gender`, `address`, `city`, `contact`, `pincode`, `status`, `check_status_link`) VALUES
+(1, 'James', 'james@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'male', 'test', 'Indore', '12455', '12221', 1, ''),
+(2, 'Rohit', 'rohit@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'male', 'test', 'Indore', '124578', '124578', 1, ''),
+(3, 'Jaya', 'jaya@gmail.com', '202cb962ac59075b964b07152d234b70', 'female', 'dfsgsd sdfgsdf', 'Delhi', '2225558', '22558', 1, ''),
+(4, 'Gaurav', 'gaurav@gmail.com', '6512bd43d9caa6e02c990b0a82652dca', 'male', 'test', 'Mumbai', '124578', '124522', 0, ''),
+(5, 'Vijay', 'vijay@gmail.com', '202cb962ac59075b964b07152d234b70', 'male', 'dfgsdfg sdfg', 'Indore', '124878', '1245778', 1, 'fjagkdhcebi154961382294766hjiakcgfdeb');
 
 --
 -- Indexes for dumped tables
@@ -163,12 +165,12 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
