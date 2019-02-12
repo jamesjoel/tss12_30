@@ -410,3 +410,19 @@ margin:0 auto;
 	font-size:14px;
 
 }
+#tab1
+{
+	color:white;
+	/*border-collapse: collapse;*/
+}
+/*#tab1 tr td,#tab1 tr th
+{
+border:2px solid white;
+padding:10px 7px;
+font-size: 16px;
+}*/
+
+#tab1 tr td a
+{
+	color:red;
+}
