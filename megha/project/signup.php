@@ -38,6 +38,7 @@ include("header.php");
 											<td><select name="city" class="input">
 												<option>Select</option>
 												<option>Indore</option>
+												<option>Silwani</option>
 												<option>Bhopal</option>
 												<option>Mumbai</option>
 												<option>Pune</option>
