@@ -1,58 +1,68 @@
 <?php
+ include("connect.php");
  include("header.php");
- // include("connect.php");
+if(isset($_GET['productcategory']))
+{
+	$a=$_GET['productcategory'];
+	$pro_query="SELECT * FROM product WHERE productcategory=$a";
+}
+else{
+
+	$pro_query="SELECT * FROM product";
+}
+$pro_result=mysqli_query($con,$pro_query);
 ?>
 			
 			
 				<div class="right-content-block">
 
 					<div class="right-content-subblock">
-					<div id="right-block1">
-						<img src="image/2.jpg" height="150" width="130" style="border-radius: 10px" />
+					<div class="right-block1">
+						<img src="upload/<?php echo $data['product_img']; ?>"class="img" />
 					</div>
-					<div id="right-block2">
+					<div class="right-block2">
 						<p>TFT Monitor</p>
 							<p>morbi nunc odio,
 							gravida at,cursus
-							price:<span style="color: #73A2BA">$147.99</span>
-							<input type="button" value="Buy"style="background-color:#A6D563" style="border-radius: 10px"><input type="button" value="sell" style="padding-right:30px " style="background-color: #c0c2c1"style="border-radius: 10px"></p>
+							price:<span class="rup">$147.99</span>
+							<input type="button" value="Buy" class="buy"><input type="button" value="sell" class="sell"></p>
 					</div>	
 					</div>
-					<div class="right-content-subblock">
+					 <div class="right-content-subblock">
 						<div id="right-block3">
-							<img src="image/6.jpg" height="150" width="130" style="border-radius: 10px" />
+							<img src="image/6.jpg" class="img" />
 						</div>
 						<div id="right-block4">
 							<p>TFT Monitor</p>
 							<p>morbi nunc odio,
 							gravida at,cursus
-							price:<span style="color: #73A2BA">$147.99</span>
-							<input type="button" value="Buy"style="background-color:#A6D563" style="padding-right:10px" style="border-radius: 10px"><input type="button" value="sell" style="padding-right:30px " style="background-color: #c0c2c1"style="border-radius: 10px"></p>
+							price:<span class="rup">$147.99</span>
+							<input type="button" value="Buy" class="buy"><input type="button" value="sell" class="sell"></p>
 						</div>
-					</div>
+					</div> 
 					<div class="right-content-subblock">
 						<div id="right-block5">
-							<img src="image/3.jpg" height="145" width="120" style="border-radius: 10px" />
+							<img src="image/3.jpg"class="img" />
 						</div>
 						<div id="right-block6">
 							<p>TFT Monitor</p>
 							<p>morbi nunc odio,
 							gravida at,cursus
-							price:<span style="color: #73A2BA">$147.99</span>
-							<input type="button" value="Buy"style="background-color:#A6D563" style="padding-right:10px" style="border-radius: 10px"><input type="button" value="sell" style="padding-right:30px " style="background-color: #c0c2c1"style="border-radius: 10px"></p>
+							price:<span class="rup">$147.99</span>
+							<input type="button" value="Buy" class="buy"><input type="button" value="sell" class="sell"></p>
 						</div>
 					</div>
 					<div class="right-content-subblock">
 						<div id="right-block7">
-							<img src="image/vaio.jpg" height="145" width="130" style="border-radius: 10px" />
+							<img src="image/vaio.jpg" class="img"/>
 						</div>
 						<div id="right-block8">
 							<p>TFT Monitor</p>
 							<p>morbi nunc odio,
 							gravida at,cursus
-							price:<span style="color: #73A2BA">$147.99</span>
-							<input type="button" value="Buy"style="background-color:#A6D563" style="padding-right:10px" style="border-radius: 10px"><input type="button" value="sell" style="padding-right:30px " style="background-color: #c0c2c1"style="border-radius: 10px"></p>
-						</div>
+							price:<span class="rup">$147.99</span>
+							<input type="button" value="Buy" class="buy"><input type="button" value="sell" class="sell"></p>
+						</div> 
 					</div>
 				</div>
 			</div>
