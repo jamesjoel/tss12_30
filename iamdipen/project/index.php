@@ -1,59 +1,37 @@
 <?php
-include("header.php")
+include("connect.php");
+include("header.php");
+
+
+$result = mysqli_query($con,"SELECT * FROM add_product");
 ?>
-	 	  	 <div id="right-content-bottom">
-	 	  	 	  <h3>Latest</h3>
-	 	  	 	  
-	 	  	 	   <div class="product-box">
-	 	  	 	     	<div class="image"><a href="#"><img src="images/1.jpeg" height="150" width="190"></a></div>
-	 	  	 	     	<div class="detail"><p>Lorem ipsum dolor sit amet</p></div>
-	 	  	 	     	<div class="price">
-	 	  	 	     		<p class="old-price">$ 300</p>
-	 	  	 	     	    <p class="new-price">$ 100</p></div>
-	 	  	 	    </div>
-	 	  	 	    <div class="product-box">
-	 	  	 	     	<div class="image"><a href="#"><img src="images/2.jpeg" height="150" width="190"></a></div>
-	 	  	 	     	<div class="detail"><p>Lorem ipsum dolor sit amet</p></div>
-	 	  	 	     	<div class="price">
-	 	  	 	     		<p class="old-price">$ 300</p>
-	 	  	 	     	    <p class="new-price">$ 100</p></div>
-	 	  	 	    </div>
-	 	  	 	       
-	 	  	 	      <div class="product-box">
-	 	  	 	      	<div class="image"><a href="#"><img src="images/3.jpeg" height="150" width="190"></a></div>
-	 	  	 	     	<div class="detail"><p>Lorem ipsum dolor sit amet</p></div>
-	 	  	 	     	<div class="price">
-	 	  	 	     		<p class="old-price">$ 400</p>
-	 	  	 	     	    <p class="new-price">$ 50</p></div>
-	 	  	 	    </div>
-	 	  	 	         <div class="product-box">
-	 	  	 	     	<div class="image"><a href="#"><img src="images/4.jpeg" height="150" width="190"></a></div>
-	 	  	 	     	<div class="detail"><p>Lorem ipsum dolor sit amet</p></div>
-	 	  	 	     	<div class="price">
-	 	  	 	     		<p class="old-price" >$ 100</p>
-	 	  	 	     	    <p class="new-price">$ 40</p></div>
-	 	  	 	    </div>
-	 	  	 	       <div class="product-box">
-	 	  	 	     	<div class="image"><a href="#"><img src="images/5.jpeg" height="150" width="190"></a></div>
-	 	  	 	     	<div class="detail"><p>Lorem ipsum dolor sit amet</p></div>
-	 	  	 	     	<div class="price">
-	 	  	 	     		<p class="old-price">$500</p>
-	 	  	 	     	    <p class="new-price">$ 150</p></div>
-	 	  	 	    </div>
-	 	  	 	    <div class="product-box">
-	 	  	 	     	<div class="image"><a href="#"><img src="images/6.jpeg" height="150" width="190"></a></div>
-	 	  	 	     	<div class="detail"><p>Lorem ipsum dolor sit amet</p></div>
-	 	  	 	     	<div class="price">
-	 	  	 	     		<p class="old-price">$ 600</p>
-	 	  	 	     	    <p class="new-price">$ 200</p></div>
-	 	  	 	    </div>
+ <div id="right-content-bottom">
+	 	  	 <h3>Latest</h3>
 
+  <?php 
+      while($data =mysqli_fetch_assoc($result))
+    { 
+      $discount=$data['discount'];
+      $price=$data['price'];
+      $m=$price*$discount/100;
+      $new_price=$price-$m;
+      ?>
+      
+ <div class="product-box">
+	
+       <div class="image"><a href="#"><img src="/adminpanel/upload/" height="150" width="190"><?php echo $data['image'];?>><a></div>
+       <div class="detail"><p><?php echo $data['details'];?></p></div>
+	   <div class="price">
+	 	  	 <p class="old-price"><?php echo $data['price'];?></p>
+	 	  	 <p class="new-price"><?php  echo '$new_price';?></p></div>
+	
+</div>
+    
+   <?php } ?>
 
-	 	  	 	   	 
-	 	  	 </div>
-	 	  </div>
-	 	</div> 
-	 </div>
+</div>
+
+	 	
 <?php
-include{"footer.php"};
+include("footer.php");
 ?>	

@@ -1,12 +1,14 @@
 <?php
 include("../connect.php");
 include("header.php");
+$query= "SELECT * FROM" 
+
 ?>
   <h3 style="color:#fff; ">Add product</h3>
   <hr>
 	 <div id="content">
 	 	
-	 		<form action="saveproduct.php" method="post">
+	 		<form action="saveproduct.php" method="post" enctype="multipart/form-data">
 	 			<div id="login">
 	 		  <table align="center">
 	 			<tr>
@@ -16,6 +18,10 @@ include("header.php");
 	 			<tr>
 	 				<td><b>Product Price</b></td>
 	 				<td><input type="text" name="price"></td>
+	 			</tr>
+	 			<tr>
+	 				<td><b>Choose Files</b></td>
+	 				<td><input type="file" name="pro_name"></td>
 	 			</tr>
 				<tr>
 	 				<td><b>Details</b></td>

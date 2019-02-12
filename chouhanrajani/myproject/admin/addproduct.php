@@ -12,6 +12,7 @@ $result=mysqli_query($con, $query);
 
 		<h3>Product_information</h3>
 		
+				<form action="saveproduct.php" method="post">
 				<form action="saveproduct.php" method="post" enctype="mulitpart/form-data">
 				<table align="center">
 						<tr>

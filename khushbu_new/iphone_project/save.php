@@ -11,7 +11,10 @@ $f=$_POST['city'];
 $g=$_POST['contact'];
 $h=$_POST['pincode'];
 
-$query="INSERT INTO user(firstname,username,password,gender,address,city,contact,pincode)VALUES('$a','$b','$x','$d','$e','$f','$g','$h')";
+
+$link = str_shuffle("abcdefghijk").time().rand(10000, 100000).str_shuffle("abcdefghijk");
+
+$query="INSERT INTO user(firstname,username,password,gender,address,city,contact,pincode,status,check_status_link)VALUES('$a','$b','$x','$d','$e','$f','$g','$h',0,'$link')";
 echo $query;
 mysqli_query($con,$query);
 header("location:login.php");

@@ -3,14 +3,17 @@
 // die;
 // $con=mysqli_connect("localhost","root","","task");
 $con=mysqli_connect("localhost","root","password","rajni");
-$a=$_POST['title'];
-$b=$_POST['subject'];
-$c=$_POST['msg'];
+$date=$_POST['date'];
+$cus=$_POST['cus_id'];
 
 
 
-$query="INSERT INTO blog(field,subject,message) VALUES('$a','$b','$c')";
+
+
+// echo 
+$query="INSERT INTO order_tab(date,cus_id) VALUES('$date','$cus')";
+// die;
 mysqli_query($con,$query);
-header("location:blog.php");
+header("location:order_tab.php");
 
 ?>

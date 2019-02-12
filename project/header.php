@@ -46,7 +46,11 @@ else
 				?>
 
 				<ul>
+<<<<<<< HEAD
+					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
+=======
 					<li><a href="my_cart.php">My Cart(<?php echo $total; ?>)</a></li>
+>>>>>>> 0c60702de2b17112a600c7ae4171f0b9e9769c65
 					<li><a href="signup.php">Signup</a>|</li>
 					<li><a href="login.php">Login</a>|</li>
 				</ul>
