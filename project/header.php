@@ -47,11 +47,9 @@ else
 
 				<ul>
 
-<<<<<<< HEAD
-					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
-=======
 
->>>>>>> 8f857985732336942247e2d1ab61d7492881672d
+					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
+
 
 					<li><a href="my_cart.php">My Cart(<?php echo $total; ?>)</a></li>
 

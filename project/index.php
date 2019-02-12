@@ -1,10 +1,7 @@
 <?php
 include("connect.php");
 include("header.php");
-<<<<<<< HEAD
-=======
 
->>>>>>> e1cbee21985ce151b294eaebb96f9d0726356e64
 if(isset($_GET['category']))
 {
 	$a = $_GET['category'];	
