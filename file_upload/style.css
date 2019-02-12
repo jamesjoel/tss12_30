@@ -1,0 +1,30 @@
+body{
+	background-color: grey;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+}
+#header{
+	width: 910px;
+	height: 200px;
+	background-color: red;
+	text-align: center;
+}
+#content{
+	width: 910px;
+	height: 700px;
+	background-color: pink;
+	text-align: center;
+}
+#in-content{
+	width: 910px;
+	height: 700px;
+	background-color: pink;
+	text-align: center;
+}
+#footer{
+	width: 910px;
+	height: 200px;
+	background-color: green;
+	text-align: center;
+}

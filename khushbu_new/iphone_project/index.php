@@ -1,6 +1,13 @@
 <?php
+include("connect.php");
 include("header.php");
 include("menu.php");
+
+// print_r($_COOKIE);
+
+
+$que_res = mysqli_query($con, "SELECT * FROM add_product");
+
 ?>
 <div id="content">
 		<div id="inside-content">
@@ -29,8 +36,8 @@ include("menu.php");
 					    <p>$10.00</p>	
 					</div>
 					<div class="product-box-left-bottom2">
-						<!-- <p>add cart</p> -->
-						<input type="button" name="add cart" value="add cart" />
+						<!-- <p>'add cart</p> -->
+						<a href="#">add cart</a>
 					</div>
 					<br>
 					<br>
@@ -58,84 +65,26 @@ include("menu.php");
 				<div id="right-content-bottom">
 					<div id="right-content-bottom-up">
 						<h4>LATEST</h4>
-						<div class="product-box">
-							<div class="product-box1">
-								<div class="product-box1-img">
-									<img src="css/new (3).jpg">
-								</div>
-								<div class="product-box2">
-									<p style="color: #FFF">product</p>
-									<p style="color: #000">$ 100</p>
-									<input type="button" name="add cart" value="add cart" />
-								</div>
-							</div>
-						</div>
-						<div class="product-box">
-							<div class="product-box1">
-								<div class="product-box1-img">
-									<img src="css/new (4).jpg">
-								</div>
-								<div class="product-box2">
-									<p style="color: #FFF">product</p>
-									<p style="color: #000">$ 100</p>
-									<input type="button" name="add cart" value="add cart" />
-								</div>
-							</div>
-						</div>
 
+						<?php 
+						while($data_pro = mysqli_fetch_assoc($que_res))
+						{ ?>
 
 						<div class="product-box">
 							<div class="product-box1">
 								<div class="product-box1-img">
-									<img src="css/images (5).jpg">
+									<img src="upload/<?php echo $data_pro['pro_image']; ?>"height="50" width="30";/>
 								</div>
 								<div class="product-box2">
-									<p style="color: #FFF">product</p>
-									<p  style="color: #000">$ 100</p>
-									<input type="button" name="add cart" value="add cart" />
+									<p style="color: #FFF"><?php echo $data_pro['product_name'];?></p>
+									<p style="color: #000">$ <?php echo $data_pro['product_price'];?></p>
+									<a href="view_more.php?pid=<?php echo $data_pro['id']; ?>">View</a>
+									<a style="float: right" href="add_to_cart.php?pid=<?php echo $data_pro['id'] ?>">add cart</a>
 								</div>
 							</div>
 						</div>
-
-
-						<div class="product-box">
-							<div class="product-box1">
-								<div class="product-box1-img">
-									<img src="css/new (2).jpg">
-								</div>
-								<div class="product-box2">
-									<p style="color: #FFF">product</p>
-									<p  style="color: #000">$ 100</p>
-									<input type="button" name="add cart" value="add cart" />
-								</div>
-							</div>
-						</div>
-
-						<div class="product-box">
-							<div class="product-box1">
-								<div class="product-box1-img">
-									<img src="css/new (3).jpg">
-								</div>
-								<div class="product-box2">
-									<p style="color: #FFF">product</p>
-									<p  style="color: #000">$ 100</p>
-									<input type="button" name="add cart" value="add cart" />
-								</div>
-							</div>
-						</div>
-
-						<div class="product-box">
-							<div class="product-box1">
-								<div class="product-box1-img">
-									<img src="css/new (5).jpg">
-								</div>
-								<div class="product-box2">
-									<p style="color: #FFF">product</p>
-									<p  style="color: #000">$ 100</p>
-									<input type="button" name="add cart" value="add cart" />
-								</div>
-							</div>
-						</div>
+						<?php } ?>
+						
 					</div> 
 					</div>
 				</div>

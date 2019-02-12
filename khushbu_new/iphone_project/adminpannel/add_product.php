@@ -10,7 +10,7 @@ $result = mysqli_query($con, $query);
 	<div id="inside-content">
 	<h2>ADD NEW PRODUCT</h2>
 	<hr>
-	<form action="save_product.php" method="post">
+	<form action="save_product.php" method="post" enctype="multipart/form-data">
 	<div id="login-box">
 	<table align="center">
 		<tr>
@@ -20,6 +20,10 @@ $result = mysqli_query($con, $query);
 		<tr>
 			<td>Product Price</td>
 			<td><input type="Text" name="product_price"  class="input"/></td>
+		</tr>
+		<tr>
+			<td>browse</td>
+			<td><input type="file" name="pro_image" class="input"></td>
 		</tr>
 		<tr>
 			<td>Detail</td>

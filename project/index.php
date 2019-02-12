@@ -1,6 +1,10 @@
 <?php
 include("connect.php");
 include("header.php");
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1cbee21985ce151b294eaebb96f9d0726356e64
 if(isset($_GET['category']))
 {
 	$a = $_GET['category'];	
@@ -42,8 +46,7 @@ $result_pro = mysqli_query($con, $query_pro);
 						<a href="add_to_cart.php?pid=<?php echo $data_pro['id']; ?>" class="view-more-btn">Add To Cart</a>
 					</div>
 				</div>
-				
-			<?php 
+				<?php 
 			}
 			?>
 			</div>

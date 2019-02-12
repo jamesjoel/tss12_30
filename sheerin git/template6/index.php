@@ -3,13 +3,15 @@
 include("connection.php");
 include("header.php");
 include("menu.php");
-$query_pro="select * from addproduct";//product dynamically
-$result_pro=mysqli_query($con,$query_pro);
-
 $query="select * from addcategory";//category dynamically
 $result=mysqli_query($con,$query);
 $n=mysqli_num_rows($result);
-// echo $n;
+
+
+$query_pro="select * from addproduct";//product dynamically
+$result_pro=mysqli_query($con,$query_pro);
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +69,8 @@ $n=mysqli_num_rows($result);
 				<?php
    				while($data_pro=mysqli_fetch_assoc($result_pro))
    				 {
-   				  // print_r($data_pro);
+   				   // print_r($data_pro);
+   				 	
    					 $discount=$data_pro['discount'];
    					 $price=$data_pro['productprice'];
    		   			 $x=$price*$discount/100;
@@ -82,8 +85,8 @@ $n=mysqli_num_rows($result);
 				 <p><?php echo $data_pro['productname'] ;?><p>
 				 <h4 class="old_price"><?php echo $data_pro['productprice'] ;?></h4>
 				<h4 class="new_price"><?php echo $new_price ;?></h4> 
-				 <a href="#">add to cart</a>
-				 <a href="#">view more</a>		 
+				 <a href="addtocart.php?pid=<?php echo $data_pro['id']; ?>">add to cart</a>
+				 <a href="viewmore.php?pid=<?php echo $data_pro['id']; ?>">view more</a>		 
 				</div>
 				<?php
 				}
