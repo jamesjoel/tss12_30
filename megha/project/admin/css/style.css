@@ -6,7 +6,8 @@ body{
 #header{
 	width: 970px;
 	height: 80px;
-	background-color: #3c3d1a;
+	/*background-color: #3c3d1a;*/
+	background-color: #606053;
 	margin: 0 auto;
 }
 #header h3{
