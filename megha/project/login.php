@@ -7,11 +7,11 @@ include("header.php");
 		<div id="right-content">
 			<h3>login</h3>
 			<div id="login-box">
-				<form action="login.php" method="post">
+				<form action="auth.php" method="post">
 					<table align="center">
 						<tr>
 							<td>Username</td>
-							<td><input name="firstname" type="text" class="input" /></td>
+							<td><input name="username" type="text" class="input" /></td>
 						</tr>
 							<tr>
 								<td>Password</td>

@@ -36,8 +36,9 @@ $page = $_SERVER['PHP_SELF'];
 					else{
 					?>
 				<ul>
-					<li><a href="login.php">Login</a></li>
-					<li><a href="register.php">register</a>or</li>
+					<li><a href="#">my cart()</a></li>
+					<li><a href="login.php">Login</a>|</li>
+					<li><a href="register.php">register</a>|</li>
 				</ul>
 				<?php
 			}

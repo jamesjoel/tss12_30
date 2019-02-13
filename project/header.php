@@ -45,11 +45,15 @@ else
 				}else{
 				?>
 
+<<<<<<< HEAD
 				<ul
 					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
 
 
 
+=======
+				<ul>
+>>>>>>> 2fef0eeaa67825d7392afe70e8ea03989c92182f
 					<li><a href="my_cart.php">My Cart(<?php echo $total; ?>)</a></li>
 
 					<li><a href="signup.php">Signup</a>|</li>
