@@ -7,9 +7,20 @@ $query="select * from addcategory";//category dynamically
 $result=mysqli_query($con,$query);
 $n=mysqli_num_rows($result);
 
+if(isset($_GET['category']))
+{
+	$a = $_GET['category'];	
+	$query_pro = "SELECT * FROM addproduct WHERE category = $a";
+}
+else
+{
 
-$query_pro="select * from addproduct";//product dynamically
-$result_pro=mysqli_query($con,$query_pro);
+	$query_pro = "SELECT * FROM addproduct";//product dynamically
+}
+
+
+
+$result_pro = mysqli_query($con, $query_pro);
 
 
 ?>
@@ -32,7 +43,7 @@ $result_pro=mysqli_query($con,$query_pro);
    		 				// print_r($data);
    					{
    		 			?>
-						<li><a href="#"><?php echo $data['categoryname'] ;?>
+						<li><a href="index.php?category=<?php echo $data['id'] ;?>"><?php echo $data['categoryname'] ;?>
 							
 							</a>
 						</li>
