@@ -72,12 +72,12 @@ $con=mysqli_connect("localhost","root","","rajni");
 		<div id="sub-content1">
 			<div id="sub-con1">
 				<div  id="top-sub-con11">
-					<?php
+					<!-- <?php
 				if(isset($_SESSION['is_user_logged_in']))
 				{
 					echo $_SESSION['id']; 
 				}
-				?>
+				?> -->
 				<style></style>
 
 				<h4 style="border-radius-top: 20px">
