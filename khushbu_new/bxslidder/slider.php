@@ -9,7 +9,8 @@
 	$(document).ready(function(){
       $('.slider').bxSlider({
       	mode:"vertical"
-      	});
+      	}); 
+      //hello world
       
     });	
 
