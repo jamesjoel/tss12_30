@@ -10,6 +10,18 @@ $con=mysqli_connect("localhost","root","","rajni");
 <head>
 	<title>homepage-index</title>
 	<link rel="stylesheet" type="text/css" href="css\style.css">
+	<link rel="stylesheet" type="text/css" href="jquery.bxslider.css">
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.bxslider.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('.bxslider').bxSlider({
+				
+				
+			});
+	});
+	</script>
 </head>
 <body>
 
@@ -103,10 +115,16 @@ $con=mysqli_connect("localhost","root","","rajni");
 				</div>
 			</div>
 		</div>
-		 <div id="sub-content2">
-			<div id="in-sub-con1">
+		 <!-- <div id="sub-content2"> -->
+		 	<div class="bxslider">
+	<div ><img src="image/253.jpg" height="200" width="610" title="hello" style="border-radius: 10px" /></div>
+	<div><img src="image/253.jpg" height="200" width="610" title="helllo world"/></div>
+
+</div>
+<!-- 
+			<div class="bxslider">
 				<img src="image/253.jpg" height="200" width="610" style="border-radius: 10px" />
-			</div>
+			</div> -->
 			<div id="right-content">
 				
 					<div id="top-con22">
