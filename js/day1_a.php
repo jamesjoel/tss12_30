@@ -5,10 +5,9 @@
 	<script type="text/javascript">
 		function demo()
 		{
-			// var a = document.getElementById("para").innerHTML;
-
-			document.getElementById("para").innerHTML="hello world";
-			// alert(a);
+		 // var a = document.getElementById("para").innerHTML;
+         document.getElementById("para").innerHTML="hello world";
+		 // alert(a);
 		}
 	</script>
 

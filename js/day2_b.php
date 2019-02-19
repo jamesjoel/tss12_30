@@ -23,7 +23,7 @@
 			document.getElementById("box").style.backgroundColor="#369850";
 			h=200;
 			w=200;
-		}
+			}
 	</script>
 	<style type="text/css">
 		#box{

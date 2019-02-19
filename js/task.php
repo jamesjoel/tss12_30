@@ -9,7 +9,7 @@
 			min-height: 200px;
 			background-color: #CCC;
 			border-radius: 10px;
-			height: auto;
+			height: auto;	
 			text-align: center;
 			padding: 10px;
 		}

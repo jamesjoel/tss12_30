@@ -10,7 +10,7 @@
 
 			document.getElementById("para").style.backgroundColor=c;
 			document.getElementById("para").style.fontSize="25px";
-			document.getElementById("para").style.color="#FFF";
+			document.getElementById("para").style.color="#fff";
 
 		}
 	</script>
