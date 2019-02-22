@@ -8,7 +8,7 @@ if(!isset($_SESSION['is_user_logged_in']))
 
 ?>
 <div id=Registration-box>
-	<a href="theme.php">you want to change your theme color</a>
+	
 	<h3>wel come <?php echo $_SESSION['name']?></h3>
 	
 </div>

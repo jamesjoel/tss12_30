@@ -21,6 +21,8 @@ else
 <head>
 	<title>My Site</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
 </head>
 <body>
 <div id="header">
@@ -45,15 +47,8 @@ else
 				}else{
 				?>
 
-<<<<<<< HEAD
-				<ul
-					<li><a href="#">My Cart(<?php echo $total; ?>)</a></li>
 
-
-
-=======
 				<ul>
->>>>>>> 2fef0eeaa67825d7392afe70e8ea03989c92182f
 					<li><a href="my_cart.php">My Cart(<?php echo $total; ?>)</a></li>
 
 					<li><a href="signup.php">Signup</a>|</li>
