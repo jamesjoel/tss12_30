@@ -1,0 +1,109 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+}
+#header{
+	width: 970px;
+	height: 80px;
+	background-color: #3c3d1a;
+	margin: 0 auto;
+}
+#header h3{
+	margin: 0;
+	padding: 15px;
+	color: #FFF;
+
+}
+#header ul{
+	margin: 0;
+	padding: 0;
+}
+#header ul li{
+	list-style: none;
+	float: left;
+}
+#header ul li a{
+	text-decoration: none;
+	display: inline-block;
+	background-color: #d35810;
+	padding: 5px;
+	color: #FFF;
+	margin: 2px;
+	border-radius: 5px 5px 0 0;
+}
+#header ul li a:hover{
+	background-color: #000;
+}
+.active{
+	background-color: #000 !important;
+}
+#content{
+	width: 970px;
+	height: auto;
+	min-height: 600px;
+	background-color: #ABB120;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+#content h3{
+	margin: 0;
+	padding: 20px;
+	border-bottom: 1px solid #000;
+}
+#login-box{
+	width: 500px;
+	border-radius: 8px;
+	box-shadow: 10px 10px 10px #000;
+	margin: 0px auto;
+
+	border:1px solid #6b6767;
+	min-height: 150px;
+	padding: 10px;
+	height: auto;
+}
+#login-box table td{
+	width: 150px;
+	height: 40px;
+}
+.input{
+	height: 30px;
+	width: 200px;
+}
+.btn{
+	background-color: #E50032;
+	color: #FFF;
+	padding: 8px 15px;
+	border:none;
+	font-size: 17px;
+	border-radius: 5px;
+}
+.btn:hover{
+	background-color:  #1F1F1F;
+}
+.tab{
+	border-collapse: collapse;
+}
+.tab tr td, .tab tr th{
+	border:1px solid #FFF;
+	padding: 5px 7px;
+	font-size: 14px;
+}
+.edit-btn{
+	background-color: #5e85f2;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
+.delete-btn{
+	background-color: #f25757;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
+.change-btn{
+	background-color: #47b731;
+	text-decoration: none;
+	color: #FFF;
+	padding: 5px;
+}
