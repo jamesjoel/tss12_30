@@ -6,20 +6,23 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("button").click(function(){
-				// $("div").hide();
-			});
+				// $("#box").html("hello world");	
+
+				$.ajax({
+					url : "call_rec_server.php",
+					type : "get",
+					success : function(rec){
+						$("#box").html(rec);
+					}
+				});
+			});		
 		});
 	</script>
-	<style type="text/css">
-		div{
-			height: 300px;
-			width: 300px;
-			background-color: #AC2589;
-		}
-	</style>
 </head>
 <body>
-<button>OK</button>
-<div></div>
+<button>Show</button>
+<table id="box" border="1">
+	
+</table>
 </body>
 </html>
