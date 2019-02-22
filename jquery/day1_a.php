@@ -6,7 +6,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("button").click(function(){
-				// $("div").hide();
+				 $("div").hide();
 			});
 		});
 	</script>
