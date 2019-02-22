@@ -10,18 +10,19 @@ $con=mysqli_connect("localhost","root","","rajni");
 <head>
 	<title>homepage-index</title>
 	<link rel="stylesheet" type="text/css" href="css\style.css">
-	<link rel="stylesheet" type="text/css" href="jquery.bxslider.css">
-	<script type="text/javascript" src="jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.bxslider.min.js"></script>
-	
-	<script>
+	<!-- <link rel="stylesheet" type="text/css" href="js/jquery.bxslider.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script> -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/validation.js"></script>
+	<!-- <script>
 		$(document).ready(function(){
 			$('.bxslider').bxSlider({
 				
 				
 			});
 	});
-	</script>
+	</script> -->
 </head>
 <body>
 
@@ -67,11 +68,10 @@ $con=mysqli_connect("localhost","root","","rajni");
 <div id="menu">
 	<div id="inside-menu">
 		<div id="in-menu1">
-		<input type="text"style="height:25px"
-	"width:200px" style="border:1px solid #000 ">search<input type="button" value="Go"></div>
+		<input type="text">search<input type="button" value="Go"/></div>
 		<div id="in-menu2">
 		 <ul><li><a <?php if(strstr($page,"index.php")){echo "class='active'";} ?>  href="index.php">Home</a></li> 
-		    <li><a <?php if(strstr($page,"login.php")){echo "class='active'";} ?>href="login.php">login</a></li>
+		    <li><a <?php if(strstr($page,"login.php")){echo "class='active'";} ?> href="login.php">login</a></li>
 	        <li><a <?php if(strstr($page,"sign.php")){echo "class='active'";} ?> href="sign.php">signup</a></li>
 	    	<li><a <?php if(strstr($page,"userlogout.php")){echo "class='active'";} ?> href="userlogout.php">logout</a></li>
 			<li><a href="#">mycart(0)</a></li>
@@ -115,17 +115,11 @@ $con=mysqli_connect("localhost","root","","rajni");
 				</div>
 			</div>
 		</div>
-		 <!-- <div id="sub-content2"> -->
-		 	<div class="bxslider">
+		  <div id="sub-content2"> 
+		 	 <div class="bxslider">
 	<div ><img src="image/253.jpg" height="200" width="610" title="hello" style="border-radius: 10px" /></div>
-	<div><img src="image/253.jpg" height="200" width="610" title="helllo world"/></div>
-
 </div>
-<!-- 
-			<div class="bxslider">
-				<img src="image/253.jpg" height="200" width="610" style="border-radius: 10px" />
-			</div> -->
-			<div id="right-content">
+<div id="right-content">
 				
 					<div id="top-con22">
 					<h5 style="margin-top:5px;padding-top:10px" >FEATURES PRODUCTS</h5>

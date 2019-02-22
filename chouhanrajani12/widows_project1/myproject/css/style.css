@@ -393,8 +393,8 @@ text-align: center;
 	text-align: center;
 }
 .input{
-	 margin: 2px;
-	 padding:2px;
+	 margin: 0px;
+	 padding:0px;
 	 background-color: #EBE9EA 
 	color: #ababab;
 	/*text-align: center;*/
