@@ -1,4 +1,32 @@
 $(document).ready(function(){
+	$("#username").blur(function(){
+		var a = $(this).val();
+		var reg = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+		if(a != "" && reg.test(a) == true)
+		{
+			$.ajax({
+				url : "check_username.php",
+				type : "post",
+				data : { uname : a},
+				success : function(rec){
+					if(rec==1)
+					{
+						$("#username_msg").html("This Username Already Exists!");
+					}
+					else
+					{
+						
+						$("#username_msg").html("");
+					}
+				}
+			});
+		}
+
+	});
+
+
+
+
 	$("#signup_frm").submit(function(){
 		var a = $("#full_name").val();
 		var b = $("#username").val();
