@@ -10,7 +10,7 @@ $result=mysqli_query($con,$query);
 if(mysqli_num_rows($result)==1){
 
 $data=mysqli_fetch_assoc($result);
-if($data["password"]==$b)
+if($data["password"]==$a)
 {
 	echo "yes";
 }
