@@ -4,6 +4,7 @@ body{
 	padding: 0;
 	font-family: Helvetica;
 }
+
 #header{
 	background-color: #1F1F1F;
 	height: 80px;
@@ -255,6 +256,11 @@ body{
 }
 .error{
 	color: red;
+	text-align: center;
+	font-size: 14px;
+}
+.success{
+	color: green;
 	text-align: center;
 	font-size: 14px;
 }
