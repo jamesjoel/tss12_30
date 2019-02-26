@@ -5,38 +5,38 @@ body{
 	font-family: helvetica;
 }
 #header{
-	height: 70px;
+	height: 80px;
 	width: 100%;
 	background-color: #121212;
 }
 #content{
 	height: 500px;
 	width: 100%;
-	background-color: #131313;
+	background-color: #13aacc;
 }
 #footer{
 	height: 50px;
 	width: 100%;
-	background-color: #123456;
+	background-color: #123fff;
 }
 #in-header{
-	height: 70px;
+	height: 80px;
 	width: 910px;
 	margin: 0 auto;
 	background-color: #abcdef;
 }
 #in-content{
 	min-height: 500px;
-	height: 0 auto;
+	height: auto;
 	width: 910px;
 	margin: 0 auto;
-	background-color: #ababab;
+	background-color: #12bbbb;
 }
 #in-footer{
 	height: 50px;
 	width: 910px;
 	margin: 0 auto;
-	background-color: #ab1234;
+	background-color: red;
 }
 .menu{
 
@@ -47,11 +47,4 @@ body{
 	margin:5px;
 	padding: 5px;
 	/*margin:0 auto;*/
-}
-#in-header select{
-	
-}
-
-
-
 }
