@@ -3,7 +3,7 @@ include("../project/connect.php");
 $que = "SELECT * FROM student";
 $result = mysqli_query($con, $que);
 $n=1;
-while($data = mysqli_fetch_assoc($result))
+while($data=mysqli_fetch_assoc($result))
 {
 
 	
