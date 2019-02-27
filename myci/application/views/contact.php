@@ -44,21 +44,8 @@
 			</div>
 		</div>
 		<div id="right-content">
-				<h2>This is About Page</h2>
-				<h3><?php echo $first ?></h3>
-				<h3><?php echo $second ?></h3>
-
-
-
-				<table align="center" border="1">
-					<?php 
-					foreach($color as $x)
-					{
-						echo $x;
-					}
-					?>
-				</table>
-		</div>
+				<h2>This is Contact Page</h2>
+			</div>
 			
 		</div>
 	</div>
