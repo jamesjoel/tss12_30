@@ -44,21 +44,24 @@
 			</div>
 		</div>
 		<div id="right-content">
-				<h2>This is About Page</h2>
-				<h3><?php echo $first ?></h3>
-				<h3><?php echo $second ?></h3>
-
-
-
-				<table align="center" border="1">
-					<?php 
-					foreach($color as $x)
-					{
-						echo $x;
-					}
-					?>
-				</table>
-		</div>
+				<h2>This is Help Page</h2>
+				<form method="post" action="<?php echo site_url("home/save") ?>">
+					First Name <input name="f_name" type="text" />
+					<Br />
+					<Br />
+					Age <input type="text" name="age"/>
+					<Br />
+					<Br />
+					City <select name="city">
+							<option>Select</option>
+							<option>Indore</option>
+							<option>Bhopal</option>
+					</select>
+					<Br />
+					<Br />
+					<input type="submit" value="Add">
+				</form>
+			</div>
 			
 		</div>
 	</div>
