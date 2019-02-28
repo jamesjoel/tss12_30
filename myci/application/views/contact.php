@@ -1,57 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url("css/style.css"); ?>">
-	
-</head>
-<body>
-<div id="header">
-	<div class="inner">
-		<div id="logo">
-			<h1>unicase</h1>
-			<p>Universal Shopping Area</p>
-		</div>
-	</div>
+<div id="right-content">
+	<h1>Contact Page</h1>	
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-<div id="menu">
-	<div class="inner">
-		<ul>
-			<li><a href="<?php echo site_url("home/index"); ?>">Home</a></li>
-			<li><a href="<?php echo site_url("home/about"); ?>">About</a></li>
-			<li><a href="<?php echo site_url("home/contact"); ?>">Contact</a></li>
-			<li><a href="<?php echo site_url("home/help"); ?>">Help</a></li>
-		</ul>
-	</div>
-</div>
-<div id="content">
-	<div class="inner">
-		<div id="left-content">
-			<div id="left-menu">
-				<h4>categories</h4>
-				<ul>
-					<li><a href="#">Mobile</a></li>
-					<li><a href="#">Home Appliance</a></li>
-					<li><a href="#">Fashion</a></li>
-					<li><a href="#">Electronics</a></li>
-					<li><a href="#">Kids</a></li>
-					<li><a href="#">Fashion Mens</a></li>
-					<li><a href="#">Fashion Womens</a></li>
-				</ul>
-			</div>
-			<div id="left-bottom">
-				<h3>Special Offer</h3>
-			</div>
-		</div>
-		<div id="right-content">
-				<h2>This is Contact Page</h2>
-			</div>
 			
-		</div>
-	</div>
-</div>
-<div id="footer">
-	<div class="inner"></div>
-</div>
-</body>
-</html>
+		

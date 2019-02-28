@@ -12,41 +12,48 @@ class Home extends CI_Controller{
 
 	function index()
 	{
-		// $this->load->helper("url");
-		$this->load->view("homepage");
+		$pagedata = array("pagename"=>"homepage", "title"=>"Home Page", "demo" =>"Special Offer");
+		$this->load->view("layout", $pagedata);
 	}
-
 	function about()
 	{
-		$a = "rohit";
-		$b = "jaya";
-
-
-		$data = array("red", "green", "blue");
-
-		$arr = array("first" => $a, "second" => $b, "color"=>$data);
-		$this->load->view("about", $arr);
+		$pagedata = array("pagename"=>"about", "title"=>"About Page", "demo" =>"Indore");
+		$this->load->view("layout", $pagedata);
 	}
 	function contact()
 	{
-		// $this->load->helper("url");
-		$this->load->view("contact");
+		$pagedata = array("pagename"=>"contact", "title" =>"Contact Page", "demo" =>"Ujjain");
+		$this->load->view("layout", $pagedata);
 	}
 	function help()
 	{
-		// $this->load->helper("url");
-		$this->load->view("help");
+		$pagedata = array("pagename"=>"help", "title"=>"Help Page", "a"=>"rohit", "demo" =>"Mumbai");
+		$this->load->view("layout", $pagedata);
 	}
-
-
-	function save()
+	function signup()
 	{
-		print_r($this->input->post());
-		$a = $this->input->post("f_name");
-		echo $a;
-		// $_POST['f_name']
+		$this->load->library("form_validation");
+		$this->form_validation->set_rules("full_name", "Full Name", "required");
+		$this->form_validation->set_rules("username", "Username", "required");
+		$this->form_validation->set_rules("pass", "Password", "required");
+		$this->form_validation->set_rules("re_pass", "Re-Password", "required");
+		$this->form_validation->set_rules("add", "Address", "required");
+		$this->form_validation->set_rules("gender", "Gender", "required");
+		$this->form_validation->set_rules("city", "City", "required");
+		$this->form_validation->set_rules("contact", "Contact", "required");
+
+		if($this->form_validation->run()==false)
+		{
+			$pagedata = array("pagename"=>"signup", "title"=>"Registration", "demo" =>"Bhopal");
+			$this->load->view("layout", $pagedata);
+		}
+		else
+		{
+			echo 'yes';
+		}
 	}
 
+	
 }
 
 
