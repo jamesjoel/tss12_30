@@ -15,7 +15,7 @@ $i=$_POST['gender'];
 // $con=mysqli_connect("localhost","root","","task");
 $query="INSERT INTO user (fullname,username,password,address,city,gender,contact,pincode)VALUES('$a','$b','$c','$e','$f','$g','$h','$i')";
 mysqli_query($con,$query);
-header("location:signup.php");
+header("location:login.php");
 
 
  ?>
