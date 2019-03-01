@@ -49,7 +49,7 @@
 		</tr>
 		<tr>
 			<td>Gender</td>
-			<td>Male<input type="radio" name="gender" value="male" />Female<input type="radio" name="gender" value="female" /></td>
+			<td>Male<input <?php echo set_radio("gender", "male"); ?> type="radio" name="gender" value="male" />Female<input type="radio" name="gender" value="female" <?php echo set_radio("gender", "female"); ?> /></td>
 		</tr>
 		<tr>
 			<td></td>
@@ -58,11 +58,11 @@
 		<tr>
 			<td>City</td>
 			<td><select name="city">
-				<option>Select</option>
-				<option>Indore</option>
-				<option>Mumbai</option>
-				<option>Bhopal</option>
-				<option>Pune</option>
+				<option value="">Select</option>
+				<option <?php echo set_select("city", "indore"); ?> value="indore">Indore</option>
+				<option <?php echo set_select("city", "mumbai"); ?> value="mumbai">Mumbai</option>
+				<option <?php echo set_select("city", "bhopal"); ?> value="bhopal">Bhopal</option>
+				<option <?php echo set_select("city", "pune"); ?> value="pune">Pune</option>
 			</select></td>
 		</tr>
 		<tr>

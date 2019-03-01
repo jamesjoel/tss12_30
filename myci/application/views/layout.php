@@ -22,6 +22,7 @@
 			<li><a href="<?php echo site_url("home/contact"); ?>">Contact</a></li>
 			<li><a href="<?php echo site_url("home/help"); ?>">Help</a></li>
 			<li><a href="<?php echo site_url("home/signup") ?>">Signup</a></li>
+			<li><a href="<?php echo site_url("home/login") ?>">Login</a></li>
 		</ul>
 	</div>
 </div>
