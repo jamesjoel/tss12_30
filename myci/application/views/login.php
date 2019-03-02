@@ -1,7 +1,7 @@
 <div id="right-content">
 	<h1>Login Page</h1>
 	
-	<form method="post" action="">
+	<form method="post" action="<?php echo site_url('home/auth'); ?>">
 		
 	<table align="center" width="400">
 		

@@ -70,6 +70,28 @@ class Home extends CI_Controller{
 		$this->load->view("layout", $pagedata);
 	}
 
+
+	function auth()
+	{
+		// print_r($this->input->post());
+		$u = $this->input->post("username");
+		$p = $this->input->post("pass");
+
+		$this->load->model("usermod");
+		$data=$this->usermod->select_by_username($u);
+		// echo $data->num_rows();die;
+		if($data->num_rows()==1)
+		{
+			echo "yes";
+		}
+		else
+		{
+			echo "no";
+
+		}
+
+	}
+
 	
 }
 
