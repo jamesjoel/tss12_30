@@ -7,6 +7,7 @@ class Home extends CI_Controller{
 	{
 		parent::__construct();
 		$this->load->helper("url");
+		$this->load->library("session");
 	}
 
 
@@ -58,7 +59,6 @@ class Home extends CI_Controller{
 			$data['contact']=$this->input->post("contact");
 
 			$this->load->model("usermod");
-			// Usermod ------ insert() call
 			$this->usermod->insert($data);
 			redirect("home/login");
 		}
@@ -73,20 +73,33 @@ class Home extends CI_Controller{
 
 	function auth()
 	{
-		// print_r($this->input->post());
 		$u = $this->input->post("username");
 		$p = $this->input->post("pass");
 
 		$this->load->model("usermod");
-		$data=$this->usermod->select_by_username($u);
-		// echo $data->num_rows();die;
-		if($data->num_rows()==1)
+		$res=$this->usermod->select_by_username($u);
+		if($res->num_rows()==1)
 		{
-			echo "yes";
+			$data = $res->row_array();
+			// $data=mysqli_fetch_assoc($res)
+			if($data['password']==$p)
+			{
+				//$_SESSION['id']=$data['id'];
+				$this->session->set_userdata("id", $data['id']);
+				$this->session->set_userdata("name", $data['full_name']);
+				$this->session->set_userdata("is_user_logged_in", true);
+				redirect("user");
+			}
+			else
+			{
+				$this->session->set_flashdata("msg", "Invalid Password");
+				redirect("home/login");		
+			}
 		}
 		else
 		{
-			echo "no";
+			$this->session->set_flashdata("msg", "This Username And Password Not Exists !");
+			redirect("home/login");
 
 		}
 

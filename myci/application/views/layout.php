@@ -21,8 +21,27 @@
 			<li><a href="<?php echo site_url("home/about"); ?>">About</a></li>
 			<li><a href="<?php echo site_url("home/contact"); ?>">Contact</a></li>
 			<li><a href="<?php echo site_url("home/help"); ?>">Help</a></li>
+
+			<?php if($this->session->userdata("is_user_logged_in"))
+			{ ?>
+				<li><a href="<?php echo site_url("user") ?>">My Account</a></li>
+				<li><a href="<?php echo site_url("user/logout") ?>">Logout</a></li>
+			<?php 
+			}
+			else
+			{ ?>
+
 			<li><a href="<?php echo site_url("home/signup") ?>">Signup</a></li>
 			<li><a href="<?php echo site_url("home/login") ?>">Login</a></li>
+			<?php
+			} 
+			?>
+
+
+
+			
+
+
 		</ul>
 	</div>
 </div>

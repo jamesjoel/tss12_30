@@ -18,6 +18,7 @@ class Usermod extends CI_Model{
 		// die;
 		$this->db->where("username", $a);
 		$result = $this->db->get("user_ci");
+		// SELECT * FROM user_ci WHERE username='$a'
 		
 		return $result;
 	}

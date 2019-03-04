@@ -22,5 +22,8 @@
 			</td>
 		</tr>
 	</table>
+	<?php
+	echo $this->session->flashdata("msg");
+	?>
 	</form>
 </div>
