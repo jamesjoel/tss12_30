@@ -88,6 +88,7 @@ class Home extends CI_Controller{
 				$this->session->set_userdata("id", $data['id']);
 				$this->session->set_userdata("name", $data['full_name']);
 				$this->session->set_userdata("is_user_logged_in", true);
+				
 				redirect("user");
 			}
 			else

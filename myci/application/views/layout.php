@@ -25,6 +25,7 @@
 			<?php if($this->session->userdata("is_user_logged_in"))
 			{ ?>
 				<li><a href="<?php echo site_url("user") ?>">My Account</a></li>
+				<li><a href="<?php echo site_url("user/profile") ?>">Profile</a></li>
 				<li><a href="<?php echo site_url("user/logout") ?>">Logout</a></li>
 			<?php 
 			}
