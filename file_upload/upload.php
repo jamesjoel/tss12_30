@@ -9,9 +9,9 @@ $d=$_POST("mail");
 $e=$_POST("pass");
 $f=$_POST("gender");
 $g=$_POST("pro_name");
-$h=$_FILS['pro_name']['name'];
+$h=$_FILES['pro_name']['name'];
 
-$tmp=$_FILS['pro_name']['tmp_name'];
+$tmp=$_FILES['pro_name']['tmp_name'];
 $x=explode(".",$h);
 $y=end($x);
 $z=time().rand(10000, 100000).".".$y;

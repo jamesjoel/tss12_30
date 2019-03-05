@@ -1,3 +1,4 @@
+<?php session_start();  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +17,15 @@
 			<tr><td colspan="2" align="center"><input type="submit" value="submit"></td></tr>
 		</table>
 	</form>
+			<p class="error">
+	 		<?php 
+					if(isset($_SESSION['msg']))
+					{
+						echo $_SESSION['msg'];
+						unset($_SESSION['msg']);
+					}
+					?>
+				</p>
 </div>
 </body>
 </html>
