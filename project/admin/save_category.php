@@ -1,7 +1,6 @@
 <?php
 include("../connect.php");
- print_r($_POST);
- die;
+ 
 if(!isset($_SESSION['is_admin_logged_in']))
 {
 	header("location:index.php");

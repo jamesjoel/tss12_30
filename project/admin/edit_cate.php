@@ -3,8 +3,8 @@
 include("../connect.php");
 include("header.php");
 
-$a = $_GET['cid'];
-$query_cate = "SELECT * FROM category WHERE id = $a";
+$c_id = $_GET['cid'];
+$query_cate = "SELECT * FROM category WHERE id = $c_id";
 $result_cate=mysqli_query($con, $query_cate);
 $data_cate=mysqli_fetch_assoc($result_cate);
 // print_r($data_cate);
@@ -16,7 +16,7 @@ $data_cate=mysqli_fetch_assoc($result_cate);
 	<form action="update_category.php" method="post">
 	<div id="login-box">
 	<table align="center">
-		<input type="hidden" value="<?php echo $a ?>" name="cid">
+		<input type="hidden" value="<?php echo $c_id ?>" name="cid">
 		<tr>
 			<td>Category Name</td>
 			<td><input value="<?php echo $data_cate['name']; ?>" type="Text" name="category_name" class="input"/></td>

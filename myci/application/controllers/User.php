@@ -35,12 +35,6 @@ class User extends CI_Controller{
 		$pagedata["demo"]="";
 		$pagedata["data"]=$res;
 
-
-
-
-
-
-
 		// $pagedata = array("pagename"=>"user/profile", "title"=>"My Profile", "demo" =>"Login Page", "data"=>$res);
 		$this->load->view("layout", $pagedata);
 	}

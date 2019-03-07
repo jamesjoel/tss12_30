@@ -32,6 +32,7 @@ $(document).ready(function(){
 		var b = $("#username").val();
 		var c = $("#pass").val();
 		var d = $("#re_pass").val();
+		var z = $("#image").val();
 		var e = $("#add").val();
 		var f = $("#contact").val();
 		var g = $("#pincode").val();
@@ -43,7 +44,15 @@ $(document).ready(function(){
 
 
 		var check=true;
-
+		if(z=="")
+		{
+			check=false;
+			$("#image_msg").html("Select Your Image");	
+		}
+		else
+		{
+			$("#image_msg").html("");
+		}
 
 		if(a=="")
 		{

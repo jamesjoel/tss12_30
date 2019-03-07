@@ -1,10 +1,10 @@
 <?php
 include("../connect.php");
-// print_r($_POST);
-$a = $_POST['category_name'];
-$b = $_POST['cid'];
 
-$query = "UPDATE category SET name = '$a' WHERE id = $b";
-mysqli_query($con, $query);
+$category_name = $_POST['category_name'];
+$cid = $_POST['cid'];
+$query = "UPDATE category SET name = '$category_name' WHERE id = $cid";
+mysqli_query($con,$query);
+
 header("location:view_category.php");
 ?>

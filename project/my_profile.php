@@ -24,6 +24,10 @@ $data_user = mysqli_fetch_assoc($result_user);
 						<td><?php echo $data_user['username'];?></td>
 					</tr>
 					<tr>
+						<td>Image</td>
+						<td><img src="user_image/<?php echo $data_user['image']; ?>" height="100" width="100" /></td>
+					</tr>
+					<tr>
 						<td>Address</td>
 						<td><?php echo $data_user['address'];?></td>
 					</tr>
@@ -45,6 +49,7 @@ $data_user = mysqli_fetch_assoc($result_user);
 					</tr>
 				</table>
 				<a href="change_password.php">Change Password</a>
+				<a href="edit_profile.php">Edit</a>
 			</div>
 		</div>
 	</div>

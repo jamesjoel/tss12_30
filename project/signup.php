@@ -12,7 +12,7 @@ include("header.php");
 			<div id="right-content-bottom">
 				<h3>User Registration</h3>
 				<div id="login-box">
-					<form id="signup_frm" action="save.php" method="post">
+					<form id="signup_frm" action="save.php" method="post" enctype="multipart/form-data">
 					<table align="center">
 						<tr>
 							<td>Full Name</td>
@@ -55,6 +55,20 @@ include("header.php");
 							<td></td>
 							<td id="gender_msg"></td>
 						</tr>
+						<tr>
+							<td>Image</td>
+							<td><input type="file" name="image" id="image"/></td>
+						</tr>
+						<tr class="error_msg">
+							<td></td>
+							<td id="image_msg"></td>
+						</tr>
+
+
+
+
+
+
 						<tr>
 							<td>Address</td>
 							<td><textarea name="add" cols="27" rows="5" id="add"></textarea></td>
