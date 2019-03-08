@@ -1,5 +1,5 @@
 <?php
-class Usermod extends CI_Model{
+class Adminmod extends CI_Model{
 
 	function __construct()
 	{
@@ -7,17 +7,17 @@ class Usermod extends CI_Model{
 		$this->load->database();
 	}
 
-	function insert($arr)
-	{
-		$this->db->insert("user_ci", $arr);
+	// function insert($arr)
+	// {
+	// 	$this->db->insert("user_ci", $arr);
 		
-	}
+	// }
 	function select_by_username($a)
 	{
 		// echo $a;
 		// die;
 		$this->db->where("username", $a);
-		$result = $this->db->get("user_ci");
+		$result = $this->db->get("admin");
 		// SELECT * FROM user_ci WHERE username='$a'
 		
 		return $result;
@@ -36,11 +36,6 @@ class Usermod extends CI_Model{
 	{
 		$this->db->where("id", $id);
 		$this->db->update("user_ci", $data);
-	}
-	function get_all()
-	{
-		$res = $this->db->get("user_ci");
-		return $res;
 	}
 }
 ?>
