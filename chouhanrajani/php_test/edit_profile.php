@@ -54,11 +54,13 @@ $data=mysqli_fetch_assoc($result);
 		<td>male<input <?php if($data['gender']=="male"){echo "checked='checked'";}?> type="radio" name="gender" value="male">female<input type="radio" name="gender"value="female" <?php if($data['gender']=="female"){echo "checked='checked'";} ?> >
 		</td>
 	</tr>
-	<tr><td>profile image</td>
-
-				<td><input type="file" name="file" value="<img height="70" width="70" src="upload/<?php echo $data['image']; ?>" ></td>
-				<!-- <td><img height="100" width="100" src="upload/<?php echo $data['image'];?>" /></td> -->
+	<tr>
+		<td>profile image</td>
+		<td><img height="70" width="70" src="upload/<?php echo $data['image']; ?>" ></td>
 			</tr>
+	<tr><td>change image</td>
+	<td><input type="file" name="file" ></td>
+</tr>
 	<tr><td colspan="2" align="center"><input type="submit" value="update"></tr>
 	</table>
 	<a href="myprofile.php">myprofile</a>
