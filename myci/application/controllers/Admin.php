@@ -21,6 +21,28 @@ class Admin extends CI_Controller{
 	{
 		$this->load->view("admin_pages/login");
 	}
+	function change_status($a, $b)
+	{
+		// echo $a;
+		// echo "<Br />";
+		// echo $b;
+		if($b == 1)
+		{
+			$arr['status']=0;
+			
+		}
+		if($b == 0)
+		{
+			$arr['status']=1;
+
+		}
+		$this->load->model("usermod");
+		$this->usermod->update($a, $arr);
+		redirect("admin/user");
+	}
+
+
+
 	function auth()
 	{
 		$u = $this->input->post("username");

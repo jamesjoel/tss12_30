@@ -88,7 +88,7 @@
 				<td><?php echo $user['contact'];?></td>
 
 				<td><?php echo $x;?></td>
-				<td><a href="#">Change</a></td>
+				<td><a href="<?php echo site_url('admin/change_status/'.$user['id']."/".$user['status']) ?>">Change</a></td>
 			</Tr>
 		<?php
 		$n++;

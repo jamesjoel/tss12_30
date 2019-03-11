@@ -1,8 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<a href="demo.php?a=rohit">Click</a>
 <?php
+if(isset($_GET['a']))
+{
+	echo $_GET['a'];
+}
 
-// print_r($_FILES);
-$a = $_FILES['file']['name'];
-$b = $_FILES['file']['tmp_name'];
-
-move_uploaded_file($b, "upload/".$a);
 ?>
+</body>
+</html>

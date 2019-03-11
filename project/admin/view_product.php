@@ -11,6 +11,13 @@ $query = "SELECT * FROM product";
 $result = mysqli_query($con, $query);
 ?>	
 <div id="content">
+	<?php
+	if(isset($_GET['msg']))
+	{
+		echo "product deleted";
+		
+	}
+	?>
 	<h3>View All Product</h3>
 	
 	<div id="login-box" style="width: 700px;">

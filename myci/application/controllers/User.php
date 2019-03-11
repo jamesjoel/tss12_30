@@ -59,6 +59,7 @@ class User extends CI_Controller{
 		$data['city']=$this->input->post("city");
 		$data['gender']=$this->input->post("gender");
 		$id = $this->session->userdata("id");
+		
 		$this->usermod->update($id, $data);
 
 		$this->session->set_flashdata("msg", "Profile Updated Successfuly");

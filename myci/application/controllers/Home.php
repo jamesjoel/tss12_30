@@ -84,12 +84,21 @@ class Home extends CI_Controller{
 			// $data=mysqli_fetch_assoc($res)
 			if($data['password']==$p)
 			{
-				//$_SESSION['id']=$data['id'];
-				$this->session->set_userdata("id", $data['id']);
-				$this->session->set_userdata("name", $data['full_name']);
-				$this->session->set_userdata("is_user_logged_in", true);
-				
-				redirect("user");
+				if($data['status']==1)
+				{
+					//$_SESSION['id']=$data['id'];
+					$this->session->set_userdata("id", $data['id']);
+					$this->session->set_userdata("name", $data['full_name']);
+					$this->session->set_userdata("is_user_logged_in", true);
+					
+						redirect("user");
+
+				}
+				else
+				{
+					$this->session->set_flashdata("msg", "You are deactive now");
+						redirect("home/login");		
+				}
 			}
 			else
 			{
