@@ -74,6 +74,40 @@ class User extends CI_Controller{
 		$this->session->sess_destroy();
 		redirect("home");
 	}
+	function image_upload()
+	{
+		$config['allowed_types']="jpg|jpeg|png|gif";
+		$config['upload_path']="user_image/";
+		$config['max_size']=2048;
+
+		$config['encrypt_name']=true;
+		$this->load->library("upload", $config);
+		// $this->upload->do_upload();
+		// print_r($this->upload->data());
+		// echo $this->upload->display_errors();
+		if($this->upload->do_upload()==false)
+		{
+			$a = $this->upload->display_errors();
+
+			$this->session->set_flashdata("msg", $a);			
+			redirect("user/profile");
+		}
+		else
+		{
+			// print_r($this->upload->data());
+			$name = $this->upload->data("file_name");
+			
+			$id=$this->session->userdata("id");
+			$arr['image']=$name;
+			$this->load->model("usermod");
+			$this->usermod->update($id, $arr);
+			redirect("user/profile");
+
+
+		}
+
+
+	}
 }
 
 ?>

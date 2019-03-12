@@ -5,11 +5,23 @@
 	// print_r($user);
 	echo $this->session->flashdata("msg");
 	?>
+	
 	<table align="center" border="1" cellspacing="0" cellpadding="10" width="300">
 		<tr>
 			<td>Full Name</td>
 			<td><?php echo $user['full_name'];?></td>
 		</tr>
+		<form action="<?php echo site_url('user/image_upload') ?>" method="post" enctype="multipart/form-data">
+			
+		<tr>
+			<td>Image</td>
+			<td><img src="<?php echo base_url('user_image/'.$user['image']); ?>" height="100" width="100">
+				<br />
+				<input type="file" name="userfile" />
+				<input type="submit" value="upload">
+			</td>
+		</tr>
+		</form>
 		<tr>
 			<td>Username</td>
 			<td><?php echo $user['username'];?></td>

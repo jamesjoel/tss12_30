@@ -56,6 +56,17 @@ class Home extends CI_Controller{
 			$data['address']=$this->input->post("add");
 			$data['city']=$this->input->post("city");
 			$data['gender']=$this->input->post("gender");
+			if($data['gender']=="male")
+			{
+				$data['image']="male.jpeg";
+			}
+			if($data['gender']=="female")
+			{
+				$data['image']="female.jpeg";
+			}
+
+
+
 			$data['contact']=$this->input->post("contact");
 
 			$this->load->model("usermod");
