@@ -20,12 +20,62 @@ class User extends CI_Controller{
 	}
 	function index()
 	{
+
+
+		// $this->load->helper("directory");
+		 // $map = directory_map('../../../html/', FALSE, TRUE);
+		 // print_r($map);
 		$pagedata = array("pagename"=>"user/my_account", "title"=>"My Account", "demo" =>"Login Page");
 		$this->load->view("layout", $pagedata);
 	}
+	function change_pass()
+	{
+		$pagedata = array("pagename"=>"user/change_pass", "title"=>"My Account", "demo" =>"Login Page");
+		$this->load->view("layout", $pagedata);
+	}
+	function update_pass()
+	{
+		$a = $this->input->post("c_pass");
+		$b = $this->input->post("n_pass");
+		$c = $this->input->post("cn_pass");
+		$this->load->model("usermod");
+		$result = $this->usermod->select_by_id($this->session->userdata("id"));
+		// print_r($result->row_array());
+		$data = $result->row_array();
+		if($data['password']==$a)
+		{
+			if($b == $c)
+			{
+				$arr['password']=$b;
+				$this->usermod->update($this->session->userdata("id"), $arr);
+				$this->session->set_flashdata("msg", "Password Cheched Successfuly");
+				redirect("user/profile");
+				
+			}
+			else
+			{
+				$this->session->set_flashdata("msg", "Confirm Password dose not matched");
+				redirect("user/change_pass");
+			}
+		}
+		else
+		{
+			$this->session->set_flashdata("msg", "Currect Password is incorrect");
+			redirect("user/change_pass");
+		}
+
+
+	}
+
+
+
+
 	function profile()
 	{
 		// $id = $_SESSION['id']
+
+		$this->benchmark->mark('code_start');
+
 		$x=$this->session->userdata("id");
 		
 		$res=$this->usermod->select_by_id($x);
@@ -37,6 +87,8 @@ class User extends CI_Controller{
 
 		// $pagedata = array("pagename"=>"user/profile", "title"=>"My Profile", "demo" =>"Login Page", "data"=>$res);
 		$this->load->view("layout", $pagedata);
+		$this->benchmark->mark('code_end');
+		echo $this->benchmark->elapsed_time('code_start', 'code_end');
 	}
 
 

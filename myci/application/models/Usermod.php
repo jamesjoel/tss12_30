@@ -12,20 +12,20 @@ class Usermod extends CI_Model{
 		$this->db->insert("user_ci", $arr);
 		
 	}
-	function select_by_username($a)
+	function select_by_username($id)
 	{
 		// echo $a;
 		// die;
-		$this->db->where("username", $a);
+		$this->db->where("username", $id);
 		$result = $this->db->get("user_ci");
 		// SELECT * FROM user_ci WHERE username='$a'
 		
 		return $result;
 	}
 
-	function select_by_id($a)
+	function select_by_id($id)
 	{
-		$this->db->where("id", $a);
+		$this->db->where("id", $id);
 		$result = $this->db->get("user_ci");
 		// SELECT * FROM user_ci WHERE id = $a
 		return $result;
@@ -39,8 +39,8 @@ class Usermod extends CI_Model{
 	}
 	function get_all()
 	{
-		$res = $this->db->get("user_ci");
-		return $res;
+		$result = $this->db->get("user_ci");
+		return $result;
 	}
 }
 ?>
