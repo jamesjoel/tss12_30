@@ -1,14 +1,16 @@
 <div id="right-content">
 	<h1>Login Page</h1>
 	
-	<form method="post" action="<?php echo site_url('home/auth'); ?>">
+
+
+	<?php echo form_open("home/auth"); ?>
 		
 	<table align="center" width="400">
 		
 		
 		<tr>
 			<td>Username</td>
-			<td><input  type="text" name="username" /></td>
+			<td><?php echo form_input("username");?></td>
 		</tr>
 		
 		<tr>
