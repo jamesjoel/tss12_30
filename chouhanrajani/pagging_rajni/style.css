@@ -1,0 +1,90 @@
+body{
+	margin: 0px;
+	padding:0px;
+	font-family: helvetika;
+	background-color:red;
+}
+#header{
+	height: 50px;
+	width: 100%;
+	/*background-color: red;*/
+}
+#in-header{
+	height: 50px;
+	width: 910px;
+	background-color: #1abab1;
+	margin: 0 auto;
+}
+#in-header h2{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	padding-top: 10px;
+}
+#menu{
+	height: 45px;
+	width: 100%;
+	/*background-color: green;*/
+}
+#in-menu{
+	height: 45px;
+	width: 910px;
+	margin: 0 auto;
+	background-color: #12aa12;
+}
+#in-menu ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#in-menu ul li{
+	float: left;
+}
+#in-menu ul li a{
+	display: inline-block;
+	padding: 10px 25px;
+	text-decoration: none;
+}
+#in-menu ul li a:hover{
+	background-color: #12ddb4;
+	color: black;
+	border-bottom: 1px solid #fff;
+}
+#content{
+	height: 700px;
+	width: 100%;
+	/*background-color: pink;*/
+}
+#in-content{
+	min-height: 700px;
+	width: 910px;
+	margin: 0 auto;
+	background-color: #bdc122;
+	overflow: hidden;
+}
+#in-content table{
+	padding-top: 20px;
+
+}
+a{
+	padding-left: 244px;
+	padding-top: 10px;
+}
+
+
+#in-content h4{
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+#footer{
+	height: 40px;
+	width: 100%;
+	/*background-color: blue;*/
+}
+#in-footer{
+	height: 40px;
+	width: 910px;
+	background-color: #abab11;
+	margin: 0 auto;
+}
