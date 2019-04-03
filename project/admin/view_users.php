@@ -31,8 +31,6 @@ $result = mysqli_query($con, $query);
 			{ 
 
 				if($data['status']==1)
-
-				if($data['status'])
 					$x="Active";
 				else
 					$x="Deactive";

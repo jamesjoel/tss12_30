@@ -17,7 +17,7 @@
 			<td>Image</td>
 			<td><img src="<?php echo base_url('user_image/'.$user['image']); ?>" height="100" width="100">
 				<br />
-				<input type="file" name="userfile" />
+				<input type="file" name="myfile" />
 				<input type="submit" value="upload">
 			</td>
 		</tr>

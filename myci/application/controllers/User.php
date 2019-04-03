@@ -137,7 +137,7 @@ class User extends CI_Controller{
 		// $this->upload->do_upload();
 		// print_r($this->upload->data());
 		// echo $this->upload->display_errors();
-		if($this->upload->do_upload()==false)
+		if($this->upload->do_upload("myfile")==false)
 		{
 			$a = $this->upload->display_errors();
 

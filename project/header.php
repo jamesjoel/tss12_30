@@ -59,7 +59,7 @@ else
 				?>
 			</div>
 				<div class="search-frm">
-					<form action="" method="get">
+					<form action="index.php" method="get">
 						
 					<input name="q" type="text" id="search-txt" placeholder="Search Product ">
 					<input type="submit" id="search-btn" value="Go">
