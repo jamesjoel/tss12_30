@@ -1,0 +1,70 @@
+<%- include('header') %>
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Teacher Page</h1>
+            <span>feel free to send us a message now!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5" style="min-height: 600px;">
+        <form action="/save_teacher" method="post">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="fullname" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input type="text" name="salary" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Age</label>
+                    <input type="text" name="age" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Education</label>
+                    <select class="form-control" name="education">
+                        <option>Select</option>
+                        <option>B.E.</option>
+                        <option>B.Sc.</option>
+                        <option>M.Sc.</option>
+                        <option>M.C.A.</option>
+                        <option>M.Teach.</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control" name="address"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <select class="form-control" name="city">
+                        <option>Select</option>
+                        <option>Indore</option>
+                        <option>Mumbai</option>
+                        <option>Pune</option>
+                        <option>Delhi</option>
+                        <option>Bhopal</option>
+                    </select>
+                </div>
+                <br />
+                <input type="submit" value="Add" class="btn btn-success" />
+            </div>
+        </div>
+    </form>
+    </div>
+
+    
+
+    
+
+   
+
+
+ <%- include('footer') %>
