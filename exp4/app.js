@@ -6,7 +6,15 @@ app.use(express.static(__dirname+"/assets"));
 
 
 // app.get() is used for routing
+
+app.use((req, res, next)=>{
+    console.log("welcome");
+    next();
+})
+
+
 app.get("/", (req, res)=>{
+    
     res.sendFile(__dirname+"/home.html");
 })
 
