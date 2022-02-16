@@ -1,0 +1,52 @@
+<%- include('header') %>
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Teacher Page</h1>
+            <span>feel free to send us a message now!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5" style="min-height: 600px;">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <h4 class="text-center">List All Teacher</h4>
+                <table class="table table-dark table-hover table-bordered table-striped mt-4">
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Salary</th>
+                        <th>Education</th>
+                        <th>City</th>
+                        <th>Address</th>
+                    </tr>
+                    <% result.forEach((x, n)=>{ %>
+                        <tr>
+                            <td><%= n+1 %></td>
+                            <td><%= x.fullname %></td>
+                            <td><%= x.age %></td>
+                            <td><%= x.salary %></td>
+                            <td><%= x.education %></td>
+                            <td><%= x.city %></td>
+                            <td><%= x.address %></td>
+                        </tr>
+                    <% }) %>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+   
+
+
+ <%- include('footer') %>
