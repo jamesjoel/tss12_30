@@ -22,7 +22,7 @@
                         <th>Age</th>
                         <th>Class</th>
                         <th>Fee</th>
-                        <th>Address</th>
+                        <th>Delete</th>
                     </tr>
                     <% result.forEach((x, n)=>{ %>
                         <tr>
@@ -31,7 +31,8 @@
                             <td><%= x.age %></td>
                             <td><%= x.class %></td>
                             <td><%= x.fee %></td>
-                            <td><%= x.address %></td>
+                            <td><a href='/student/delete/<%= x._id %>'class='btn btn-danger btn-sm'>Delete</a></td>
+                       
                         </tr>
                     <% }) %>
 

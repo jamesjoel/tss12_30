@@ -17,6 +17,19 @@ routes.get("/view", (req, res)=>{
 })
 
 
+routes.get("/delete/:x", (req, res)=>{
+    var a = req.params.x; // 510
+    var b = mongodb.ObjectId(a); // ObjectId(510)
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("student").deleteMany({ _id : b }, ()=>{
+            res.redirect("/student/view")
+        })
+    })
+})
+
+
+
 
 routes.get("/", (req, res)=>{
     res.render("student");

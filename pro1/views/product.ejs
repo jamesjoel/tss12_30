@@ -1,0 +1,38 @@
+<%- include('header') %>
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Product Page</h1>
+            <span>feel free to send us a message now!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5" style="min-height: 600px;">
+        <div class="row">
+            <% result.forEach((x)=>{ %>
+
+            
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="<%= x.image %>" style="height: 200px;"/>
+                    <div class="card-body">
+                        
+                            <h6><%= x.title %></h6>
+                            <h6><%= x.price %></h6>
+                            <p><%= x.category %></p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-sm">More</button>
+                    </div>
+                </div>
+            </div>
+
+            <% }) %>
+        </div>
+    </div>
+ <%- include('footer') %>
