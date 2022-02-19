@@ -29,6 +29,31 @@ routes.get("/delete/:x", (req, res)=>{
 })
 
 
+routes.get("/edit/:id", (req, res)=>{
+    var id = req.params.id;
+    var objid = mongodb.ObjectId(id);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("student").find({ _id : objid }).toArray((err, result)=>{
+            // console.log(result);
+            var pagedata = { result : result[0] };
+            res.render("edit_student", pagedata);
+        })
+    })
+})
+
+
+routes.post("/update_student/:id", (req, res)=>{
+    var id = req.params.id;
+    var objid = mongodb.ObjectId(id);
+    // console.log(req.body);
+    MongoClient.connect(database.dbUrl, (err, con)=>{
+        var db = con.db(database.dbName);
+        db.collection("student").updateMany({ _id : objid }, { $set : req.body }, ()=>{
+            res.redirect("/student/view");
+        })
+    })
+})
 
 
 routes.get("/", (req, res)=>{
