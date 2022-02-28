@@ -5,6 +5,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HelpComponent } from './pages/help/help.component';
+import { EventsComponent } from './pages/events/events.component';
+import { ControlStatement1Component } from './pages/control-statement1/control-statement1.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,14 @@ const routes: Routes = [
   {
     path : "",
     component : HomeComponent
+  },
+  {
+    path : "events",
+    component : EventsComponent
+  },
+  {
+    path : "ctrl1",
+    component : ControlStatement1Component
   }
 ];
 

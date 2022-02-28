@@ -12,6 +12,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HelpComponent } from './pages/help/help.component';
 import { InfoComponent } from './shared/info/info.component';
 import { BottomHeaderComponent } from './shared/bottom-header/bottom-header.component';
+import { EventsComponent } from './pages/events/events.component';
+import { ControlStatement1Component } from './pages/control-statement1/control-statement1.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BottomHeaderComponent } from './shared/bottom-header/bottom-header.comp
     ContactComponent,
     HelpComponent,
     InfoComponent,
-    BottomHeaderComponent
+    BottomHeaderComponent,
+    EventsComponent,
+    ControlStatement1Component
   ],
   imports: [
     BrowserModule,
