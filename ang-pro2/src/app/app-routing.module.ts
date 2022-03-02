@@ -7,6 +7,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { HelpComponent } from './pages/help/help.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ControlStatement1Component } from './pages/control-statement1/control-statement1.component';
+import { ControlStatement2Component } from './pages/control-statement2/control-statement2.component';
 
 
 const routes: Routes = [
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path : "ctrl1",
     component : ControlStatement1Component
+  },
+  {
+    path : "ctrl2",
+    component : ControlStatement2Component
   }
 ];
 

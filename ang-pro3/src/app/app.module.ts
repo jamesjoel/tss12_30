@@ -3,34 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Box1Component } from './shared/box1/box1.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { SliderComponent } from './shared/slider/slider.component';
+import { FreeTrailComponent } from './shared/free-trail/free-trail.component';
+import { VideoPresentComponent } from './shared/video-present/video-present.component';
+import { DesignComponent } from './shared/design/design.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { HelpComponent } from './pages/help/help.component';
-import { InfoComponent } from './shared/info/info.component';
-import { BottomHeaderComponent } from './shared/bottom-header/bottom-header.component';
-import { EventsComponent } from './pages/events/events.component';
-import { ControlStatement1Component } from './pages/control-statement1/control-statement1.component';
-import { ControlStatement2Component } from './pages/control-statement2/control-statement2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Box1Component,
     HeaderComponent,
+    SliderComponent,
+    FreeTrailComponent,
+    VideoPresentComponent,
+    DesignComponent,
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent,
-    HelpComponent,
-    InfoComponent,
-    BottomHeaderComponent,
-    EventsComponent,
-    ControlStatement1Component,
-    ControlStatement2Component
+    ContactComponent
   ],
   imports: [
     BrowserModule,
