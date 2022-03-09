@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 (contextmenu)="demo9()">Events</h1>
+            <br />
+            <br />
+            <input type="text" (keydown)="demo1()" (focus)="demo4()" (blur)="demo5()"/>
+            <Br />
+            <Br />
+            <Br />
+            <input type="text" (keypress)="demo2()"/>
+            <Br />
+            <Br />
+            <input type="text" (keyup)="demo3()"/>
+            <br />
+            <Br />
+            <select (change)="demo1()">
+                <option>Select</option>
+                <option>indore</option>
+                <option>pune</option>
+                <option>mumbai</option>
+                <option>bhopal</option>
+            </select>
+            <Br />
+            <br />
+            <input type="file" (change)="demo10()"/>
+        </div>
+    </div>
+</div>

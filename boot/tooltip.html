@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $("[data-toggle='popover']").popover();
+            })
+        </script>
+    </head>
+    <body>
+        <br />
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2 mt-4">
+                    <h1>Tooltip in Bootstrap</h1>
+                    <button data-placement="bottom" data-toggle="popover" title="Message" data-content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni, ut laudantium earum atque provident debitis, eum unde quisquam asperiores, reiciendis voluptatibus eos? Ipsam, eum minus. Officiis repellendus quam reiciendis cum." class="btn btn-primary">Help</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </body>
+</html>

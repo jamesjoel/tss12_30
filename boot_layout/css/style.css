@@ -1,0 +1,24 @@
+.bg-blue{
+    background-color: #3CBDFB;
+}
+.navbar{
+    border-bottom: 5px solid #3CBDFB;
+}
+.navbar-brand{
+    font-size: 2.50rem;
+    font-weight: bold;
+    color: #454545 !important;
+}
+.navbar-brand span{
+    color: #3CBDFB;
+}
+#menu .nav .nav-item .nav-link:hover{
+    color: #3CBDFB;
+}
+.left-content .nav .nav-item .nav-link:hover{
+    background-color: #3CBDFB;
+    color: #fff !important;
+}
+.right-content .card .card-text{
+    font-size: .90rem !important;
+}
