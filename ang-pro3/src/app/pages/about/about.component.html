@@ -3,6 +3,45 @@
         <div class="col-md-12">
             <h2>About Page</h2>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga asperiores quam laborum quo quasi dicta, doloribus quia pariatur debitis neque aliquam repellendus mollitia minima sit? Expedita consectetur inventore maxime laudantium?</p>
+            <br />
+            <Br />
+            <button class="btn btn-primary" (click)="demo()">Get Data <span *ngIf="dataCome" class="spinner-border spinner-border-sm"></span></button>
+            <br />
+            <!-- <table class="table table-dark">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Image</th>
+                </tr>
+                <tr *ngFor="let p of product; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ p.title }}</td>
+                    <td>{{ p.price }}</td>
+                    <td>{{ p.category }}</td>
+                    <td><img src="{{ p.image }}" height="50" width="50" /></td>
+                </tr>
+            </table> -->
+
+            <div class="row">
+                <div *ngFor="let p of product" class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>{{ p.title }}</h5>
+                        </div>
+                        <div class="card-body">
+                            <img src="{{ p.image }}" height="100" />
+                            <p class="m-0">{{ p.price }}</p>
+                            <small>{{ p.category }}</small>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-info btn-sm">More</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
