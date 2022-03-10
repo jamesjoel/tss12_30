@@ -9,8 +9,10 @@ import { CategoryComponent } from './pages/category/category.component';
 import { OrderComponent } from './pages/order/order.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { DemoComponent } from './pages/demo/demo.component';
 
 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { FooterComponent } from './shared/footer/footer.component';
     CategoryComponent,
     OrderComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    DemoComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    HttpClientModule
   ]
 })
 export class AdminModule { }
