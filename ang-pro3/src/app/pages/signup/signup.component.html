@@ -1,0 +1,27 @@
+<div class="container mt-4" style="min-height: 600px; margin-top: 300px; color: #000 !important;">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3 class="text-center text-dark">Form in Angular</h3>
+            <form [formGroup]="myForm">
+                <div class="form-group">
+                    <label>Full Name <b class="text-danger">*</b></label>
+                    <input type="text" [ngClass]="{'is-invalid' : checkForm && myForm.controls.fullName.errors}" formControlName="fullName" class="form-control" />
+                    <small *ngIf="checkForm && myForm.controls.fullName.errors" class="text-danger">Insert Your Full Name</small>
+                </div>
+                <div class="form-group">
+                    <label>Email <b class="text-danger">*</b></label>
+                    <input type="text" [ngClass]="{'is-invalid' : checkForm && myForm.controls.email.errors}" formControlName="email" class="form-control" />
+                    <small *ngIf="checkForm && myForm.controls.email.errors" class="text-danger">Insert Your Email Id</small>
+                </div>
+                <div class="form-group">
+                    <label>Contact <b class="text-danger">*</b></label>
+                    <input [ngClass]="{'is-invalid' : checkForm && myForm.controls.contact.errors}" type="text" formControlName="contact" class="form-control" />
+                    <small *ngIf="checkForm && myForm.controls.contact.errors" class="text-danger">Insert Your Contact Number</small>
+                </div>
+                <br />
+                <Br />
+                <input type="submit" (click)="submit()" value="Signup" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+</div>
