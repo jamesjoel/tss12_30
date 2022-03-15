@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
@@ -12,6 +13,7 @@ import { FeatureProductComponent } from './shared/feature-product/feature-produc
 import { DiscountComponent } from './shared/discount/discount.component';
 import { BlogComponent } from './shared/blog/blog.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 
 @NgModule({
@@ -25,11 +27,13 @@ import { FooterComponent } from './shared/footer/footer.component';
     FeatureProductComponent,
     DiscountComponent,
     BlogComponent,
-    FooterComponent
+    FooterComponent,
+    SignupComponent
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class UserModule { }

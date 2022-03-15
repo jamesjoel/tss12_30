@@ -1,0 +1,63 @@
+<div class="container mt-4" style="min-height: 600px;">
+    <form [formGroup]="userForm">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h4 class="text-center">Registration</h4>
+            <div class="form-group">
+                <Label>Full Name</Label>
+                <input type="text" formControlName="fullname" [ngClass]="{'is-invalid' : checkForm && userForm.controls.fullname.errors}" class="form-control" />
+                <small *ngIf="checkForm && userForm.controls.fullname.errors" class="text-danger">Insert Your Full Name</small>
+            </div>
+            <div class="form-group">
+                <Label>Email/Username</Label>
+                <input type="text" formControlName="email" [ngClass]="{'is-invalid' : checkForm && userForm.controls.email.errors}" class="form-control" />
+                <small *ngIf="checkForm && userForm.controls.email.errors" class="text-danger">Insert Email Id</small>
+            </div>
+            <div class="form-group">
+                <Label>Password</Label>
+                <input type="password" formControlName="password" [ngClass]="{'is-invalid' : checkForm && userForm.controls.password.errors}" class="form-control" />
+                <small *ngIf="checkForm && userForm.controls.password.errors" class="text-danger">Insert Your Password</small>
+            </div>
+            <div class="form-group">
+                <Label>Re-Password</Label>
+                <input type="password" formControlName="re_password" [ngClass]="{'is-invalid' : checkForm && userForm.controls.re_password.errors}" class="form-control" />
+                <small *ngIf="checkForm && userForm.controls.re_password.errors" class="text-danger">Insert Your Re-Password</small>
+            </div>
+            <div class="form-group">
+                <Label>Gender</Label>
+                <br />
+                Male<input type="radio" value="male" formControlName="gender" [ngClass]="{'is-invalid' : checkForm && userForm.controls.gender.errors}"/>
+                Female<input type="radio" value="female" formControlName="gender" [ngClass]="{'is-invalid' : checkForm && userForm.controls.gender.errors}"/>
+                <br />
+                <small *ngIf="checkForm && userForm.controls.gender.errors" class="text-danger">Select Your Gender</small>
+            </div>
+            <div class="form-group">
+                <Label>Address</Label>
+                <textarea class="form-control" formControlName="address" [ngClass]="{'is-invalid' : checkForm && userForm.controls.address.errors}"></textarea>
+                <small *ngIf="checkForm && userForm.controls.address.errors" class="text-danger">Insert Your Address</small>
+            </div>
+            <div class="form-group">
+                <Label>City</Label>
+                <select class="form-control" formControlName="city" [ngClass]="{'is-invalid' : checkForm && userForm.controls.city.errors}">
+                    <option value="">Select</option>
+                    <option value="indore">Indore</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="pune">Pune</option>
+                    <option value="bhopal">Bhopal</option>
+                </select>
+                <small *ngIf="checkForm && userForm.controls.city.errors" class="text-danger">Select Your City</small>
+            </div>
+            <div class="form-group">
+                <Label>Contact</Label>
+                <input type="text" formControlName="contact" [ngClass]="{'is-invalid' : checkForm && userForm.controls.contact.errors}" class="form-control" />
+                <small *ngIf="checkForm && userForm.controls.contact.errors" class="text-danger">Insert Your Contact Number</small>
+            </div>
+            <br />
+            <br />
+            <input type="submit" (click)="submit()" value="Signup" class="btn btn-primary" />
+            <br />
+            <br />
+        </div>
+    </div>
+</form>
+</div>
