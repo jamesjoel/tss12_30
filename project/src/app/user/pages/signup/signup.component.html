@@ -11,7 +11,11 @@
             <div class="form-group">
                 <Label>Email/Username</Label>
                 <input type="text" formControlName="email" [ngClass]="{'is-invalid' : checkForm && userForm.controls.email.errors}" class="form-control" />
-                <small *ngIf="checkForm && userForm.controls.email.errors" class="text-danger">Insert Email Id</small>
+                <div *ngIf="checkForm && userForm.controls.email.errors">
+                    <small *ngIf="userForm.controls.email.errors.required" class="text-danger">Insert Email Id</small>
+                    <small *ngIf="userForm.controls.email.errors.email" class="text-danger">Email id is not correct</small>
+
+                </div>
             </div>
             <div class="form-group">
                 <Label>Password</Label>
@@ -21,7 +25,12 @@
             <div class="form-group">
                 <Label>Re-Password</Label>
                 <input type="password" formControlName="re_password" [ngClass]="{'is-invalid' : checkForm && userForm.controls.re_password.errors}" class="form-control" />
-                <small *ngIf="checkForm && userForm.controls.re_password.errors" class="text-danger">Insert Your Re-Password</small>
+                <div *ngIf="checkForm && userForm.controls.re_password.errors">
+                    <small *ngIf="userForm.controls.re_password.errors.required" class="text-danger">Insert Your Re-Password</small>
+                    <small *ngIf="userForm.controls.re_password.errors.matchErr" class="text-danger">Password and Re-Password not Matched</small>
+
+
+                </div>
             </div>
             <div class="form-group">
                 <Label>Gender</Label>
@@ -50,7 +59,12 @@
             <div class="form-group">
                 <Label>Contact</Label>
                 <input type="text" formControlName="contact" [ngClass]="{'is-invalid' : checkForm && userForm.controls.contact.errors}" class="form-control" />
-                <small *ngIf="checkForm && userForm.controls.contact.errors" class="text-danger">Insert Your Contact Number</small>
+                <div *ngIf="checkForm && userForm.controls.contact.errors">
+
+                    <small *ngIf="userForm.controls.contact.errors.required" class="text-danger">Insert Your Contact Number</small>
+                    <small *ngIf="userForm.controls.contact.errors.numErr" class="text-danger">Insert Number Only</small>
+                    <small *ngIf="userForm.controls.contact.errors.sizeErr" class="text-danger">The Contact Number should be 10 Digit</small>
+                </div>
             </div>
             <br />
             <br />

@@ -14,6 +14,7 @@ import { DiscountComponent } from './shared/discount/discount.component';
 import { BlogComponent } from './shared/blog/blog.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { SignupComponent } from './pages/signup/signup.component';
     DiscountComponent,
     BlogComponent,
     FooterComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

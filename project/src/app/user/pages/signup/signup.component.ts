@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { SignupService } from '../../services/signup.service';
+import { Router } from '@angular/router';
+import { checkRePass, checkNum, sizeCheck } from '../../../helpers/custom.validataion';
 
 @Component({
   selector: 'app-signup',
@@ -14,17 +16,21 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private _fb : FormBuilder,
-    private _signup : SignupService
+    private _signup : SignupService,
+    private _router : Router
   ) {
     this.userForm = this._fb.group({
       fullname : ["", Validators.required],
-      email : ["", Validators.required],
+      email : ["", [Validators.required, Validators.email]],
       password : ["", Validators.required],
       re_password : ["", Validators.required],
       gender : ["", Validators.required],
       address : ["", Validators.required],
       city : ["", Validators.required],
       contact : ["", Validators.required]
+    }, 
+    {
+      validator : [checkRePass(), checkNum(), sizeCheck()]
     })
    }
 
@@ -38,7 +44,10 @@ export class SignupComponent implements OnInit {
     }
     //console.log(this.userForm.value);
     this._signup.save(this.userForm.value).subscribe(data=>{
-      console.log(data);
+      // console.log(data);
+      if(data){
+        this._router.navigate(["/login"]);
+      }
     })
   }
 

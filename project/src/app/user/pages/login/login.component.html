@@ -1,0 +1,25 @@
+<div class="contaier mt-4" style="min-height: 600px;">
+    <form [formGroup]="loginForm">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3 class="text-center">Login Page</h3>
+            <div class="form-group">
+                <label>Email/Username</label>
+                <input type="text" formControlName="email" [ngClass]="{'is-invalid' : checkForm && loginForm.controls.email.errors }" class="form-control" />
+                <div *ngIf="checkForm && loginForm.controls.email.errors">
+                    <small class="text-danger" *ngIf="loginForm.controls.email.errors.required">Insert Your Email/Username</small>
+                    <small class="text-danger" *ngIf="loginForm.controls.email.errors.email">Email Id is Incorrect</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" formControlName="password" [ngClass]="{'is-invalid' : checkForm && loginForm.controls.password.errors}" class="form-control" />
+                <small class="text-danger" *ngIf="checkForm && loginForm.controls.password.errors">Insert Your Password</small>
+            </div>
+            <Br />
+            <Br />
+            <input type="submit" value="Login" class="btn btn-primary" (click)="login()"/>
+        </div>
+    </div>
+    </form>
+</div>
