@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <a routerLink="/add-student" class="btn btn-primary">Add Student</a>
+            <table class="table table-bordered">
+                <tr>
+                    <th>S.No.</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Class</th>
+                </tr>
+                <tr *ngFor="let s of allStu; let n = index">
+                    <td>{{ n+1 }}</td>
+                    <td>{{ s.name }}</td>
+                    <td>{{ s.age }}</td>
+                    <td>{{ s.class }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
