@@ -1,4 +1,5 @@
 module.exports = {
     dbUrl : "mongodb://localhost:27017",
-    dbName : "tss12"
+    dbName : "tss12",
+    myStr : "tss"
 }

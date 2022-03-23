@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private _fb : FormBuilder,
-    private _auth : AuthService
+    private _auth : AuthService,
+    private _router : Router
   ) {
     this.loginForm = this._fb.group({
       email : ["", [Validators.required, Validators.email]],
@@ -34,7 +36,10 @@ export class LoginComponent implements OnInit {
       return;
     }
     this._auth.do_login(this.loginForm.value).subscribe(data=>{
-      console.log(data);
+      if(data){
+        console.log(data);
+        this._router.navigate(["/profile"]);
+      }
     }, err=>{
       // console.log(err);
       if(err.error.type==1){

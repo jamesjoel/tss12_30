@@ -4,6 +4,7 @@ const MongoClient = mongodb.MongoClient;
 const database = require("../config/database");
 const collName = "user";
 const sha1 = require("sha1");
+const jwt = require("jsonwebtoken");
 
 routes.post("/", (req, res)=>{
     // console.log(req.body);
@@ -16,7 +17,9 @@ routes.post("/", (req, res)=>{
             {
                 if(result[0].password == sha1(p))
                 {
-                    res.status(200).send({ success : true });
+                    var token = jwt.sign(result[0], database.myStr);
+                    // console.log(token);
+                    res.status(200).send({ success : true, token : token });
                 }
                 else{
                     res.status(401).send({ type : 2 });
