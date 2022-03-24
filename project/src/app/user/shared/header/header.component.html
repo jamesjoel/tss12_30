@@ -1,3 +1,6 @@
+
+
+
 <header class="header_area">
     <div class="top_menu">
       <div class="container">
@@ -11,16 +14,30 @@
           <div class="col-lg-5">
             <div class="float-right">
               <ul class="right_side">
-                <li>
-                  <a routerLink="/signup">
-                    Signup
-                  </a>
-                </li>
-                <li>
-                  <a routerLink="/login">
-                    Login
-                  </a>
-                </li>
+                <ng-template [ngIf]="_auth.isLoggedIn()" [ngIfElse]="notLogIn">
+                  <li>
+                    <a routerLink="/profile">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a (click)="_auth.logout()">
+                      Logout
+                    </a>
+                  </li>
+                </ng-template>
+                <ng-template #notLogIn>
+                  <li>
+                    <a routerLink="/signup">
+                      Signup
+                    </a>
+                  </li>
+                  <li>
+                    <a routerLink="/login">
+                      Login
+                    </a>
+                  </li>
+                </ng-template>
                 <li>
                   <a href="contact.html">
                     Contact Us
