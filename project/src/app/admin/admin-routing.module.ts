@@ -7,6 +7,7 @@ import { DemoComponent } from './pages/demo/demo.component';
 import { LoginComponent } from './pages/login/login.component';
 import { OrderComponent } from './pages/order/order.component';
 import { ProductComponent } from './pages/product/product.component';
+import { BackdoorGuard } from './guard/backdoor.guard';
 
 const routes: Routes = [
   {
@@ -19,23 +20,29 @@ const routes: Routes = [
       },
       {
         path : "dashboard",
-        component : DashboardComponent
+        component : DashboardComponent,
+        canActivate : [BackdoorGuard]
+        
       },
       {
         path : "product",
-        component : ProductComponent
+        component : ProductComponent,
+        canActivate : [BackdoorGuard]
       },
       {
         path : "category",
-        component : CategoryComponent
+        component : CategoryComponent,
+        canActivate : [BackdoorGuard]
       },
       {
         path : "order",
-        component : OrderComponent
+        component : OrderComponent,
+        canActivate : [BackdoorGuard]
       },
       {
         path : "demo",
-        component : DemoComponent
+        component : DemoComponent,
+        canActivate : [BackdoorGuard]
       }
     ]
   }

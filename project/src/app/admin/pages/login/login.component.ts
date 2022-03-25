@@ -34,7 +34,10 @@ export class LoginComponent implements OnInit {
       return;
     }
     this._auth.do_login(this.loginForm.value).subscribe(data=>{
-      console.log(data);
+      if(data){
+        localStorage.setItem("admintoken", data.token);
+        this._router.navigate(["/admin/dashboard"]);
+      }
     }, err=>{
       if(err.error.type==1){
         this.errMsg = "This Username and Password is Incorrect";
