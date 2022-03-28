@@ -19,9 +19,24 @@
                 <li class="nav-item">
                     <a class="nav-link page-scroll" routerLink="/about">ABOUT</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" routerLink="/signup">SIGNUP</a>
-                </li>
+                <ng-template [ngIf]="_auth.isLoggedIn()" [ngIfElse]="notLogin">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" routerLink="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" (click)="_auth.logout()">Logout</a>
+                    </li>
+                </ng-template>
+                <ng-template #notLogin>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" routerLink="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" routerLink="/signup">SIGNUP</a>
+                    </li>
+                </ng-template>
+
+                
                 <li class="nav-item">
                     <a class="nav-link page-scroll" routerLink="/contact">CONTACT</a>
                 </li>
