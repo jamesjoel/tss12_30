@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { OrderComponent } from './pages/order/order.component';
 import { ProductComponent } from './pages/product/product.component';
 import { BackdoorGuard } from './guard/backdoor.guard';
+import { AddCategoryComponent } from './pages/add-category/add-category.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,11 @@ const routes: Routes = [
       {
         path : "category",
         component : CategoryComponent,
+        canActivate : [BackdoorGuard]
+      },
+      {
+        path :"category/add",
+        component : AddCategoryComponent,
         canActivate : [BackdoorGuard]
       },
       {

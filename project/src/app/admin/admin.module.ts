@@ -14,6 +14,7 @@ import { DemoComponent } from './pages/demo/demo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
+import { AddCategoryComponent } from './pages/add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     OrderComponent,
     HeaderComponent,
     FooterComponent,
-    DemoComponent
+    DemoComponent,
+    AddCategoryComponent
   ],
   imports: [
     CommonModule,

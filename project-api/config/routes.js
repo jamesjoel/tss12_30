@@ -10,6 +10,8 @@ routes.use("/api/signup", require("../controllers/signupController"));
 routes.use("/api/auth", require("../controllers/authController"));
 routes.use("/api/admin/auth", require("../controllers/adminAuthController"));
 
+
+
 routes.use("/api/user", require("../controllers/userController"));
 
 
