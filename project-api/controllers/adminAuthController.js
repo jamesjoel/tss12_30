@@ -17,7 +17,7 @@ routes.post("/", (req, res)=>{
             {
                 if(result[0].password == sha1(p))
                 {
-                    var token = jwt.sign(result[0], database.myStr);
+                    var token = jwt.sign(result[0], database.myStr, { expiresIn : '2h'});
                     // console.log(token);
                     res.status(200).send({ success : true, token : token });
                 }

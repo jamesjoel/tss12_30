@@ -9,6 +9,7 @@
                     <th>Product Price</th>
                     <th>Category</th>
                     <th>Image</th>
+                    <th>Delete</th>
                 </tr>
                 <tr *ngFor="let p of allProduct; let n = index">
                     <td>{{ n+1 }}</td>
@@ -16,8 +17,26 @@
                     <td>{{ p.price }}</td>
                     <td>{{ p.category }}</td>
                     <td><img src="{{ p.path }}" height="80" width="80" /></td>
+                    <td><button data-toggle="modal" (click)="askDelete(p)" data-target="#delModal" class="btn btn-danger btn-sm">Delete</button></td>
                 </tr>
             </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Delete Product</h3>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure want to delete <b *ngIf="product">{{ product.title }}</b></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" #closeBtn data-dismiss="modal">Close</button>
+                <button class="btn btn-dark" (click)="confDelete(closeBtn)">Delete</button>
+            </div>
         </div>
     </div>
 </div>

@@ -9,6 +9,7 @@ import { ProductService  } from '../../../services/product.service';
 export class ProductComponent implements OnInit {
 
   allProduct : any[] = [];
+  product:any;
   constructor(
     private _prod : ProductService
   ) {
@@ -20,4 +21,16 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  askDelete(obj:any){
+    this.product = obj;
+  }
+
+  confDelete(btn:any){
+    this._prod.delete(this.product._id).subscribe(data=>{
+      // console.log(data);
+      let n = this.allProduct.indexOf(this.product);
+      this.allProduct.splice(n, 1);
+      btn.click();
+    })
+  }
 }

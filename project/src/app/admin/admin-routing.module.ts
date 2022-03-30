@@ -9,6 +9,7 @@ import { OrderComponent } from './pages/order/order.component';
 import { ProductComponent } from './pages/product/product.component';
 import { BackdoorGuard } from './guard/backdoor.guard';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
+import { AntiBackdoorGuard } from './guard/anti-backdoor.guard';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
     children : [
       {
         path : "",
-        component : LoginComponent
+        component : LoginComponent,
+        canActivate : [AntiBackdoorGuard]
       },
       {
         path : "dashboard",
