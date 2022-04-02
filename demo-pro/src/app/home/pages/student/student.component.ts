@@ -12,7 +12,7 @@ export class StudentComponent implements OnInit {
   constructor(
     private _stu : StudentService
   ) {
-    this._stu.getData().subscribe(data=>{
+    this._stu.getData()(data=>{
       this.allStu = data;
     })
    }
@@ -21,3 +21,35 @@ export class StudentComponent implements OnInit {
   }
 
 }
+/*
+   demo(){
+    
+    return this._http.get<any>(url).subscrib;
+  }
+
+
+
+  this.x.demo()(data=>{
+    
+  })
+
+
+
+
+
+  demo()
+  {
+    return console.log;
+  }
+
+
+
+
+
+  this.a.demo()();
+
+
+
+
+
+*/

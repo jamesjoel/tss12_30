@@ -39,4 +39,8 @@ export class AddStudentComponent implements OnInit {
     })
   }
 
+  get f(){
+    return this.stuForm.controls;
+  }
+
 }

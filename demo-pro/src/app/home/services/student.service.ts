@@ -12,7 +12,7 @@ export class StudentService {
   ) { }
 
   getData(){
-    return this._http.get<any>(environment.apiUrl+"/api/student");
+    return this._http.get<any>(environment.apiUrl+"/api/student").subscribe;
   }
   save(obj:any){
     return this._http.post<any>(environment.apiUrl+"/api/student", obj);

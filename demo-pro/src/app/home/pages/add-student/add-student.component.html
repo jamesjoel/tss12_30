@@ -5,15 +5,15 @@
             <h4>Add New Student</h4>
             <div class="form-group">
                 <label>Full Name</label>
-                <input type="text" formControlName="name" [ngClass]="{ 'is-invalid' : checkForm && stuForm.controls.name.errors }" class="form-control" />
+                <input type="text" formControlName="name" [ngClass]="{ 'is-invalid' : checkForm && f.name.errors }" class="form-control" />
             </div>
             <div class="form-group">
                 <label>Age</label>
-                <input type="text" formControlName="age" [ngClass]="{ 'is-invalid' : checkForm && stuForm.controls.age.errors }" class="form-control" />
+                <input type="text" formControlName="age" [ngClass]="{ 'is-invalid' : checkForm && f.age.errors }" class="form-control" />
             </div>
             <div class="form-group">
                 <label>Class</label>
-                <input type="text"  formControlName="class" [ngClass]="{ 'is-invalid' : checkForm && stuForm.controls.class.errors }" class="form-control" />
+                <input type="text"  formControlName="class" [ngClass]="{ 'is-invalid' : checkForm && f.class.errors }" class="form-control" />
             </div>
             <br />
             <input type="submit" value="Add" class="btn btn-success" (click)="submit()"/>
