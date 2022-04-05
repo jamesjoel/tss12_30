@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddCategoryComponent } from './pages/add-category/add-category.componen
     HeaderComponent,
     FooterComponent,
     DemoComponent,
-    AddCategoryComponent
+    AddCategoryComponent,
+    AddProductComponent
   ],
   imports: [
     CommonModule,

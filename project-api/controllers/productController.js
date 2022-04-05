@@ -3,6 +3,8 @@ const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
 const database = require("../config/database");
 const collName = "product";
+const path = require("path");
+const unique = require("unique-string-generator");
 
 routes.get("/", (req, res)=>{
     MongoClient.connect(database.dbUrl, (err, con)=>{
@@ -20,11 +22,31 @@ routes.get("/", (req, res)=>{
 })
 
 routes.post("/", (req, res)=>{
-    var obj = req.body;
+    // console.log(JSON.parse(req.body.formdata));
+    // console.log(req.files);
+    var obj = JSON.parse(req.body.formdata);
+    var photo = req.files.photo;
+    var name = photo.name;
+    var arr = name.split(".");
+    var ext = arr[arr.length-1];
+    var str = unique.UniqueString();
+
+    var new_name =  str+"."+ext;
+
+
+    obj.image = new_name;
+    obj.price = parseInt(obj.price);
+    obj.discount = parseInt(obj.discount);
+
+    var imagepath = path.resolve()+"/assets/product-img/"+new_name;
+    
+
     MongoClient.connect(database.dbUrl, (err, con)=>{
         var db = con.db(database.dbName);
         db.collection(collName).insertOne(obj, ()=>{
-            res.send({ success : true });
+            photo.mv(imagepath, (err)=>{
+                res.send({ success : true });
+            });
         })
     })
 })

@@ -1,0 +1,18 @@
+<div class="container" style="min-height: 600px; color: #000 !important;">
+    <form [formGroup]="myForm">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3>File Upload in Angular</h3>
+            <br />
+            <br />
+            <br />
+            <div class="form-group">
+                <label>Select File</label>
+                <input formControlName="file" #myFile type="file" class="form-control" />
+            </div>
+            <br />
+            <input type="submit" (click)="submit(myFile)" value="Upload" class="btn btn-primary" />
+        </div>
+    </div>
+    </form>
+</div>

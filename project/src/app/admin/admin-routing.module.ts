@@ -10,6 +10,7 @@ import { ProductComponent } from './pages/product/product.component';
 import { BackdoorGuard } from './guard/backdoor.guard';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
 import { AntiBackdoorGuard } from './guard/anti-backdoor.guard';
+import { AddProductComponent } from './pages/add-product/add-product.component';
 
 const routes: Routes = [
   {
@@ -40,6 +41,11 @@ const routes: Routes = [
       {
         path :"category/add",
         component : AddCategoryComponent,
+        canActivate : [BackdoorGuard]
+      },
+      {
+        path : "product/add",
+        component : AddProductComponent,
         canActivate : [BackdoorGuard]
       },
       {

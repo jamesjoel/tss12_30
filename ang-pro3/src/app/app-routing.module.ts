@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BackdoorGuard } from './guard/backdoor.guard';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { FileUploadComponent } from './pages/file-upload/file-upload.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -33,6 +34,10 @@ const routes: Routes = [
     path : "profile",
     component : ProfileComponent,
     canActivate : [BackdoorGuard]
+  },
+  {
+    path : "file-upload",
+    component : FileUploadComponent
   }
 ];
 
