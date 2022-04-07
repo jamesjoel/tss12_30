@@ -10,7 +10,7 @@ export class CategoryService {
     private _http : HttpClient
   ) { }
 
-  getData(){
+  getData(){ // getting all data
     return this._http.get<any>(environment.apiUrl+"/api/category");
   }
   save(obj:any){
@@ -22,5 +22,9 @@ export class CategoryService {
   update(id:any, obj:any){
     return this._http.put<any>(environment.apiUrl+"/api/category/"+id, obj);
 
+  }
+
+  getSingleData(id:any){
+    return this._http.get<any>(environment.apiUrl+"/api/category/"+id);
   }
 }

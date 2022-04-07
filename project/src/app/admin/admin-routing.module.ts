@@ -11,6 +11,7 @@ import { BackdoorGuard } from './guard/backdoor.guard';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
 import { AntiBackdoorGuard } from './guard/anti-backdoor.guard';
 import { AddProductComponent } from './pages/add-product/add-product.component';
+import { EditCategoryComponent } from './pages/edit-category/edit-category.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,11 @@ const routes: Routes = [
       {
         path :"category/add",
         component : AddCategoryComponent,
+        canActivate : [BackdoorGuard]
+      },
+      {
+        path : "category/edit/:id",
+        component : EditCategoryComponent,
         canActivate : [BackdoorGuard]
       },
       {
