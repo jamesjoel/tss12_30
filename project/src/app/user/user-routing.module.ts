@@ -8,6 +8,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserComponent } from './user.component';
 import { BackdoorGuard } from './guard/backdoor.guard';
+import { AlbumsComponent } from './pages/albums/albums.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,11 @@ const routes: Routes = [
       {
         path : "profile",
         component : ProfileComponent,
+        canActivate : [BackdoorGuard]
+      },
+      {
+        path : "albums",
+        component : AlbumsComponent,
         canActivate : [BackdoorGuard]
       }
     ]

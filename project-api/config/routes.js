@@ -8,6 +8,7 @@ routes.use("/api/category", require("../controllers/categoryController"));
 routes.use("/api/product", require("../controllers/productController"));
 routes.use("/api/signup", require("../controllers/signupController"));
 routes.use("/api/auth", require("../controllers/authController"));
+routes.use("/api/album", require("../controllers/albumController"));
 routes.use("/api/admin/auth", require("../controllers/adminAuthController"));
 
 

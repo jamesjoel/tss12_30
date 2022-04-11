@@ -1,0 +1,44 @@
+<div class="container" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <h3 class="text-cetner">Your Albums</h3>
+            <button data-toggle="modal" data-target="#addModal" class="btn btn-info">Add Photos</button>
+        </div>
+    </div>
+</div>
+
+
+<Div id="addModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="imageForm">
+            <div class="modal-header">Add New Photos</div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Image Title</label>
+                    <input type="text" formControlName="title" [ngClass]="{'is-invalid' : checkForm && f.title.errors}" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Image Category</label>
+                    <select class="form-control" formControlName="category" [ngClass]="{'is-invalid' : checkForm && f.category.errors}">
+                        <option value="">Select</option>
+                        <option value="my_family">My Family</option>
+                        <option value="friends">Friends</option>
+                        <option value="college">College</option>
+                        <option value="schools">Schools</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Select Image</label>
+                    <input type="file" #photo class="form-control" formControlName="image" [ngClass]="{'is-invalid' : checkForm && f.image.errors}"/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button class="btn btn-success" (click)="submit(photo)">Add</button>
+            </div>
+        </form>
+        </div>
+    </div>
+</Div>
