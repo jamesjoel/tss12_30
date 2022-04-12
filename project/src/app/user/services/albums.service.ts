@@ -12,7 +12,11 @@ export class AlbumsService {
   ) { }
 
   getAll(){
-    return this._http.get<any>(environment.apiUrl+"/api/album");
+    return this._http.get<any>(environment.apiUrl+"/api/album", {
+      headers : {
+        Authorization : JSON.stringify(localStorage.getItem("mytoken"))
+      }
+    });
   }
   getData(id:any){
     return this._http.get<any>(environment.apiUrl+"/api/album/"+id);

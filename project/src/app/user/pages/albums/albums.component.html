@@ -3,6 +3,20 @@
         <div class="col-md-10 offset-md-1">
             <h3 class="text-cetner">Your Albums</h3>
             <button data-toggle="modal" data-target="#addModal" class="btn btn-info">Add Photos</button>
+            <br />
+            <br />
+            <div class="row">
+                <div *ngFor="let a of allAlbum" class="col-md-3 my-4">
+                    <div class="card">
+                        <img src="{{ a.path }}" class="card-img-top" style="height: 170px;" />
+                        <div class="card-body">
+                            <h4>{{ a.title }}</h4>
+                            <h4>{{ a.category }}</h4>
+                            <button  class="close">x</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -35,8 +49,8 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button class="btn btn-success" (click)="submit(photo)">Add</button>
+                <button class="btn btn-danger" #closeBtn data-dismiss="modal">Close</button>
+                <button class="btn btn-success" (click)="submit(photo, closeBtn)">Add</button>
             </div>
         </form>
         </div>

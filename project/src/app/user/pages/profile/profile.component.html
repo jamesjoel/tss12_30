@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h3>User Profile Page</h3>
-            <table class="table table-dark">
+            <table *ngIf="user" class="table table-dark">
                 <tr>
                     <td>Full Name</td>
                     <td>{{ user.fullname }}</td>

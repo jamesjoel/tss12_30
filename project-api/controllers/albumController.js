@@ -30,8 +30,11 @@ routes.post("/", (req, res)=>{
             req.files.photo.mv(path.resolve()+"/assets/album-img/"+new_name, (err)=>{
                 MongoClient.connect(database.dbUrl, (err, con)=>{
                     var db = con.db(database.dbName);
-                    db.collection(collName).insertOne(obj, ()=>{
-                        res.send({ success : true });
+                    db.collection(collName).insertOne(obj, (err, result)=>{
+                        obj._id = result.insertedId;
+                        obj.path = "http://localhost:3000/album-img/"+new_name;
+                        // console.log(obj);
+                        res.send(obj);
                     })
                 })
             })
@@ -44,6 +47,33 @@ routes.post("/", (req, res)=>{
         }
     }else{
         res.status(401).send({ msg : "Un-Authorize User"});
+    }
+})
+
+routes.get("/", (req, res)=>{
+    if(req.headers.authorization){
+        var token = JSON.parse(req.headers.authorization);
+        var info = jwt.decode(token, database.myStr);
+        if(info){
+            var id = info._id;
+            MongoClient.connect(database.dbUrl, (err, con)=>{
+                var db = con.db(database.dbName);
+                db.collection(collName).find({ user_id : id }).toArray((err, result)=>{
+                    // res.send(result);
+                    var arr = result.map((x)=>{
+                        x.path = "http://localhost:3000/album-img/"+x.image;
+                        return x;
+                    })
+                    res.send(arr);
+                })
+            })
+
+        }else{
+            res.status(401).send({ msg : "Un-Authorized User"});
+
+        }
+    }else{
+        res.status(401).send({ msg : "Un-Authorized User"});
     }
 })
 
