@@ -17,6 +17,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { AlbumsComponent } from './pages/albums/albums.component';
+import { DiscountPipe } from './pipes/discount.pipe';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AlbumsComponent } from './pages/albums/albums.component';
     SignupComponent,
     LoginComponent,
     ProfileComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    DiscountPipe
   ],
   imports: [
     CommonModule,
