@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  arr = [
+    {
+      name : "Mayank",
+      age : 21,
+      city : "indore"
+    },
+    {
+      name : "Atul",
+      age : 24,
+      city : "mumbai"
+    }
+  ]
   constructor() { }
 
   ngOnInit(): void {

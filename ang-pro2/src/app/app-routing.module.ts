@@ -8,6 +8,8 @@ import { HelpComponent } from './pages/help/help.component';
 import { EventsComponent } from './pages/events/events.component';
 import { ControlStatement1Component } from './pages/control-statement1/control-statement1.component';
 import { ControlStatement2Component } from './pages/control-statement2/control-statement2.component';
+import { ParentToChildComponent } from './pages/parent-to-child/parent-to-child.component';
+import { StudentComponent } from './pages/student/student.component';
 
 
 const routes: Routes = [
@@ -38,6 +40,14 @@ const routes: Routes = [
   {
     path : "ctrl2",
     component : ControlStatement2Component
+  },
+  {
+    path : "parent-to-child",
+    component : ParentToChildComponent
+  },
+  {
+    path : "student",
+    component : StudentComponent
   }
 ];
 

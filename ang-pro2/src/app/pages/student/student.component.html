@@ -1,0 +1,20 @@
+<div class="container" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-md-12">
+            <Br />
+            <!-- <pre>{{ obj | json }}</pre> -->
+            <br />
+            Name : <input type="text" [(ngModel)]="obj.name"/>
+            Age  : <input type="text" [(ngModel)]="obj.age"/>
+            City : <select [(ngModel)]="obj.city">
+                <option value="">Select</option>
+                <option value="indore">Indore</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+            </select>
+            <button class="btn btn-success" (click)="save()">Save</button>
+            <Br />
+            <app-table [cData]="data"></app-table>
+        </div>
+    </div>
+</div>

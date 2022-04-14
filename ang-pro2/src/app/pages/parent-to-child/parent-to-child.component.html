@@ -1,0 +1,37 @@
+<div class="container" style="min-height: 600px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ a }}</h1>
+            <input type="text" [(ngModel)]="a" />
+            <button class="btn btn-primary" (click)="go()">Go</button>
+            <Br />
+            <Br />
+            <Br />
+
+            <app-box2 [y]="x"></app-box2>
+            <!-- Male <input type="radio" [(ngModel)]="b" value="male" name="gender" />
+            Female <input type="radio" [(ngModel)]="b" value="female" name="gender" />
+            <h3>{{ b }}</h3>
+            <Br />
+            <button class="btn btn-info" (click)="demo()">Click</button>
+            <br />
+            <Br />
+            <input type="checkbox" value="false" [(ngModel)]="hello" />Click Here
+            <h2>{{ hello }}</h2>
+            <Br />
+            <input type="text" *ngIf="hello"/>
+            <Br />
+            <Br />
+            <select [(ngModel)]="city">
+                <option value="">Select</option>
+                <option value="indore">Indore</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+            </select>
+            {{ city }}
+
+
+            <p *ngIf="city=='pune'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti accusantium sapiente esse deserunt voluptatibus sed aperiam distinctio voluptates, ducimus aliquam fugit magni provident doloremque laborum? Ullam suscipit assumenda distinctio dicta!</p> -->
+        </div>
+    </div>
+</div>
