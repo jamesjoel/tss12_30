@@ -23,6 +23,8 @@ import { ParentToChildComponent } from './pages/parent-to-child/parent-to-child.
 import { Box2Component } from './shared/box2/box2.component';
 import { StudentComponent } from './pages/student/student.component';
 import { TableComponent } from './shared/table/table.component';
+import { ChildToParentComponent } from './pages/child-to-parent/child-to-parent.component';
+import { Box3Component } from './shared/box3/box3.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { TableComponent } from './shared/table/table.component';
     ParentToChildComponent,
     Box2Component,
     StudentComponent,
-    TableComponent
+    TableComponent,
+    ChildToParentComponent,
+    Box3Component
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ export class CategoryComponent implements OnInit {
 
   allCategory : any[]=[];
   category:any;
+  label="Category";
 
 
   

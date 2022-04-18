@@ -10,6 +10,7 @@ import { ControlStatement1Component } from './pages/control-statement1/control-s
 import { ControlStatement2Component } from './pages/control-statement2/control-statement2.component';
 import { ParentToChildComponent } from './pages/parent-to-child/parent-to-child.component';
 import { StudentComponent } from './pages/student/student.component';
+import { ChildToParentComponent } from './pages/child-to-parent/child-to-parent.component';
 
 
 const routes: Routes = [
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path : "student",
     component : StudentComponent
+  },
+  {
+    path : "child-to-parent",
+    component : ChildToParentComponent
   }
 ];
 

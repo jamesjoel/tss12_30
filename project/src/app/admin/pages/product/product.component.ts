@@ -10,6 +10,7 @@ export class ProductComponent implements OnInit {
 
   allProduct : any[] = [];
   product:any;
+  label="Product";
   constructor(
     private _prod : ProductService
   ) {

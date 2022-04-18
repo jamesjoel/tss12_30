@@ -20,23 +20,4 @@
     </div>
 </div>
 
-
-<!-- <h1 #x>hello TSS</h1>
-<button (click)="demo(x)">Click</button> -->
-
-<div class="modal fade" id="delModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Delete Categroy</h3>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure want to delete <b *ngIf="category">{{ category.name }}</b> !</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger"  (click)="confDelete(closeBtn)">Delete</button>
-                <button class="btn btn-dark" #closeBtn data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
+<app-delete [obj]="category" [label]="label" (myEvent)="confDelete($event)"></app-delete>

@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddCategoryComponent } from './pages/add-category/add-category.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 import { EditCategoryComponent } from './pages/edit-category/edit-category.component';
+import { DeleteComponent } from './shared/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EditCategoryComponent } from './pages/edit-category/edit-category.compo
     DemoComponent,
     AddCategoryComponent,
     AddProductComponent,
-    EditCategoryComponent
+    EditCategoryComponent,
+    DeleteComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,16 @@
+<div class="modal fade" id="delModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Delete {{ label }}</h3>
+            </div>
+            <div class="modal-body">
+                Are you sure want to delete <b *ngIf="obj">{{ obj.name }}</b>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" (click)="demo(delBtn)">Delete</button>
+                <button class="btn btn-dark" #delBtn data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
