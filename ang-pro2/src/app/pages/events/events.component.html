@@ -1,5 +1,19 @@
 <div class="container">
     <div class="row">
+        <div class="col-md-8">
+            <div style="display: block;">
+                <canvas baseChart 
+                  [datasets]="barChartData"
+                  [labels]="barChartLabels"
+                  [options]="barChartOptions"
+                  [plugins]="barChartPlugins"
+                  [legend]="barChartLegend"
+                  >
+                </canvas>
+              </div>
+        </div>
+    </div>
+    <!-- <div class="row">
         <div class="col-md-12">
             <h1 (contextmenu)="demo9()">Events</h1>
             <br />
@@ -25,5 +39,5 @@
             <br />
             <input type="file" (change)="demo10()"/>
         </div>
-    </div>
+    </div> -->
 </div>

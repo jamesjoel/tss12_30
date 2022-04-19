@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { NgChartsModule } from 'ng2-charts';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +27,7 @@ import { StudentComponent } from './pages/student/student.component';
 import { TableComponent } from './shared/table/table.component';
 import { ChildToParentComponent } from './pages/child-to-parent/child-to-parent.component';
 import { Box3Component } from './shared/box3/box3.component';
+import { MyDirDirective } from './directives/my-dir.directive';
 
 @NgModule({
   declarations: [
@@ -46,13 +49,16 @@ import { Box3Component } from './shared/box3/box3.component';
     StudentComponent,
     TableComponent,
     ChildToParentComponent,
-    Box3Component
+    Box3Component,
+    MyDirDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgImageSliderModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

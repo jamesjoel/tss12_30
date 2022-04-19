@@ -7,6 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  imgArr:any[]=[
+    {
+      image : "assets/1.jpg",
+      thumbImage : "assets/1.jpg",
+      title : "Hello",
+      alt : "Hello"
+    },
+    {
+      image : "assets/2.jpg",
+      thumbImage : "assets/2.jpg",
+      title : "Hello",
+      alt : "Hello"
+    },
+    {
+      image : "assets/3.jpg",
+      thumbImage : "assets/3.jpg",
+      title : "Hello",
+      alt : "Hello"
+    },
+    {
+      image : "assets/4.jpg",
+      thumbImage : "assets/4.jpg",
+      title : "Hello",
+      alt : "Hello"
+    }
+  ];
+
+
+
   name="rohit";
   city = "mumbai";
   color = ["red", "green", "blue"];
