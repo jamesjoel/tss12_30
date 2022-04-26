@@ -1,0 +1,35 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 03/03/2019 05:22
+  	*/
+
+	
+
+	
+
+	[class^="flaticon-"]:before,
+	[class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after,
+	[class*=" flaticon-"]:after {
+	    font-family: Flaticon;
+      font-size: 32px;
+      color: #2a2a2a;
+	    font-style: normal;
+	    margin-left: 0px;
+	}
+
+	.flaticon-money:before {
+	    content: "\f100";
+	}
+
+	.flaticon-truck:before {
+	    content: "\f101";
+	}
+
+	.flaticon-support:before {
+	    content: "\f102";
+	}
+
+	.flaticon-blockchain:before {
+	    content: "\f103";
+	}
