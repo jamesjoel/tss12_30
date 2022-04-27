@@ -38,14 +38,25 @@
             }
 
 
-            getData(3, 5).then(a => square(a)
-                         .then(b => divide(b)
-                         .then(c => demo(c))
-                         .then(d => console.log(d))
-                        )
-                    );
-                
+            // getData(3, 5).then(a => square(a))
+                        
+            //              .then(b => divide(b))
+            //              .then(c => demo(c))
+            //              .then(d => console.log(d)
+            //              );
 
+            async function hello(){
+                const a = await getData(5, 20);
+                const b = await square(a);
+                const c = await divide(b);
+                const d = await demo(c);
+                console.log(d);
+            }
+            hello();
+                        
+
+
+            
 
         </script>
     </head>

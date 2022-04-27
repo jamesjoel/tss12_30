@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            function demo()
+            {
+                var test = "Rohit";
+                // document.getElementById("myid").innerHTML = "<h2>The Stepping Stone "+test+"</h2>";
+                document.getElementById("myid").innerHTML = `
+                    <h2>The Stepping Stone ${test}</h2>
+                `;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="demo()">OK</button>
+        <div id="myid"></div>
+    </body>
+</html>
