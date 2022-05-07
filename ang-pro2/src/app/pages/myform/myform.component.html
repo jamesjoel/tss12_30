@@ -1,0 +1,35 @@
+<div class="container mt-4">
+    <form [formGroup]="myForm">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" formControlName="fullname" class="form-control" />
+                <div class="text-danger" *ngIf="checkForm && myForm.controls.fullname.errors">
+                    Insert Your Full Name
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Hobby</label>
+                <br />
+                
+                <div *ngFor="let h of hobbyArr; let i = index">
+                    <input (change)="demo10($event)" type="checkbox" [value]="h.value" /> {{ h.name }}
+                </div>
+
+                <div class="text-danger" *ngIf="checkForm && myForm.controls.hobby.errors">
+                    Select your Hobby
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" (click)="submit()" class="btn btn-primary" value="Submit" />
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+<Br />
+<Br />
+<Br />
+<!-- <input type="file"  (change)="demo2($event)" /> -->

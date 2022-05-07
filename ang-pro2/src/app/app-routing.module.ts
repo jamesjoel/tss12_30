@@ -11,6 +11,7 @@ import { ControlStatement2Component } from './pages/control-statement2/control-s
 import { ParentToChildComponent } from './pages/parent-to-child/parent-to-child.component';
 import { StudentComponent } from './pages/student/student.component';
 import { ChildToParentComponent } from './pages/child-to-parent/child-to-parent.component';
+import { MyformComponent } from './pages/myform/myform.component';
 
 
 const routes: Routes = [
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path : "child-to-parent",
     component : ChildToParentComponent
+  },
+  {
+    path : "myform",
+    component : MyformComponent
   }
 ];
 

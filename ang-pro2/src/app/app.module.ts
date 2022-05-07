@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { NgChartsModule } from 'ng2-charts';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +29,7 @@ import { TableComponent } from './shared/table/table.component';
 import { ChildToParentComponent } from './pages/child-to-parent/child-to-parent.component';
 import { Box3Component } from './shared/box3/box3.component';
 import { MyDirDirective } from './directives/my-dir.directive';
+import { MyformComponent } from './pages/myform/myform.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,8 @@ import { MyDirDirective } from './directives/my-dir.directive';
     TableComponent,
     ChildToParentComponent,
     Box3Component,
-    MyDirDirective
+    MyDirDirective,
+    MyformComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { MyDirDirective } from './directives/my-dir.directive';
     HttpClientModule,
     FormsModule,
     NgImageSliderModule,
-    NgChartsModule
+    NgChartsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
